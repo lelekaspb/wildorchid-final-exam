@@ -1,0 +1,18 @@
+/* these buttons are only for intl demonstration, to be deleted or changed */
+.btn_outline {
+  border: 1px solid brown;
+  background-color: lightsalmon;
+  color: brown;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.btn_primary {
+  border: none;
+  background-color: brown;
+  border: 1px solid brown;
+  color: lightsalmon;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+/* these buttons are only for intl demonstration, to be deleted or changed -- end */
