@@ -9,7 +9,7 @@ function Navbar({ activePage }) {
   const context = useContext(Context);
 
   return (
-    <div>
+    <nav>
       <Link to="/" className={navbar.link}>
         Logo
       </Link>
@@ -44,6 +44,15 @@ function Navbar({ activePage }) {
         <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
       </Link>
 
+      <Link
+        to="/giftcard"
+        className={` ${navbar.link} ${
+          activePage === "giftcard" ? navbar.underline : ""
+        }`}
+      >
+        <FormattedMessage id="navigation.giftcard" defaultMessage="Gavekort" />
+      </Link>
+
       <a
         className={navbar.link}
         href="https://wildorchid.onlinebooq.dk/"
@@ -72,7 +81,7 @@ function Navbar({ activePage }) {
       >
         DK
       </button>
-    </div>
+    </nav>
   );
 }
 

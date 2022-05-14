@@ -1,8 +1,26 @@
 import text from "../styles/Text.module.css";
+import navbar from "../styles/Navbar.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
+import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
 
 function Services() {
+  // check if a subpage was chosen (navigated to)
+  // so that it doesn't change to default on page reload
+  const sessionSubPage = sessionStorage.getItem("subpage");
+  console.log(sessionSubPage);
+
+  // save chosen subpage in state
+  const [activeSubPage, setActiveSubPage] = useState(sessionSubPage || "nails");
+
+  // change subpage on Link click
+  const changeActiveSubPage = (e) => {
+    const subPage = e.target.getAttribute("data-subpage");
+    setActiveSubPage(subPage);
+    sessionStorage.setItem("subpage", subPage);
+  };
+
   return (
     <>
       <Navbar activePage="services" />
@@ -24,32 +42,66 @@ function Services() {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <ul>
-          <li>
+
+        <nav>
+          <Link
+            to="eyes"
+            data-subpage="eyes"
+            className={` ${navbar.link} ${
+              activeSubPage === "eyes" ? navbar.bold : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
             <FormattedMessage
               id="navigation.services.eyes"
               defaultMessage="Bryn og vipper"
             />
-          </li>
-          <li>
-            <FormattedMessage
-              id="navigation.services.nails"
-              defaultMessage="Negle"
-            />
-          </li>
-          <li>
+          </Link>
+
+          <Link
+            to="wax"
+            data-subpage="wax"
+            className={` ${navbar.link} ${
+              activeSubPage === "wax" ? navbar.bold : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
             <FormattedMessage
               id="navigation.services.wax"
               defaultMessage="Hårfjerning"
             />
-          </li>
-          <li>
+          </Link>
+
+          <Link
+            to="nails"
+            data-subpage="nails"
+            className={` ${navbar.link} ${
+              activeSubPage === "nails" ? navbar.bold : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
+            <FormattedMessage
+              id="navigation.services.nails"
+              defaultMessage="Negle"
+            />
+          </Link>
+
+          <Link
+            to="spraytan"
+            data-subpage="spraytan"
+            className={` ${navbar.link} ${
+              activeSubPage === "spraytan" ? navbar.bold : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
             <FormattedMessage
               id="navigation.services.spraytan"
               defaultMessage="Spraytan"
             />
-          </li>
-        </ul>
+          </Link>
+        </nav>
+
+        <Outlet />
       </div>
     </>
   );
