@@ -6,19 +6,13 @@ import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function Services() {
-  // check if a subpage was chosen (navigated to)
-  // so that it doesn't change to default on page reload
-  const sessionSubPage = sessionStorage.getItem("subpage");
-  console.log(sessionSubPage);
-
   // save chosen subpage in state
-  const [activeSubPage, setActiveSubPage] = useState(sessionSubPage || "nails");
+  const [activeSubPage, setActiveSubPage] = useState("eyes");
 
   // change subpage on Link click
   const changeActiveSubPage = (e) => {
     const subPage = e.target.getAttribute("data-subpage");
     setActiveSubPage(subPage);
-    sessionStorage.setItem("subpage", subPage);
   };
 
   return (
