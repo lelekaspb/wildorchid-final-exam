@@ -12,7 +12,7 @@ import Giftcard from "./components/Giftcard";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter forceRefresh={false}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />}>
@@ -24,7 +24,7 @@ function App() {
             {/* <Route path="*" element={<NoMatch />} /> */}
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} exact />
           <Route path="/giftcard" element={<Giftcard />} />
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>

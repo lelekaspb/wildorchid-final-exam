@@ -1,8 +1,12 @@
 import text from "../styles/Text.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
+import { useContext } from "react";
+import { Context } from "./ContextWrapper";
 
 function AboutUs() {
+  const context = useContext(Context);
+  console.log(context.menuOpen);
   return (
     <>
       <Navbar activePage="about_us" />

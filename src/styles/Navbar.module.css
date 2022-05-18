@@ -1,13 +1,36 @@
-.link {
-  margin: 2rem;
-  color: brown;
-  text-decoration: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
-.underline {
-  text-decoration: underline;
+.logo_link {
+  justify-self: center;
 }
 
-.bold {
-  font-weight: 900;
+.logo {
+  width: 25vw;
+}
+
+.lang_buttons {
+  display: inline;
+}
+
+.mr_1 {
+  margin-right: 0.6rem;
+}
+
+.button_primary {
+  composes: button_primary from "./Buttons.module.css";
+  border: 2px solid var(--primary-font-color);
+  padding: 0.25rem;
+}
+
+.button_outline {
+  border: 2px solid var(--primary-font-color);
+  background-color: var(--pinkish-bg-color);
+  color: var(--primary-font-color);
+  border-radius: 1px;
+  padding: 0.25rem;
 }
