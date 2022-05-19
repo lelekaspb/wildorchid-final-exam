@@ -2,19 +2,9 @@ import text from "../styles/Text.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
 import giftcard from "../styles/Giftcard.module.css";
-import { useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function Giftcard() {
-  let navigate = useNavigate();
-  const redirectToPayment = () => {
-    navigate("/giftcard/payment");
-  };
-  const handleSubmit = (e) => {
-    // validate
-    // ...
-    // if validated correctly, redirect to payment
-    redirectToPayment();
-  };
   return (
     <>
       <Navbar activePage="giftcard" />
@@ -29,12 +19,9 @@ function Giftcard() {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
-        <form>
-          <button type="submit" onClick={handleSubmit}>
-            next
-          </button>
-        </form>
       </div>
+
+      <Outlet />
     </>
   );
 }

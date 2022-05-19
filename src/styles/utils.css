@@ -21,4 +21,5 @@
   text-transform: uppercase;
   font-weight: var(--font-regular);
   text-align: center;
+  font-size: var(--title-font-size);
 }

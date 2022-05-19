@@ -1,18 +1,16 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function Payment() {
-  let navigate = useNavigate();
-  const redirectToCreditcard = () => {
-    navigate("/creditcard");
-  };
-  const redirectToMobilepay = () => {
-    navigate("/mobilepay");
-  };
   return (
     <div>
+      <Link to="/giftcard/info">back to form</Link>
       <p>Payment</p>
-      <button onClick={redirectToCreditcard}>creditcard</button>
-      <button onClick={redirectToMobilepay}>mobilepay</button>
+      <Link to="creditcard">
+        <button>creditcard</button>
+      </Link>
+      <Link to="mobilepay">
+        <button>mobilepay</button>
+      </Link>
 
       <Outlet />
     </div>
