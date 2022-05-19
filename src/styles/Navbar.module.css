@@ -30,7 +30,7 @@
 
 .button_outline {
   border: 2px solid var(--primary-font-color);
-  background-color: var(--pinkish-bg-color);
+  background-color: transparent;
   color: var(--primary-font-color);
   border-radius: 1px;
   padding: 0.25rem;

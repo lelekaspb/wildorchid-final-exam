@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease-in-out;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .open {
@@ -25,9 +25,9 @@
 
 .link {
   composes: link from "./utils.css";
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-right: 0;
-  height: 1.7rem;
+  height: 2.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +38,8 @@
 }
 
 .icon {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.3rem;
+  height: 1.3rem;
   margin-right: 0.3rem;
 }
 
