@@ -8,6 +8,10 @@ import AboutUs from "./components/AboutUs";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Giftcard from "./components/Giftcard";
+import Payment from "./components/Payment";
+import Creditcard from "./components/Creditcard";
+import Mobilepay from "./components/Mobilepay";
+import GiftcardConfirmation from "./components/GiftcardConfirmation";
 
 function App() {
   return (
@@ -25,7 +29,15 @@ function App() {
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} exact />
-          <Route path="/giftcard" element={<Giftcard />} />
+          <Route path="/giftcard" element={<Giftcard />}>
+            <Route index element={<Payment />} />
+            <Route path="payment" element={<Payment />}>
+              <Route index element={<Creditcard />} />
+              <Route path="creditcard" element={<Creditcard />} />
+              <Route path="mobilepay" element={<Mobilepay />} />
+            </Route>
+            <Route path="confirm" element={<GiftcardConfirmation />} />
+          </Route>
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>
       </BrowserRouter>

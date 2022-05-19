@@ -15,3 +15,10 @@
 .underline {
   background-size: 100% 1px;
 }
+
+.heading {
+  color: var(--primary-font-color);
+  text-transform: uppercase;
+  font-weight: var(--font-regular);
+  text-align: center;
+}
