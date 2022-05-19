@@ -9,8 +9,6 @@ function Home() {
       <h1 className={heading.header}>
         <FormattedMessage id="greeting" defaultMessage="Wild Orchid Webside" />
       </h1>
-
-      <h2>this is a test</h2>
     </>
   );
 }
