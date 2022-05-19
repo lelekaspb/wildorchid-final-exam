@@ -14,6 +14,9 @@
   --font-medium: 500;
   --font-bold: 700;
   --font-black: 900;
+
+  --body-font-size: calc(1rem + 0.3vw);
+  --title-font-size: calc(1.8rem + 0.3vw);
 }
 
 body {
