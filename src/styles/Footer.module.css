@@ -1,0 +1,49 @@
+* {
+  font-family: Roboto, sans-serif;
+  color: #844424;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.CategoryName {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.CategoryTextDiv {
+}
+
+.CategoryText {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.CategoryContact {
+  margin-top: 0.8rem;
+}
+
+.CVRnumber {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .CategoryName {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .CategoryText {
+    font-size: 1rem;
+  }
+
+  .CVRnumber {
+    font-size: 1rem;
+  }
+}

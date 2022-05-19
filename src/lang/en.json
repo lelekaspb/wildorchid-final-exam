@@ -9,5 +9,14 @@
   "navigation.giftcard": "Gift card",
   "navigation.book": "Book",
 
-  "greeting": "Wild Orchid Website"
+  "greeting": "Wild Orchid Website",
+
+  "footer.hours": "Opening Hours",
+  "footer.hours.one": "Tuesday - Thursday: 11 - 19",
+  "footer.hours.two": "Friday: 9 - 17",
+  "footer.hours.three": "Saturday: 9 - 16",
+  "footer.hours.four": "Sunday - Monday: Lukket",
+
+  "footer.address": "Address",
+  "footer.follow": "Follow us"
 }
