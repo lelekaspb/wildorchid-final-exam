@@ -25,6 +25,7 @@
   composes: button_primary from "./Buttons.module.css";
   border: 2px solid var(--primary-font-color);
   padding: 0.25rem;
+  cursor: pointer;
 }
 
 .button_outline {
@@ -33,4 +34,24 @@
   color: var(--primary-font-color);
   border-radius: 1px;
   padding: 0.25rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .logo {
+    width: 10vw;
+  }
+
+  .logo_link {
+    justify-self: flex-start;
+  }
+
+  .pull_right {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

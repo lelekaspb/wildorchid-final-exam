@@ -18,32 +18,34 @@ function Navbar({ activePage }) {
         <img className={navbar.logo} src="logo/logo.svg" alt="logo" />
       </Link>
 
-      <DesktopMenu activePage={activePage} />
+      <div className={navbar.pull_right}>
+        <DesktopMenu activePage={activePage} />
 
-      <div className={navbar.lang_buttons}>
-        <button
-          data-lang="da"
-          className={`${navbar.mr_1} ${
-            context.locale === "da"
-              ? navbar.button_primary
-              : navbar.button_outline
-          }`}
-          onClick={context.changeLang}
-        >
-          DK
-        </button>
+        <div className={navbar.lang_buttons}>
+          <button
+            data-lang="da"
+            className={`${navbar.mr_1} ${
+              context.locale === "da"
+                ? navbar.button_primary
+                : navbar.button_outline
+            }`}
+            onClick={context.changeLang}
+          >
+            DK
+          </button>
 
-        <button
-          data-lang="en"
-          className={`${
-            context.locale === "en"
-              ? navbar.button_primary
-              : navbar.button_outline
-          }`}
-          onClick={context.changeLang}
-        >
-          EN
-        </button>
+          <button
+            data-lang="en"
+            className={`${
+              context.locale === "en"
+                ? navbar.button_primary
+                : navbar.button_outline
+            }`}
+            onClick={context.changeLang}
+          >
+            EN
+          </button>
+        </div>
       </div>
     </nav>
   );
