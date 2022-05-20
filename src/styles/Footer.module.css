@@ -1,10 +1,10 @@
 * {
   font-family: Roboto, sans-serif;
-  color: #844424;
+  color: var(--primary-font-color);
 }
 
 footer {
-  background-color: #fff3ee;
+  background-color: var(--pinkish-bg-color);
   padding: 0.5rem;
 }
 
@@ -28,10 +28,6 @@ footer {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
-
-/* .CategoryContact {
-  margin-top: 0.5rem;
-} */
 
 .CVRnumber {
   font-size: 0.5rem;
