@@ -14,7 +14,7 @@ function AboutUs() {
 
         <img
           className={` ${about.FrontPic} ${about.FrontHidden} `}
-          src="./photos/"
+          src="./photos/Salon-outside.jpg"
           alt=""
         ></img>
       </div>
