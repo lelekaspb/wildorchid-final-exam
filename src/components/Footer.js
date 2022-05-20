@@ -54,8 +54,25 @@ export default function Footer({ activePage }) {
 
         <div className={` ${footer.Category} `}>
           <h1 className={` ${footer.CategoryName} `}>
-            <FormattedMessage id="follow" defaultMessage="Følg oss" />
+            <FormattedMessage id="footer.follow" defaultMessage="Følg oss" />
           </h1>
+          <div className={` ${footer.IconGroup} `}>
+            <a href="https://www.facebook.com/WildOrchidDk/" target="_blank">
+              <img
+                className={` ${footer.icon} `}
+                src="./icons/Facebook.svg"
+                alt=""
+              ></img>
+            </a>
+
+            <a href="https://www.instagram.com/wildorchiddk/" target="_blank">
+              <img
+                className={` ${footer.icon} `}
+                src="./icons/Instagram.svg"
+                alt=""
+              ></img>
+            </a>
+          </div>
         </div>
       </div>
 
