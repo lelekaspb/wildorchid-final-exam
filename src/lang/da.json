@@ -20,5 +20,20 @@
 
   "footer.address": "Adresse",
   "footer.follow": "Følg oss",
-  "footer.cvr": "CVR-nummer: 37892726"
+  "footer.cvr": "CVR-nummer: 37892726",
+
+  "services.eyes.intro_one": "Vi farver bryn og vipper, og vi tilbyder både Lash Lift og vippeextensions.",
+  "services.eyes.intro_two": "Med Lash Lift løfter og former vi dine naturlige øjenvipper, så de fremstår buede og større. Det åbner øjnene op og vipperne virker længere. Effekten efter behandlingen varer i cirka fire uger.",
+  "services.eyes.intro_three": "Vi bruger kendte og betroede mærker, som kombineret med vores professionalisme giver flotte resultater. De mærker, vi bruger, giver os et bredt udvalg af nuancer, som vi kan blande for at matche enhver hudtype og hårfarve.",
+  "services.eyes.color_lashes": "Farvning af vipper",
+  "services.eyes.color_brows": "Farvning af bryn",
+  "services.eyes.color_lashes_and_brows": "Farvning af vipper og bryn",
+  "services.eyes.color_and_correction_brows": "Farvning samt retning af bryn",
+  "services.eyes.color_and_correction_brows_and_lashes": "Farvning af vipper og bryn, samt retning af bryn",
+  "services.eyes.lash_lift": "Lashlift",
+  "services.eyes.lash_lift_and_color": "Lashlift inkl. farve af vipper",
+  "services.eyes.lash_botox_addon_to_lift": "Lash botox i forbindelse med lash lift",
+  "services.eyes.lash_extension": "Vippe extensions (enkelte)",
+  "services.eyes.lash_filling": "Lille opfyldning med enkelte vipper",
+  "services.eyes.lash_extension_remove": "Aftagning af vippe extenstions"
 }

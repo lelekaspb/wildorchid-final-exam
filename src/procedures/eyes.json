@@ -1,0 +1,46 @@
+[
+  {
+    "translId": "services.eyes.color_lashes",
+    "price": 100
+  },
+  {
+    "translId": "services.eyes.color_brows",
+    "price": 100
+  },
+  {
+    "translId": "services.eyes.color_lashes_and_brows",
+    "price": 180
+  },
+  {
+    "translId": "services.eyes.color_and_correction_brows",
+    "price": 180
+  },
+  {
+    "translId": "services.eyes.color_and_correction_brows_and_lashes",
+    "price": 230
+  },
+  {
+    "translId": "services.eyes.lash_lift",
+    "price": 450
+  },
+  {
+    "translId": "services.eyes.lash_lift_and_color",
+    "price": 500
+  },
+  {
+    "translId": "services.eyes.lash_botox_addon_to_lift",
+    "price": 50
+  },
+  {
+    "translId": "services.eyes.lash_extension",
+    "price": 700
+  },
+  {
+    "translId": "services.eyes.lash_filling",
+    "price": 400
+  },
+  {
+    "translId": "services.eyes.lash_extension_remove",
+    "price": 200
+  }
+]

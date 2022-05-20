@@ -20,5 +20,20 @@
 
   "footer.address": "Address",
   "footer.follow": "Follow us",
-  "footer.cvr": "CVR-number: 37892726"
+  "footer.cvr": "CVR-number: 37892726",
+
+  "services.eyes.intro_one": "We color eyebrows and lashes, and we offer both Lash Lift and lash extensions.",
+  "services.eyes.intro_two": "With Lash Lift, we lift and shape your natural eyelashes so that they appear curved and larger. It opens the eyes up and the lashes work longer. The effect after treatment lasts for about four weeks.",
+  "services.eyes.intro_three": "We use well-known and trusted brands, which combined with our professionalism gives great results. The brands we use give us a wide range of shades that we can mix to match any skin type and hair color.",
+  "services.eyes.color_lashes": "Staining of lashes",
+  "services.eyes.color_brows": "Staining of brows",
+  "services.eyes.color_lashes_and_brows": "Staining of lashes and brows",
+  "services.eyes.color_and_correction_brows": "Staining and correction of brows",
+  "services.eyes.color_and_correction_brows_and_lashes": "Coloring of lashes and brows, as well as correction of brows",
+  "services.eyes.lash_lift": "Lash lift",
+  "services.eyes.lash_lift_and_color": "Lash Lift incl. staining of lashes",
+  "services.eyes.lash_botox_addon_to_lift": "Lash botox in conjunction with lash lift",
+  "services.eyes.lash_extension": "Lash extensions (single)",
+  "services.eyes.lash_filling": "Small filling with single lashes",
+  "services.eyes.lash_extension_remove": "Removal of lash extensions"
 }
