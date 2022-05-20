@@ -1,9 +1,7 @@
-import { useContext } from "react";
-import { Context } from "./IntlWrapper";
 import { FormattedMessage } from "react-intl";
 import footer from "../styles/Footer.module.css";
 
-export default function Footer({ activePage }) {
+export default function Footer() {
   return (
     <footer>
       <div className={` ${footer.FlexWrap} `}>
