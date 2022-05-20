@@ -4,14 +4,18 @@
 }
 
 footer {
+  background-color: #fff3ee;
+  padding: 0.5rem;
+}
+
+.FlexWrap {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #fff3ee;
 }
 
 .CategoryName {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: normal;
   margin-bottom: 0;
 }
@@ -20,18 +24,19 @@ footer {
 }
 
 .CategoryText {
-  font-size: 0.7rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
-.CategoryContact {
-  margin-top: 0.8rem;
-}
+/* .CategoryContact {
+  margin-top: 0.5rem;
+} */
 
 .CVRnumber {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 800px) {
@@ -44,7 +49,12 @@ footer {
     font-size: 1rem;
   }
 
+  .CategoryContact {
+    margin-top: 0.5rem;
+  }
+
   .CVRnumber {
     font-size: 1rem;
+    margin-top: 3rem;
   }
 }
