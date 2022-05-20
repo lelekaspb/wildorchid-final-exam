@@ -1,86 +1,52 @@
 import { useContext } from "react";
-import { Context } from "./IntlWrapper";
+import { Context } from "./ContextWrapper";
 import { Link } from "react-router-dom";
 import navbar from "../styles/Navbar.module.css";
-import buttons from "../styles/Buttons.module.css";
-import { FormattedMessage } from "react-intl";
+import Burgermenu from "./Burgermenu";
+import Burger from "./Burger";
+import DesktopMenu from "./DesktopMenu";
 
 function Navbar({ activePage }) {
   const context = useContext(Context);
 
   return (
-    <nav>
-      <Link to="/" className={navbar.link}>
-        Logo
+    <nav className={navbar.navbar}>
+      <Burger />
+      <Burgermenu activePage={activePage} />
+
+      <Link to="/" className={`${navbar.logo_link}`}>
+        <img className={navbar.logo} src="logo/logo.svg" alt="logo" />
       </Link>
 
-      <Link
-        to="/services"
-        className={` ${navbar.link} ${
-          activePage === "services" ? navbar.underline : ""
-        }`}
-      >
-        <FormattedMessage
-          id="navigation.services"
-          defaultMessage="Behandlinger"
-        />
-      </Link>
+      <div className={navbar.pull_right}>
+        <DesktopMenu activePage={activePage} />
 
-      <Link
-        to="/about_us"
-        className={` ${navbar.link} ${
-          activePage === "about_us" ? navbar.underline : ""
-        }`}
-      >
-        <FormattedMessage id="navigation.about_us" defaultMessage="Om os" />
-      </Link>
+        <div className={navbar.lang_buttons}>
+          <button
+            data-lang="da"
+            className={`${navbar.mr_1} ${
+              context.locale === "da"
+                ? navbar.button_primary
+                : navbar.button_outline
+            }`}
+            onClick={context.changeLang}
+          >
+            DK
+          </button>
 
-      <Link
-        to="/contact"
-        className={` ${navbar.link} ${
-          activePage === "contact" ? navbar.underline : ""
-        }`}
-      >
-        <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
-      </Link>
-
-      <Link
-        to="/giftcard"
-        className={` ${navbar.link} ${
-          activePage === "giftcard" ? navbar.underline : ""
-        }`}
-      >
-        <FormattedMessage id="navigation.giftcard" defaultMessage="Gavekort" />
-      </Link>
-
-      <a
-        className={navbar.link}
-        href="https://wildorchid.onlinebooq.dk/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FormattedMessage id="navigation.book" defaultMessage="Bestil tid" />
-      </a>
-
-      <button
-        data-lang="en"
-        className={`${
-          context.locale === "en" ? buttons.btn_primary : buttons.btn_outline
-        }`}
-        onClick={context.changeLang}
-      >
-        EN
-      </button>
-
-      <button
-        data-lang="da"
-        className={`${
-          context.locale === "da" ? buttons.btn_primary : buttons.btn_outline
-        }`}
-        onClick={context.changeLang}
-      >
-        DK
-      </button>
+          <button
+            data-lang="en"
+            className={`${
+              context.locale === "en"
+                ? navbar.button_primary
+                : navbar.button_outline
+            }`}
+            onClick={context.changeLang}
+          >
+            EN
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }

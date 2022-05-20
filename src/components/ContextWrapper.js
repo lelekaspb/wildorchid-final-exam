@@ -5,12 +5,13 @@ import English from "../lang/en.json";
 
 export const Context = React.createContext();
 
-function IntlWrapper(props) {
+function ContextWrapper(props) {
   // find preferred language from browser settings
   const lang = navigator.language.split(/[-_]/)[0]; // language without region code
 
-  // check if the page has been open and language chosen
-  // so that chosen language doesn't change on page reload
+  // get chosen language from sessionStorage
+  // in order to see if the page has been open
+  // so that the chosen language doesn't change on page reload
   const sessionLang = sessionStorage.getItem("lang");
 
   // gather translations in one object
@@ -37,8 +38,11 @@ function IntlWrapper(props) {
     sessionStorage.setItem("lang", locale);
   }, [locale]);
 
+  // hamburger menu state for tracking whether it's open or not
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Context.Provider value={{ locale, changeLang }}>
+    <Context.Provider value={{ locale, changeLang, menuOpen, setMenuOpen }}>
       <IntlProvider messages={messages} locale={locale}>
         {props.children}
       </IntlProvider>
@@ -46,4 +50,4 @@ function IntlWrapper(props) {
   );
 }
 
-export default IntlWrapper;
+export default ContextWrapper;
