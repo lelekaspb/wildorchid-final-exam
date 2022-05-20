@@ -1,0 +1,27 @@
+.title {
+  font-weight: var(--font-regular);
+  color: var(--primary-font-color);
+  font-size: var(--title-font-size);
+}
+
+.FrontHidden {
+  display: none;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1100px) {
+  .FrontPic {
+    width: 80vw;
+    height: auto;
+  }
+
+  .FrontHidden {
+    display: block;
+  }
+}
