@@ -10,5 +10,15 @@
   "navigation.giftcard": "Gavekort",
   "navigation.book": "Bestil tid",
 
-  "greeting": "Wild Orchid Webside"
+  "greeting": "Wild Orchid Webside",
+
+  "footer.hours": "Åbningstider",
+  "footer.hours.one": "Tirsdag - Torsdag: 11 - 19",
+  "footer.hours.two": "Fredag: 9 - 17",
+  "footer.hours.three": "Lørdag: 9 - 16",
+  "footer.hours.four": "Søndag - Mandag: Lukket",
+
+  "footer.address": "Adresse",
+  "footer.follow": "Følg oss",
+  "footer.cvr": "CVR-nummer: 37892726"
 }

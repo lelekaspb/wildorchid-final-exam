@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Giftcard from "./components/Giftcard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>
       </BrowserRouter>
+      <Footer></Footer>
     </div>
   );
 }
