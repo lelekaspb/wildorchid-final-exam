@@ -56,6 +56,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .SubSection {
@@ -77,6 +78,10 @@
     width: 25vw;
   }
 
+  .div {
+    margin-bottom: 0;
+  }
+
   .PicContainer {
     display: flex;
     width: 80%;
@@ -90,6 +95,7 @@
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
 
   .SubTitle {
