@@ -22,14 +22,17 @@ function AboutUs() {
               alt=""
             ></img>
           </div>
-          <h3 className={` ${about.SubTitle} `}>OM JULIA</h3>
+          <h3 className={` ${about.SubTitle} `}>
+            <FormattedMessage
+              id="about.julia.title"
+              defaultMessage="OM JULIA"
+            />
+          </h3>
           <p className={` ${about.BodyText} `}>
-            “Jeg er meget åben over for mine kunder. Jeg fortæller om mit liv,
-            og de fortæller mig om deres. Mine behandlinger er gode og
-            tilfredsstillende, og jeg er meget grundig. Jeg kan finde på at tage
-            resten af de hår, der skal fjernes, med en pincet, hvis jeg ikke er
-            tilfreds. Derfor kalder flere af mine kunder mig for perfektionist,”
-            fortæller Julia Kurkova, der kommer fra Rusland.
+            <FormattedMessage
+              id="about.julia.body"
+              defaultMessage="“Jeg er meget åben over for mine kunder. Jeg fortæller om mit liv, og de fortæller mig om deres. Mine behandlinger er gode og tilfredsstillende, og jeg er meget grundig. Jeg kan finde på at tage resten af de hår, der skal fjernes, med en pincet, hvis jeg ikke er tilfreds. Derfor kalder flere af mine kunder mig for perfektionist,” fortæller Julia Kurkova, der kommer fra Rusland."
+            />
           </p>
         </div>
         <div className={` ${about.SubSection} `}>
@@ -40,14 +43,17 @@ function AboutUs() {
               alt=""
             ></img>
           </div>
-          <h3 className={` ${about.SubTitle} `}>OM SALONEN</h3>
+          <h3 className={` ${about.SubTitle} `}>
+            <FormattedMessage
+              id="about.salon.title"
+              defaultMessage="OM SALONEN"
+            />
+          </h3>
           <p className={` ${about.BodyText} `}>
-            Hos Wild Orchid er du sikker på at få en god og grundig behandling -
-            uanset hvilken du vælger. Julia Kurkova elsker sit arbejde med
-            skønhedsbehandlinger og går op i at levere en god service og
-            fantastiske behandlinger hver gang. Julia Kurkova har arbejdet med
-            skønhed siden 2014 og er efterhånden en ekspert inden for de
-            behandlinger, hun tilbyder.
+            <FormattedMessage
+              id="about.salon.body"
+              defaultMessage="Hos Wild Orchid er du sikker på at få en god og grundig behandling  uanset hvilken du vælger. Julia Kurkova elsker sit arbejde med skønhedsbehandlinger og går op i at levere en god service og fantastiske behandlinger hver gang. Julia Kurkova har arbejdet med skønhed siden 2014 og er efterhånden en ekspert inden for de behandlinger, hun tilbyder."
+            />
           </p>
         </div>
 
@@ -59,19 +65,17 @@ function AboutUs() {
               alt=""
             ></img>
           </div>
-          <h3 className={` ${about.SubTitle} `}>VI PAS PÅ DIG</h3>
+          <h3 className={` ${about.SubTitle} `}>
+            <FormattedMessage
+              id="about.clean.title"
+              defaultMessage="VI PAS PÅ DIG"
+            />
+          </h3>
           <p className={` ${about.BodyText} `}>
-            Hos Wild Orchid vil vi sørge for, at du er sikker. Vi tager vores
-            forholdsregler for at sikre, at ingen smitte spredes fra én kunde
-            til en anden. For at opnå dette bruger vi engangsværktøj og
-            steriliserer engangsudstyr korrekt. Vi tager også særligt hensyn til
-            vores genanvendelige udstyr. Alle instrumenter vi bruger gennemgår
-            en 4-trins rengøringsproces. Redskaberne er behandlet med
-            desinficerende spray; for det andet, derefter vasket for at sikre,
-            at der ikke er nogen hudpartikler tilbage efter en procedure;
-            instrumenterne udsættes for varmluftsterilisering; og til sidst
-            lægges værktøjerne i en UV-sterilisator, hvor de opbevares indtil
-            næste procedure.
+            <FormattedMessage
+              id="about.clean.body"
+              defaultMessage="Hos Wild Orchid vil vi sørge for, at du er sikker. Vi tager vores forholdsregler for at sikre, at ingen smitte spredes fra én kunde til en anden. For at opnå dette bruger vi engangsværktøj og steriliserer engangsudstyr korrekt. Vi tager også særligt hensyn til vores genanvendelige udstyr. Alle instrumenter vi bruger gennemgår en 4-trins rengøringsproces. Redskaberne er behandlet med desinficerende spray; for det andet, derefter vasket for at sikre, at der ikke er nogen hudpartikler tilbage efter en procedure; instrumenterne udsættes for varmluftsterilisering; og til sidst lægges værktøjerne i en UV-sterilisator, hvor de opbevares indtil næste procedure."
+            />
           </p>
         </div>
 
