@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 function DesktopMenu({ activePage }) {
   const context = useContext(Context);
-  console.log(activePage);
 
   return (
     <div className={menu.menu}>

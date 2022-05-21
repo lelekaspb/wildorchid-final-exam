@@ -1,4 +1,4 @@
-import navbar from "../styles/Navbar.module.css";
+import services from "../styles/Services.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
 import { Link, Outlet } from "react-router-dom";
@@ -17,20 +17,20 @@ function Services() {
   return (
     <>
       <Navbar activePage="services" />
-      <div>
-        <h2>
+      <div className={services.page}>
+        <h2 className={services.heading}>
           <FormattedMessage
             id="navigation.services"
             defaultMessage="Behandlinger"
           />
         </h2>
 
-        <nav>
+        <nav className={services.navbar}>
           <Link
             to="eyes"
             data-subpage="eyes"
-            className={` ${navbar.link} ${
-              activeSubPage === "eyes" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "eyes" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
@@ -43,8 +43,8 @@ function Services() {
           <Link
             to="wax"
             data-subpage="wax"
-            className={` ${navbar.link} ${
-              activeSubPage === "wax" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "wax" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
@@ -57,8 +57,8 @@ function Services() {
           <Link
             to="nails"
             data-subpage="nails"
-            className={` ${navbar.link} ${
-              activeSubPage === "nails" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "nails" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
@@ -71,8 +71,8 @@ function Services() {
           <Link
             to="spraytan"
             data-subpage="spraytan"
-            className={` ${navbar.link} ${
-              activeSubPage === "spraytan" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "spraytan" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >

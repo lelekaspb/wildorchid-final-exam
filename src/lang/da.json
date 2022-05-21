@@ -35,5 +35,7 @@
   "services.eyes.lash_botox_addon_to_lift": "Lash botox i forbindelse med lash lift",
   "services.eyes.lash_extension": "Vippe extensions (enkelte)",
   "services.eyes.lash_filling": "Lille opfyldning med enkelte vipper",
-  "services.eyes.lash_extension_remove": "Aftagning af vippe extenstions"
+  "services.eyes.lash_extension_remove": "Aftagning af vippe extenstions",
+
+  "book": "Book nu"
 }

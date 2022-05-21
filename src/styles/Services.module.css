@@ -1,0 +1,36 @@
+.heading {
+  composes: heading from "./utils.css";
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link {
+  composes: link from "./utils.css";
+  height: 1.2rem;
+  /* font-size: 14px; */
+}
+
+.link:hover,
+.link:active {
+  background-size: 100% 1px;
+}
+
+.underline {
+  composes: underline from "./utils.css";
+  cursor: default;
+}
+
+@media screen and (min-width: 415px) {
+  .link {
+    height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .link {
+    height: 1.6rem;
+  }
+}

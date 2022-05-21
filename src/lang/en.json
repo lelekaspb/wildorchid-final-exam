@@ -30,10 +30,12 @@
   "services.eyes.color_lashes_and_brows": "Staining of lashes and brows",
   "services.eyes.color_and_correction_brows": "Staining and correction of brows",
   "services.eyes.color_and_correction_brows_and_lashes": "Coloring of lashes and brows, as well as correction of brows",
-  "services.eyes.lash_lift": "Lash lift",
+  "services.eyes.lash_lift": "Lash Lift",
   "services.eyes.lash_lift_and_color": "Lash Lift incl. staining of lashes",
   "services.eyes.lash_botox_addon_to_lift": "Lash botox in conjunction with lash lift",
   "services.eyes.lash_extension": "Lash extensions (single)",
   "services.eyes.lash_filling": "Small filling with single lashes",
-  "services.eyes.lash_extension_remove": "Removal of lash extensions"
+  "services.eyes.lash_extension_remove": "Removal of lash extensions",
+
+  "book": "Book now"
 }
