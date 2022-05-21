@@ -18,13 +18,6 @@ function Services() {
     <>
       <Navbar activePage="services" />
       <div className={services.page}>
-        <h2 className={services.heading}>
-          <FormattedMessage
-            id="navigation.services"
-            defaultMessage="Behandlinger"
-          />
-        </h2>
-
         <nav className={services.navbar}>
           <Link
             to="eyes"
