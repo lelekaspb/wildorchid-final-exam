@@ -37,5 +37,9 @@
   "services.eyes.lash_filling": "Small filling with single lashes",
   "services.eyes.lash_extension_remove": "Removal of lash extensions",
 
+  "services.spraytan.upper_body": "Upper body incl. face, abdomen, back and arms",
+  "services.spraytan.whole_body": "The whole body incl. face",
+  "services.spraytan.whole_body_dark": "The whole body incl. face (extra dark)",
+
   "book": "Book now"
 }

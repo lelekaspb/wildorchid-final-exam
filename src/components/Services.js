@@ -48,20 +48,6 @@ function Services() {
           </Link>
 
           <Link
-            to="nails"
-            data-subpage="nails"
-            className={` ${services.link} ${
-              activeSubPage === "nails" ? services.underline : ""
-            }`}
-            onClick={changeActiveSubPage}
-          >
-            <FormattedMessage
-              id="navigation.services.nails"
-              defaultMessage="Negle"
-            />
-          </Link>
-
-          <Link
             to="spraytan"
             data-subpage="spraytan"
             className={` ${services.link} ${
@@ -72,6 +58,20 @@ function Services() {
             <FormattedMessage
               id="navigation.services.spraytan"
               defaultMessage="Spraytan"
+            />
+          </Link>
+
+          <Link
+            to="nails"
+            data-subpage="nails"
+            className={` ${services.link} ${
+              activeSubPage === "nails" ? services.underline : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
+            <FormattedMessage
+              id="navigation.services.nails"
+              defaultMessage="Negle"
             />
           </Link>
         </nav>

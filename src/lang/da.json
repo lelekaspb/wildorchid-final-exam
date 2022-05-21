@@ -37,5 +37,9 @@
   "services.eyes.lash_filling": "Lille opfyldning med enkelte vipper",
   "services.eyes.lash_extension_remove": "Aftagning af vippe extenstions",
 
+  "services.spraytan.upper_body": "Overkrop inkl. ansigt, mave, ryg og arme",
+  "services.spraytan.whole_body": "Hele kroppen inkl. ansigt",
+  "services.spraytan.whole_body_dark": "Hele kroppen inkl. ansigt (ekstra mørk)",
+
   "book": "Book nu"
 }
