@@ -11,16 +11,10 @@ function AboutUs() {
         <h2 className={` ${about.title} `}>
           <FormattedMessage id="navigation.about_us" defaultMessage="Om os" />
         </h2>
-
-        <img
-          className={` ${about.FrontPic} ${about.FrontHidden} `}
-          src="./photos/Salon-outside.jpg"
-          alt=""
-        ></img>
       </div>
 
       <div className={` ${about.section} `}>
-        <div className={` ${about.SubSection} `}>
+        <div className={` ${about.SubSection} ${about.MobileHidden}  `}>
           <div className={` ${about.PicContainer} `}>
             <img
               src="./photos/Julia.jpg"
@@ -80,6 +74,12 @@ function AboutUs() {
             næste procedure.
           </p>
         </div>
+
+        <img
+          className={` ${about.FrontPic} ${about.MobileHidden}  `}
+          src="./photos/Salon-outside.jpg"
+          alt=""
+        ></img>
       </div>
     </>
   );
