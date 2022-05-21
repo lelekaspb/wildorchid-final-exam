@@ -21,12 +21,33 @@ function AboutUs() {
 
       <div className={` ${about.section} `}>
         <div className={` ${about.SubSection} `}>
-          <img
-            src="./photos/Salon.jpg"
-            className={` ${about.SectionPic} `}
-            alt=""
-          ></img>
-          <p>
+          <div className={` ${about.PicContainer} `}>
+            <img
+              src="./photos/Julia.jpg"
+              className={` ${about.SectionPic} `}
+              alt=""
+            ></img>
+          </div>
+          <h3 className={` ${about.SubTitle} `}>OM JULIA</h3>
+          <p className={` ${about.BodyText} `}>
+            “Jeg er meget åben over for mine kunder. Jeg fortæller om mit liv,
+            og de fortæller mig om deres. Mine behandlinger er gode og
+            tilfredsstillende, og jeg er meget grundig. Jeg kan finde på at tage
+            resten af de hår, der skal fjernes, med en pincet, hvis jeg ikke er
+            tilfreds. Derfor kalder flere af mine kunder mig for perfektionist,”
+            fortæller Julia Kurkova, der kommer fra Rusland.
+          </p>
+        </div>
+        <div className={` ${about.SubSection} `}>
+          <div className={` ${about.PicContainer} `}>
+            <img
+              src="./photos/Salon.jpg"
+              className={` ${about.SectionPic} `}
+              alt=""
+            ></img>
+          </div>
+          <h3 className={` ${about.SubTitle} `}>OM SALONEN</h3>
+          <p className={` ${about.BodyText} `}>
             Hos Wild Orchid er du sikker på at få en god og grundig behandling -
             uanset hvilken du vælger. Julia Kurkova elsker sit arbejde med
             skønhedsbehandlinger og går op i at levere en god service og
@@ -37,12 +58,15 @@ function AboutUs() {
         </div>
 
         <div className={` ${about.SubSection} `}>
-          <img
-            src="./photos/Clean.jpg"
-            className={` ${about.SectionPic} `}
-            alt=""
-          ></img>
-          <p>
+          <div className={` ${about.PicContainer} `}>
+            <img
+              src="./photos/Clean.jpg"
+              className={` ${about.SectionPic} `}
+              alt=""
+            ></img>
+          </div>
+          <h3 className={` ${about.SubTitle} `}>VI PAS PÅ DIG</h3>
+          <p className={` ${about.BodyText} `}>
             Hos Wild Orchid vil vi sørge for, at du er sikker. Vi tager vores
             forholdsregler for at sikre, at ingen smitte spredes fra én kunde
             til en anden. For at opnå dette bruger vi engangsværktøj og
