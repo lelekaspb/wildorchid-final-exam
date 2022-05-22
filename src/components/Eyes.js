@@ -22,7 +22,7 @@ function Eyes() {
         <div className={styles.products_img_wrapper}>
           <img
             className={styles.products_img}
-            src="./photos/eyes_products.jpg"
+            src="../photos/eyes_products.jpg"
             alt="brows and lashes products"
           />
         </div>
@@ -61,17 +61,17 @@ function Eyes() {
       <article className={styles.gallery}>
         <img
           className={styles.gallery_img}
-          src="./photos/eyes_gallery_3.jpg"
+          src="../photos/eyes_gallery_3.jpg"
           alt="brows and lashes gallery "
         />
         <img
           className={styles.gallery_img}
-          src="./photos/eyes_gallery_2.jpg"
+          src="../photos/eyes_gallery_2.jpg"
           alt="brows and lashes gallery "
         />
         <img
           className={styles.gallery_img}
-          src="./photos/eyes_gallery_1.jpg"
+          src="../photos/eyes_gallery_1.jpg"
           alt="brows and lashes gallery "
         />
       </article>

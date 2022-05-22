@@ -15,7 +15,7 @@ function Navbar({ activePage }) {
       <Burgermenu activePage={activePage} />
 
       <Link to="/" className={`${navbar.logo_link}`}>
-        <img className={navbar.logo} src="logo/logo.svg" alt="logo" />
+        <img className={navbar.logo} src="../logo/logo.svg" alt="logo" />
       </Link>
 
       <div className={navbar.pull_right}>
