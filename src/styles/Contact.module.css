@@ -1,9 +1,77 @@
 .title {
   font-weight: var(--font-regular);
-  font-weight: var(--title-font-size);
+  font-size: var(--title-font-size);
+  text-align: center;
 }
 
 .background {
   width: 100vw;
   background-color: var(--pinkish-bg-color);
+}
+
+.ContactWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CategoryWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.CategoryPadding {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.ContactIcon {
+  height: 1.2rem;
+  width: auto;
+}
+
+.ContactTitle {
+  font-weight: var(--font-regular);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.ContactText {
+  font-size: var(--body-font-size);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.TitleIconWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.illustration {
+  width: 8rem;
+  height: auto;
+}
+
+.FindContainer {
+  width: 85vw;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.FindIcon {
+  height: 1.2rem;
+  width: auto;
+}
+
+.FindTitle {
+  font-weight: var(--font-regular);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.FindText {
+  margin-top: 0.5rem;
 }

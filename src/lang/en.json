@@ -20,5 +20,13 @@
 
   "footer.address": "Address",
   "footer.follow": "Follow us",
-  "footer.cvr": "CVR-number: 37892726"
+  "footer.cvr": "CVR-number: 37892726",
+
+  "about.hours": "Opening Hours",
+  "about.hours.one": "Tuesday - Thursday: 11 - 19",
+  "about.hours.two": "Friday: 9 - 17",
+  "about.hours.three": "Saturday: 9 - 16",
+  "about.hours.four": "Sunday - Monday: Closed",
+
+  "about.find": "Find Us"
 }
