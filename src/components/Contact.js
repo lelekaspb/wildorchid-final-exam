@@ -137,9 +137,52 @@ function Contact() {
           </div>
         </div>
 
-        <div className={contact.TitleIconWrap}>
-          <img src="./icons/write.svg" className={contact.WriteIcon}></img>
-          <h2 className={contact.WriteTitle}>Skriv til os</h2>
+        <div className={contact.TitleFormWrap}>
+          <div className={contact.TitleIconWrap}>
+            <img src="./icons/write.svg" className={contact.WriteIcon}></img>
+            <h2 className={contact.WriteTitle}>Skriv til os</h2>
+          </div>
+          <form>
+            <div className={contact.LabelInputWrap}>
+              <label for="name">Navn *</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Skriv dit navn her..."
+                className={contact.SmallInput}
+                required
+              ></input>
+            </div>
+            <div className={contact.LabelInputWrap}>
+              <label for="name">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Skriv dit email her..."
+                className={contact.SmallInput}
+              ></input>
+            </div>
+            <div className={contact.LabelInputWrap}>
+              <label for="name">Telefon</label>
+              <input
+                type="tel"
+                name="tel"
+                placeholder="Skriv dit telefon her..."
+                className={contact.SmallInput}
+                required
+              ></input>
+            </div>
+
+            <div className={contact.LabelInputWrap}>
+              <label for="name">Besked *</label>
+              <textarea
+                name="name"
+                placeholder="Skriv dit navn her..."
+                className={contact.BigInput}
+                required
+              ></textarea>
+            </div>
+          </form>
         </div>
       </div>
     </>

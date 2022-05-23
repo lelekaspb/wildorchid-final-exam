@@ -88,3 +88,38 @@
   height: 1.4rem;
   width: auto;
 }
+
+.TitleFormWrap {
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.LabelInputWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.SmallInput {
+  background-color: var(--pinkish-bg-color);
+  border: none;
+  /* height: 2rem; */
+  padding: 0.8rem;
+  width: 80vw;
+}
+
+.BigInput {
+  background-color: var(--pinkish-bg-color);
+  border: none;
+  padding: 0.8rem;
+  padding-bottom: 8rem;
+  width: 80vw;
+}
+
+input {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  color: #d6a38a;
+}
