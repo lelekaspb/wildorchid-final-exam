@@ -136,6 +136,11 @@ function Contact() {
             </div>
           </div>
         </div>
+
+        <div className={contact.TitleIconWrap}>
+          <img src="./icons/write.svg" className={contact.WriteIcon}></img>
+          <h2 className={contact.WriteTitle}>Skriv til os</h2>
+        </div>
       </div>
     </>
   );
