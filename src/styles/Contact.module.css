@@ -1,0 +1,9 @@
+.title {
+  font-weight: var(--font-regular);
+  font-weight: var(--title-font-size);
+}
+
+.background {
+  width: 100vw;
+  background-color: var(--pinkish-bg-color);
+}

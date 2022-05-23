@@ -8,13 +8,23 @@ function Contact() {
     <>
       <Navbar activePage="contact" />
       <div>
-        <h2>
+        <h2 className={contact.title}>
           <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
         </h2>
-        <p className={contact.header}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+
+        <div className={contact.background}>
+          <div>
+            <div>
+              <h3>Åbningstider</h3>
+            </div>
+            <div>
+              <p>Tirsdag - Torsdag: 11-19</p>
+              <p>Tirsdag - Torsdag: 11-19</p>
+              <p>Tirsdag - Torsdag: 11-19</p>
+              <p>Tirsdag - Torsdag: 11-19</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
