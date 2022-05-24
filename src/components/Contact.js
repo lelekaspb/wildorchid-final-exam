@@ -140,11 +140,18 @@ function Contact() {
         <div className={contact.TitleFormWrap}>
           <div className={contact.TitleIconWrap}>
             <img src="./icons/write.svg" className={contact.WriteIcon}></img>
-            <h2 className={contact.WriteTitle}>Skriv til os</h2>
+            <h2 className={contact.WriteTitle}>
+              <FormattedMessage
+                id="contact.title"
+                defaultMessage="Skriv til os"
+              />
+            </h2>
           </div>
           <form>
             <div className={contact.LabelInputWrap}>
-              <label for="name">Navn *</label>
+              <label for="name">
+                <FormattedMessage id="contact.name" defaultMessage="Navn *" />
+              </label>
               <input
                 type="text"
                 name="name"
@@ -154,7 +161,7 @@ function Contact() {
               ></input>
             </div>
             <div className={contact.LabelInputWrap}>
-              <label for="name">Email</label>
+              <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
@@ -163,7 +170,9 @@ function Contact() {
               ></input>
             </div>
             <div className={contact.LabelInputWrap}>
-              <label for="name">Telefon</label>
+              <label for="phone">
+                <FormattedMessage id="contact.phone" defaultMessage="Telefon" />
+              </label>
               <input
                 type="tel"
                 name="tel"
@@ -174,9 +183,14 @@ function Contact() {
             </div>
 
             <div className={contact.LabelInputWrap}>
-              <label for="name">Besked *</label>
+              <label for="inquiry">
+                <FormattedMessage
+                  id="contact.inquiry"
+                  defaultMessage="Besked *"
+                />
+              </label>
               <textarea
-                name="name"
+                name="textarea"
                 placeholder="Skriv dit navn her..."
                 className={contact.BigInput}
                 required

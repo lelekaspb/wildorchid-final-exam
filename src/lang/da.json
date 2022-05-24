@@ -32,5 +32,10 @@
   "about.find.parking.title": "PARKERING",
   "about.find.metro.body": "M1 og M2 ligger 800 meter fra klinikken. Benyt stoppestedet “Forum”. M3 linjen ligger 240 meter fra klinikken. Benyt stoppestedet “Aksel Møllers Have”.",
   "about.find.bus.body": "Bus 2A har stoppested 150 meter fra klinikken. Benyt stoppestedet “Falkoner Allé (Godthåbsvej)”. Bus 18 har stoppested 240 meter fra klinikken. Benyt stoppestedet “Rolighedsvej (Falkoner Allé)”.",
-  "about.find.parking.body": "Der er parkeringsmuligheder på sidegaderne til Rolighedsvej. Her er der 2 timers gratis parkering. Benyt Easypark mobil-app for at se tilgængelighed."
+  "about.find.parking.body": "Der er parkeringsmuligheder på sidegaderne til Rolighedsvej. Her er der 2 timers gratis parkering. Benyt Easypark mobil-app for at se tilgængelighed.",
+
+  "contact.title": "Skriv til os",
+  "contact.name": "Navn *",
+  "contact.phone": "Telefon",
+  "contact.inquiry": "Besked *"
 }
