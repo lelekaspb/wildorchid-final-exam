@@ -79,7 +79,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div>
+              <div className={contact.IllustrationWrap}>
                 <img
                   src="./illustrations/burger-menu-orchid.svg"
                   className={contact.illustration}
@@ -150,7 +150,7 @@ function Contact() {
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe> */}
-        <div className={contact.MapWrap}>
+        <div className={` ${contact.MapWrap} ${contact.MobileHidden}  `}>
           <iframe
             className={contact.map}
             title="maps"
