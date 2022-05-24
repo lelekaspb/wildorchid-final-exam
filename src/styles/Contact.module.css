@@ -1,10 +1,15 @@
+.hidden {
+  display: none;
+}
+
 .title {
   font-weight: var(--font-regular);
   font-size: var(--title-font-size);
   text-align: center;
 }
 
-.background {
+.background,
+.FindBackground {
   width: 100vw;
   background-color: var(--pinkish-bg-color);
 }
@@ -139,6 +144,15 @@ textarea {
 }
 
 @media only screen and (min-width: 700px) {
+  .BackgroundWrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .background {
+    width: 90vw;
+  }
+
   .CategoryWrapper {
     flex-direction: row;
     justify-content: space-around;
@@ -163,5 +177,35 @@ textarea {
 
   .FindIconTextWrap {
     width: 40%;
+  }
+
+  .FindBackground {
+    background-color: transparent;
+  }
+
+  .TitleFormWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .WriteIcon {
+    display: none;
+  }
+
+  .SmallInput,
+  .BigInput {
+    width: 60vw;
+  }
+
+  .map {
+    border: none;
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .MapWrap {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -13,77 +13,79 @@ function Contact() {
           <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
         </h2>
 
-        <div className={contact.background}>
-          <div className={contact.ContactWrapper}>
-            <div className={contact.CategoryWrapper}>
-              <div className={contact.CategoryPadding}>
-                <div className={contact.TitleIconWrap}>
-                  <img
-                    src="./icons/clock.svg"
-                    className={contact.ContactIcon}
-                    alt=""
-                  ></img>
-                  <h3 className={contact.ContactTitle}>
+        <div className={contact.BackgroundWrap}>
+          <div className={contact.background}>
+            <div className={contact.ContactWrapper}>
+              <div className={contact.CategoryWrapper}>
+                <div className={contact.CategoryPadding}>
+                  <div className={contact.TitleIconWrap}>
+                    <img
+                      src="./icons/clock.svg"
+                      className={contact.ContactIcon}
+                      alt=""
+                    ></img>
+                    <h3 className={contact.ContactTitle}>
+                      <FormattedMessage
+                        id="about.hours"
+                        defaultMessage="Åbningstider"
+                      />
+                    </h3>
+                  </div>
+                  <p className={contact.ContactText}>
                     <FormattedMessage
-                      id="about.hours"
-                      defaultMessage="Åbningstider"
+                      id="about.hours.one"
+                      defaultMessage="Tirsdag - Torsdag: 11 - 19"
                     />
-                  </h3>
-                </div>
-                <p className={contact.ContactText}>
-                  <FormattedMessage
-                    id="about.hours.one"
-                    defaultMessage="Tirsdag - Torsdag: 11 - 19"
-                  />
-                </p>
-                <p className={contact.ContactText}>
-                  <FormattedMessage
-                    id="about.hours.two"
-                    defaultMessage="Fredag: 9 - 17"
-                  />
-                </p>
-                <p className={contact.ContactText}>
-                  <FormattedMessage
-                    id="about.hours.three"
-                    defaultMessage="Lørdag: 9 - 16"
-                  />
-                </p>
-                <p className={contact.ContactText}>
-                  <FormattedMessage
-                    id="about.hours.four"
-                    defaultMessage="Søndag - Mandag: Lukket"
-                  />
-                </p>
-              </div>
-
-              <div className={contact.CategoryPadding}>
-                <div className={contact.TitleIconWrap}>
-                  <img
-                    src="./icons/address.svg"
-                    className={contact.ContactIcon}
-                    alt=""
-                  ></img>
-                  <h3 className={contact.ContactTitle}>Adresse</h3>
-                </div>
-                <div>
-                  <p className={contact.ContactText}>Rolighedsvej 19,</p>
-                  <p className={contact.ContactText}>1958 Frederiksberg</p>
-                  <p className={contact.ContactText}>
-                    Email: info@wildorchid.dk
                   </p>
                   <p className={contact.ContactText}>
-                    Telefon: +45 93 93 81 63
+                    <FormattedMessage
+                      id="about.hours.two"
+                      defaultMessage="Fredag: 9 - 17"
+                    />
+                  </p>
+                  <p className={contact.ContactText}>
+                    <FormattedMessage
+                      id="about.hours.three"
+                      defaultMessage="Lørdag: 9 - 16"
+                    />
+                  </p>
+                  <p className={contact.ContactText}>
+                    <FormattedMessage
+                      id="about.hours.four"
+                      defaultMessage="Søndag - Mandag: Lukket"
+                    />
                   </p>
                 </div>
-              </div>
-            </div>
 
-            <div>
-              <img
-                src="./illustrations/burger-menu-orchid.svg"
-                className={contact.illustration}
-                alt=""
-              ></img>
+                <div className={contact.CategoryPadding}>
+                  <div className={contact.TitleIconWrap}>
+                    <img
+                      src="./icons/address.svg"
+                      className={contact.ContactIcon}
+                      alt=""
+                    ></img>
+                    <h3 className={contact.ContactTitle}>Adresse</h3>
+                  </div>
+                  <div>
+                    <p className={contact.ContactText}>Rolighedsvej 19,</p>
+                    <p className={contact.ContactText}>1958 Frederiksberg</p>
+                    <p className={contact.ContactText}>
+                      Email: info@wildorchid.dk
+                    </p>
+                    <p className={contact.ContactText}>
+                      Telefon: +45 93 93 81 63
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="./illustrations/burger-menu-orchid.svg"
+                  className={contact.illustration}
+                  alt=""
+                ></img>
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +94,7 @@ function Contact() {
           <FormattedMessage id="about.find" defaultMessage="Find Vej" />
         </h2>
 
-        <div className={contact.background}>
+        <div className={contact.FindBackground}>
           <div className={contact.FindContainer}>
             <div className={contact.FindIconTextWrap}>
               <div className={contact.FindTitleIconWrap}>
@@ -136,6 +138,29 @@ function Contact() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* <iframe
+          title="wildorchid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.236726178961!2d12.53938015182533!3d55.68487198043961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253f591c5993d%3A0x1011c06cef26fe04!2sWild%20Orchid!5e0!3m2!1sen!2sse!4v1653394275961!5m2!1sen!2sse"
+          width="100px"
+          height="450px"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe> */}
+        <div className={contact.MapWrap}>
+          <iframe
+            className={contact.map}
+            title="maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.236726178961!2d12.53938015182533!3d55.68487198043961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253f591c5993d%3A0x1011c06cef26fe04!2sWild%20Orchid!5e0!3m2!1sen!2sse!4v1653394566096!5m2!1sen!2sse"
+            // width="1000"
+            // height="600"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
 
         <div className={contact.TitleFormWrap}>
