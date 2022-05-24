@@ -122,12 +122,23 @@
 
 .table_header {
   margin-bottom: 0.6rem;
+  align-items: baseline;
 }
 
 .table_name {
   text-transform: uppercase;
   font-weight: var(--font-bold);
   font-size: calc(1.2rem + 0.3vw);
+}
+
+.table_price_bigger {
+  composes: price_bigger;
+  font-size: 10px;
+}
+
+.table_price_smaller {
+  composes: price_smaller;
+  font-size: 10px;
 }
 
 .book_waxing {
@@ -140,21 +151,25 @@
 }
 
 .valid_for {
-  font-size: 12px;
+  font-size: 10px;
   text-align: right;
 }
 
 /* media queries 
 ---------------- */
 @media screen and (min-width: 415px) {
-  .valid_for {
-    font-size: 14px;
+  .valid_for,
+  .table_price_bigger,
+  .table_price_smaller {
+    font-size: 11px;
   }
 }
 
 @media screen and (min-width: 520px) {
-  .valid_for {
-    font-size: calc(calc(0.8rem + 0.3vw));
+  .valid_for,
+  .table_price_bigger,
+  .table_price_smaller {
+    font-size: 12px;
   }
 }
 
@@ -186,6 +201,18 @@
 
   .sugaring {
     margin-bottom: 2rem;
+  }
+
+  .table_price_bigger {
+    font-size: 14px;
+  }
+
+  .table_price_smaller {
+    font-size: 14px;
+  }
+
+  .valid_for {
+    font-size: 14px;
   }
 }
 

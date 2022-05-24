@@ -76,6 +76,25 @@ function Wax() {
               defaultMessage="Over en længere periode med hårfjerning opnås så meget reduktion af hårvæksten, at vækstfasen stoppes."
             />
           </p>
+          <p>
+            <FormattedMessage
+              id="services.waxing.intro_four"
+              defaultMessage="Hver voks-/sukkerbehandling inkluderer {value}"
+              values={{
+                value: (
+                  <strong>
+                    {" "}
+                    {
+                      <FormattedMessage
+                        id="services.waxing.ingrown_hair"
+                        defaultMessage="indgroet hår behandling"
+                      />
+                    }{" "}
+                  </strong>
+                ),
+              }}
+            />
+          </p>
         </div>
       </article>
 
@@ -88,13 +107,13 @@ function Wax() {
                 defaultMessage="Sugaring"
               />
             </span>
-            <span className={styles.price_smaller}>
+            <span className={styles.table_price_smaller}>
               <FormattedMessage
                 id="services.waxing.before_six_weeks"
                 defaultMessage="Inden 6 uger"
               />
             </span>
-            <span className={styles.price_bigger}>
+            <span className={styles.table_price_bigger}>
               <FormattedMessage
                 id="services.waxing.after_six_weeks"
                 defaultMessage="Efter 6 uger*"
@@ -122,13 +141,13 @@ function Wax() {
             <span className={styles.table_name}>
               <FormattedMessage id="services.waxing" defaultMessage="Voks" />
             </span>
-            <span className={styles.price_smaller}>
+            <span className={styles.table_price_smaller}>
               <FormattedMessage
                 id="services.waxing.before_six_weeks"
                 defaultMessage="Inden 6 uger"
               />
             </span>
-            <span className={styles.price_bigger}>
+            <span className={styles.table_price_bigger}>
               <FormattedMessage
                 id="services.waxing.after_six_weeks"
                 defaultMessage="Efter 6 uger*"
