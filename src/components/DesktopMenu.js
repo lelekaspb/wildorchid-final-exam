@@ -1,4 +1,4 @@
-import menu from "../styles/Desktopmenu.module.css";
+import menu from "./../styles/Desktopmenu.module.css";
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
 import { FormattedMessage } from "react-intl";

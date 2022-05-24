@@ -1,4 +1,4 @@
-import services from "../styles/Services.module.css";
+import services from "./../styles/Services.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
 import { Link, Outlet } from "react-router-dom";

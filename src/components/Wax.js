@@ -1,59 +1,20 @@
 import { FormattedMessage } from "react-intl";
-import waxing from "../procedures/waxing.json";
-import sugaring from "../procedures/sugaring.json";
-import styles from "../styles/Procedures.module.css";
+import waxing from "./../procedures/waxing.json";
+import sugaring from "./../procedures/sugaring.json";
+import styles from "./../styles/Procedures.module.css";
+import { getWaxingDOMProcedures } from "./../utilities/procedures.js";
 
 function Wax() {
-  const waxProcedures = waxing.map((procedure, index) => {
-    return (
-      <div key={index} className={styles.line_waxing}>
-        <span className={styles.name}>
-          <FormattedMessage
-            id={procedure.translId}
-            defaultMessage={procedure.translDefould}
-          />
-        </span>
-        <span className={styles.price_smaller}>
-          {" "}
-          {procedure.priceBeforeSixWeeks},-{" "}
-        </span>
-        <span className={styles.price_bigger}>
-          {" "}
-          {procedure.priceAfterSixWeeks}
-          {procedure.priceAfterSixWeeks !== "-" ? ",-" : ""}
-        </span>
-      </div>
-    );
-  });
+  const waxingProcedures = getWaxingDOMProcedures(waxing);
+  const sugaringProcedures = getWaxingDOMProcedures(sugaring);
 
-  const sugaringProcedures = sugaring.map((procedure, index) => {
-    return (
-      <div key={index} className={styles.line_waxing}>
-        <span className={styles.name_waxing}>
-          <FormattedMessage
-            id={procedure.translId}
-            defaultMessage={procedure.translDefould}
-          />
-        </span>
-        <span className={styles.price_smaller}>
-          {" "}
-          {procedure.priceBeforeSixWeeks},-{" "}
-        </span>
-        <span className={styles.price_bigger}>
-          {" "}
-          {procedure.priceAfterSixWeeks}
-          {procedure.priceAfterSixWeeks !== "-" ? ",-" : ""}
-        </span>
-      </div>
-    );
-  });
   return (
     <section className={styles.section}>
       <article className={styles.products}>
         <div className={styles.products_img_wrapper}>
           <img
             className={styles.products_img}
-            src="../photos/waxing_products.jpg"
+            src="./../photos/waxing_products.jpg"
             alt="waxing products"
           />
         </div>
@@ -83,13 +44,14 @@ function Wax() {
               values={{
                 value: (
                   <strong>
-                    {" "}
+                    {""}
                     {
                       <FormattedMessage
                         id="services.waxing.ingrown_hair"
                         defaultMessage="indgroet hår behandling"
                       />
-                    }{" "}
+                    }
+                    {""}
                   </strong>
                 ),
               }}
@@ -154,7 +116,7 @@ function Wax() {
               />
             </span>
           </div>
-          {waxProcedures}
+          {waxingProcedures}
           <div className={styles.book_waxing}>
             <a
               className={styles.book_btn}
@@ -175,17 +137,17 @@ function Wax() {
       <article className={styles.gallery}>
         <img
           className={styles.gallery_img}
-          src="../photos/waxing_gallery_1.jpg"
+          src="./../photos/waxing_gallery_1.jpg"
           alt="waxing gallery "
         />
         <img
           className={styles.gallery_img}
-          src="../photos/waxing_gallery_2.jpg"
+          src="./../photos/waxing_gallery_2.jpg"
           alt="waxing gallery "
         />
         <img
           className={styles.gallery_img}
-          src="../photos/waxing_gallery_3.jpg"
+          src="./../photos/waxing_gallery_3.jpg"
           alt="waxing gallery "
         />
       </article>

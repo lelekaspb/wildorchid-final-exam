@@ -1,28 +1,17 @@
 import { FormattedMessage } from "react-intl";
-import data from "../procedures/nails.json";
-import styles from "../styles/Procedures.module.css";
+import data from "./../procedures/nails.json";
+import styles from "./../styles/Procedures.module.css";
+import { getDOMProcedures } from "./../utilities/procedures.js";
 
 function Nails() {
-  const procedures = data.map((procedure, index) => {
-    return (
-      <div key={index} className={styles.line}>
-        <span className={styles.name}>
-          <FormattedMessage
-            id={procedure.translId}
-            defaultMessage={procedure.translDefould}
-          />
-        </span>
-        <span className={styles.price}> {procedure.price},- </span>
-      </div>
-    );
-  });
+  const procedures = getDOMProcedures(data);
   return (
     <section className={styles.section}>
       <article className={styles.products}>
         <div className={styles.products_img_wrapper}>
           <img
             className={styles.products_img}
-            src="../photos/nails_products.jpg"
+            src="./../photos/nails_products.jpg"
             alt="nails products"
           />
         </div>
@@ -55,17 +44,17 @@ function Nails() {
       <article className={styles.gallery}>
         <img
           className={styles.gallery_img}
-          src="../photos/nails_gallery_1.jpg"
+          src="./../photos/nails_gallery_1.jpg"
           alt="nails gallery "
         />
         <img
           className={styles.gallery_img}
-          src="../photos/nails_gallery_2.jpg"
+          src="./../photos/nails_gallery_2.jpg"
           alt="nails gallery "
         />
         <img
           className={styles.gallery_img}
-          src="../photos/nails_gallery_3.jpg"
+          src="./../photos/nails_gallery_3.jpg"
           alt="nails gallery "
         />
       </article>
