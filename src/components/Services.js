@@ -1,5 +1,4 @@
-import text from "../styles/Text.module.css";
-import navbar from "../styles/Navbar.module.css";
+import services from "./../styles/Services.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
 import { Link, Outlet } from "react-router-dom";
@@ -18,31 +17,13 @@ function Services() {
   return (
     <>
       <Navbar activePage="services" />
-      <div>
-        <h2>
-          <FormattedMessage
-            id="navigation.services"
-            defaultMessage="Behandlinger"
-          />
-        </h2>
-        <p className={text.header}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-
-        <nav>
+      <div className={services.page}>
+        <nav className={services.navbar}>
           <Link
             to="eyes"
             data-subpage="eyes"
-            className={` ${navbar.link} ${
-              activeSubPage === "eyes" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "eyes" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
@@ -55,8 +36,8 @@ function Services() {
           <Link
             to="wax"
             data-subpage="wax"
-            className={` ${navbar.link} ${
-              activeSubPage === "wax" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "wax" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
@@ -67,30 +48,30 @@ function Services() {
           </Link>
 
           <Link
-            to="nails"
-            data-subpage="nails"
-            className={` ${navbar.link} ${
-              activeSubPage === "nails" ? navbar.bold : ""
-            }`}
-            onClick={changeActiveSubPage}
-          >
-            <FormattedMessage
-              id="navigation.services.nails"
-              defaultMessage="Negle"
-            />
-          </Link>
-
-          <Link
             to="spraytan"
             data-subpage="spraytan"
-            className={` ${navbar.link} ${
-              activeSubPage === "spraytan" ? navbar.bold : ""
+            className={` ${services.link} ${
+              activeSubPage === "spraytan" ? services.underline : ""
             }`}
             onClick={changeActiveSubPage}
           >
             <FormattedMessage
               id="navigation.services.spraytan"
               defaultMessage="Spraytan"
+            />
+          </Link>
+
+          <Link
+            to="nails"
+            data-subpage="nails"
+            className={` ${services.link} ${
+              activeSubPage === "nails" ? services.underline : ""
+            }`}
+            onClick={changeActiveSubPage}
+          >
+            <FormattedMessage
+              id="navigation.services.nails"
+              defaultMessage="Negle"
             />
           </Link>
         </nav>

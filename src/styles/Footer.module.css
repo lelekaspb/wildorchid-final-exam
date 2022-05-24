@@ -1,0 +1,72 @@
+* {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-font-color);
+}
+
+footer {
+  background-color: var(--pinkish-bg-color);
+  padding: 0.5rem;
+}
+
+.FlexWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.CategoryName {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.CategoryTextDiv {
+}
+
+.CategoryText {
+  font-size: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.CVRnumber {
+  font-size: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.IconGroup {
+  margin-top: 0.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 1.3rem;
+  height: auto;
+}
+
+@media only screen and (min-width: 800px) {
+  .CategoryName {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .CategoryText {
+    font-size: 1rem;
+  }
+
+  .CategoryContact {
+    margin-top: 0.5rem;
+  }
+
+  .CVRnumber {
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+
+  .icon {
+    width: 2rem;
+    height: auto;
+  }
+}

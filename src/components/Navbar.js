@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
 import { Link } from "react-router-dom";
-import navbar from "../styles/Navbar.module.css";
+import navbar from "./../styles/Navbar.module.css";
 import Burgermenu from "./Burgermenu";
 import Burger from "./Burger";
 import DesktopMenu from "./DesktopMenu";
@@ -15,7 +15,7 @@ function Navbar({ activePage }) {
       <Burgermenu activePage={activePage} />
 
       <Link to="/" className={`${navbar.logo_link}`}>
-        <img className={navbar.logo} src="/logo/logo.svg" alt="logo" />
+        <img className={navbar.logo} src="./../logo/logo.svg" alt="logo" />
       </Link>
 
       <div className={navbar.pull_right}>

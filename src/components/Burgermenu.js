@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import menu from "../styles/Burgermenu.module.css";
+import menu from "./../styles/Burgermenu.module.css";
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
 
@@ -20,7 +20,7 @@ function Burgermenu({ activePage }) {
           context.setMenuOpen(!context.menuOpen);
         }}
       >
-        <img className={menu.icon} src="/icons/home.svg" alt="home icon" />
+        <img className={menu.icon} src="./../icons/home.svg" alt="home icon" />
         <FormattedMessage id="navigation.home" defaultMessage="Forside" />
       </Link>
 
@@ -35,7 +35,7 @@ function Burgermenu({ activePage }) {
       >
         <img
           className={menu.icon}
-          src="/icons/services.svg"
+          src="./../icons/services.svg"
           alt="services icon"
         />
         <FormattedMessage
@@ -53,7 +53,11 @@ function Burgermenu({ activePage }) {
           context.setMenuOpen(!context.menuOpen);
         }}
       >
-        <img className={menu.icon} src="/icons/about.svg" alt="about us icon" />
+        <img
+          className={menu.icon}
+          src="./../icons/about.svg"
+          alt="about us icon"
+        />
         <FormattedMessage id="navigation.about_us" defaultMessage="Om os" />
       </Link>
 
@@ -68,7 +72,7 @@ function Burgermenu({ activePage }) {
       >
         <img
           className={menu.icon}
-          src="/icons/contact.svg"
+          src="./../icons/contact.svg"
           alt="contact icon"
         />
         <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
@@ -85,7 +89,7 @@ function Burgermenu({ activePage }) {
       >
         <img
           className={menu.icon}
-          src="/icons/giftcard.svg"
+          src="./../icons/giftcard.svg"
           alt="giftcard icon"
         />
         <FormattedMessage id="navigation.giftcard" defaultMessage="Gavekort" />
@@ -97,13 +101,13 @@ function Burgermenu({ activePage }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img className={menu.icon} src="/icons/book.svg" alt="book icon" />
+        <img className={menu.icon} src="./../icons/book.svg" alt="book icon" />
         <FormattedMessage id="navigation.book" defaultMessage="Bestil tid" />
       </a>
 
       <img
         className={menu.orchid}
-        src="/illustrations/burger-menu-orchid.svg"
+        src="./../illustrations/burger-menu-orchid.svg"
         alt="orchid flower"
       />
     </div>
