@@ -1,7 +1,8 @@
 // import text from "../styles/Text.module.css";
 import contact from "../styles/Contact.module.css";
-import { FormattedMessage } from "react-intl";
+import { useIntl, FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
+// const intl = useIntl();
 
 function Contact() {
   return (
@@ -155,7 +156,7 @@ function Contact() {
               <input
                 type="text"
                 name="name"
-                placeholder="Skriv dit navn her..."
+                // placeholder={intl.messages["contact.name.placeholder"]}
                 className={contact.SmallInput}
                 required
               ></input>
@@ -170,7 +171,7 @@ function Contact() {
               ></input>
             </div>
             <div className={contact.LabelInputWrap}>
-              <label for="phone">
+              <label for="tel">
                 <FormattedMessage id="contact.phone" defaultMessage="Telefon" />
               </label>
               <input
@@ -196,6 +197,11 @@ function Contact() {
                 required
               ></textarea>
             </div>
+            <input
+              className={contact.ContactButton}
+              type="submit"
+              value="SEND"
+            ></input>
           </form>
         </div>
       </div>

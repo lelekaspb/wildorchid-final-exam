@@ -124,3 +124,10 @@ textarea {
 ::placeholder {
   color: #d6a38a;
 }
+
+.ContactButton {
+  background-color: var(--primary-font-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+}
