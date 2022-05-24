@@ -1,10 +1,33 @@
 // import text from "../styles/Text.module.css";
 import contact from "../styles/Contact.module.css";
 import { useIntl, FormattedMessage } from "react-intl";
+import { Form, Field } from "react-final-form";
+import { z } from "zod";
 import Navbar from "./Navbar";
 
 function Contact() {
   const intl = useIntl();
+
+  const ContactForm = z.object({
+    name: z.string(),
+    email: z.string().email(),
+    phone: z.number().optional(),
+    inquiry: z.string(),
+  });
+
+  function validate(values) {
+    const { success, error } = ContactForm.safeParse(values);
+    if (success) {
+      return {};
+    } else {
+      const errors = {};
+      error.errors.forEach((e) => {
+        errors[e.path[0]] = e.message;
+      });
+      return errors;
+    }
+  }
+
   return (
     <>
       <Navbar activePage="contact" />
@@ -173,61 +196,97 @@ function Contact() {
               />
             </h2>
           </div>
-          <form>
-            <div className={contact.LabelInputWrap}>
-              <label for="name">
-                <FormattedMessage id="contact.name" defaultMessage="Navn *" />
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder={intl.messages["contact.name.placeholder"]}
-                className={contact.SmallInput}
-                required
-              ></input>
-            </div>
-            <div className={contact.LabelInputWrap}>
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder={intl.messages["contact.email.placeholder"]}
-                className={contact.SmallInput}
-              ></input>
-            </div>
-            <div className={contact.LabelInputWrap}>
-              <label for="tel">
-                <FormattedMessage id="contact.phone" defaultMessage="Telefon" />
-              </label>
-              <input
-                type="tel"
-                name="tel"
-                placeholder={intl.messages["contact.phone.placeholder"]}
-                className={contact.SmallInput}
-                required
-              ></input>
-            </div>
 
-            <div className={contact.LabelInputWrap}>
-              <label for="inquiry">
-                <FormattedMessage
-                  id="contact.inquiry"
-                  defaultMessage="Besked *"
-                />
-              </label>
-              <textarea
-                name="textarea"
-                placeholder={intl.messages["contact.inquiry.placeholder"]}
-                className={contact.BigInput}
-                required
-              ></textarea>
-            </div>
-            <input
-              className={contact.ContactButton}
-              type="submit"
-              value="SEND"
-            ></input>
-          </form>
+          <Form
+            onSubmit={() => {}}
+            validate={validate}
+            render={({ handleSubmit }) => (
+              <form onSubmit={handleSubmit}>
+                <Field name="name">
+                  {({ input, meta }) => (
+                    <div className={contact.LabelInputWrap}>
+                      <label for="name">
+                        <FormattedMessage
+                          id="contact.name"
+                          defaultMessage="Navn *"
+                        />
+                      </label>
+                      <input
+                        type="text"
+                        {...input}
+                        placeholder={intl.messages["contact.name.placeholder"]}
+                        className={contact.SmallInput}
+                      />
+                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                    </div>
+                  )}
+                </Field>
+
+                <Field name="email">
+                  {({ input, meta }) => (
+                    <div className={contact.LabelInputWrap}>
+                      <label for="email">Email</label>
+                      <input
+                        type="email"
+                        {...input}
+                        placeholder={intl.messages["contact.email.placeholder"]}
+                        className={contact.SmallInput}
+                      />
+                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                    </div>
+                  )}
+                </Field>
+
+                <Field name="tel">
+                  {({ input, meta }) => (
+                    <div className={contact.LabelInputWrap}>
+                      <label for="tel">
+                        <FormattedMessage
+                          id="contact.phone"
+                          defaultMessage="Telefon"
+                        />
+                      </label>
+                      <input
+                        type="tel"
+                        {...input}
+                        placeholder={intl.messages["contact.phone.placeholder"]}
+                        className={contact.SmallInput}
+                      />
+                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                    </div>
+                  )}
+                </Field>
+
+                <Field name="inquiry">
+                  {({ input, meta }) => (
+                    <div className={contact.LabelInputWrap}>
+                      <label for="inquiry">
+                        <FormattedMessage
+                          id="contact.inquiry"
+                          defaultMessage="Besked *"
+                        />
+                      </label>
+                      <input
+                        type="text"
+                        {...input}
+                        placeholder={
+                          intl.messages["contact.inquiry.placeholder"]
+                        }
+                        className={contact.BigInput}
+                      />
+                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                    </div>
+                  )}
+                </Field>
+
+                <input
+                  className={contact.ContactButton}
+                  type="submit"
+                  value="SEND"
+                ></input>
+              </form>
+            )}
+          />
         </div>
       </div>
     </>
