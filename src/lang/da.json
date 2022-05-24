@@ -37,5 +37,10 @@
   "contact.title": "Skriv til os",
   "contact.name": "Navn *",
   "contact.phone": "Telefon",
-  "contact.inquiry": "Besked *"
+  "contact.inquiry": "Besked *",
+
+  "contact.name.placeholder": "Skriv dit navn her...",
+  "contact.email.placeholder": "Skriv dit email her...",
+  "contact.phone.placeholder": "Skriv dit telefon her...",
+  "contact.inquiry.placeholder": "Skriv dit besked her..."
 }

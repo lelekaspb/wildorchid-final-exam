@@ -64,6 +64,12 @@
   gap: 0.5rem;
 }
 
+.FindTitleIconWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
 .FindIcon {
   height: 1.2rem;
   width: auto;
@@ -130,4 +136,32 @@ textarea {
   color: white;
   border: none;
   padding: 0.5rem 1rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .CategoryWrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .CategoryPadding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .FindContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: initial;
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+
+  .FindTitleIconWrap {
+    justify-content: center;
+  }
+
+  .FindIconTextWrap {
+    width: 40%;
+  }
 }

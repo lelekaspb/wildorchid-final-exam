@@ -2,9 +2,9 @@
 import contact from "../styles/Contact.module.css";
 import { useIntl, FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
-// const intl = useIntl();
 
 function Contact() {
+  const intl = useIntl();
   return (
     <>
       <Navbar activePage="contact" />
@@ -95,7 +95,7 @@ function Contact() {
         <div className={contact.background}>
           <div className={contact.FindContainer}>
             <div className={contact.FindIconTextWrap}>
-              <div className={contact.TitleIconWrap}>
+              <div className={contact.FindTitleIconWrap}>
                 <img src="./icons/metro.svg" className={contact.FindIcon}></img>
                 <h4 className={contact.FindTitle}>METRO</h4>
               </div>
@@ -107,7 +107,7 @@ function Contact() {
               </p>
             </div>
             <div className={contact.FindIconTextWrap}>
-              <div className={contact.TitleIconWrap}>
+              <div className={contact.FindTitleIconWrap}>
                 <img src="./icons/bus.svg" className={contact.FindIcon}></img>
                 <h4 className={contact.FindTitle}>BUS</h4>
               </div>
@@ -119,7 +119,7 @@ function Contact() {
               </p>
             </div>
             <div className={contact.FindIconTextWrap}>
-              <div className={contact.TitleIconWrap}>
+              <div className={contact.FindTitleIconWrap}>
                 <img src="./icons/car.svg" className={contact.FindIcon}></img>
                 <h4 className={contact.FindTitle}>
                   <FormattedMessage
@@ -156,7 +156,7 @@ function Contact() {
               <input
                 type="text"
                 name="name"
-                // placeholder={intl.messages["contact.name.placeholder"]}
+                placeholder={intl.messages["contact.name.placeholder"]}
                 className={contact.SmallInput}
                 required
               ></input>
@@ -166,7 +166,7 @@ function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="Skriv dit email her..."
+                placeholder={intl.messages["contact.email.placeholder"]}
                 className={contact.SmallInput}
               ></input>
             </div>
@@ -177,7 +177,7 @@ function Contact() {
               <input
                 type="tel"
                 name="tel"
-                placeholder="Skriv dit telefon her..."
+                placeholder={intl.messages["contact.phone.placeholder"]}
                 className={contact.SmallInput}
                 required
               ></input>
@@ -192,7 +192,7 @@ function Contact() {
               </label>
               <textarea
                 name="textarea"
-                placeholder="Skriv dit navn her..."
+                placeholder={intl.messages["contact.inquiry.placeholder"]}
                 className={contact.BigInput}
                 required
               ></textarea>
