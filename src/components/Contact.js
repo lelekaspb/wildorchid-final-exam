@@ -220,7 +220,7 @@ function Contact() {
                 <Field name="email">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="email">Email</label>
+                      <label for="email">Email *</label>
                       <input
                         type="email"
                         {...input}
