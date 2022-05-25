@@ -19,8 +19,14 @@ function Home() {
         </h2>
       </div>
 
-      <div className={home.WelcomePicBorder}>
-        <img className={home.WelcomePic} src="./photos/homepage-girl.jpg"></img>
+      <div className={home.WelcomePicWrap}>
+        <div className={home.WelcomePicBorder}>
+          <img
+            className={home.WelcomePic}
+            src="./photos/homepage-girl.jpg"
+            alt=""
+          ></img>
+        </div>
       </div>
     </>
   );

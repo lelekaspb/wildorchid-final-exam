@@ -18,3 +18,17 @@
   width: 50vw;
   height: auto;
 }
+
+.WelcomePicWrap {
+  position: relative;
+}
+
+.WelcomePicBorder::before {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--pinkish-border-color);
+  content: "";
+}
