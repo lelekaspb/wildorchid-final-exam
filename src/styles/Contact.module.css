@@ -144,6 +144,10 @@ textarea {
   padding: 0.5rem 1rem;
 }
 
+.ErrorFont {
+  color: #b73a52;
+}
+
 @media only screen and (min-width: 850px) {
   .BackgroundWrap {
     display: flex;
@@ -211,7 +215,7 @@ textarea {
 
   .TitleFormWrap {
     padding-left: 0;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
   }
 
   .FindTitleIconWrap {
@@ -239,5 +243,10 @@ textarea {
   .SmallInput,
   .BigInput {
     width: 60vw;
+  }
+
+  span {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 }

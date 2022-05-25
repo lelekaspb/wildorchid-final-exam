@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 function Contact() {
   const intl = useIntl();
 
+  //using zod to describe the type of string for each object to validate it
   const ContactForm = z.object({
     name: z.string(),
     email: z.string().email(),
@@ -15,8 +16,10 @@ function Contact() {
     inquiry: z.string(),
   });
 
+  //the actual validation where it looks at each error and then looks at the first path
   function validate(values) {
     const { success, error } = ContactForm.safeParse(values);
+
     if (success) {
       return {};
     } else {
@@ -217,7 +220,9 @@ function Contact() {
                         placeholder={intl.messages["contact.name.placeholder"]}
                         className={contact.SmallInput}
                       />
-                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                      {meta.touched && meta.error && (
+                        <span className={contact.ErrorFont}>{meta.error}</span>
+                      )}
                     </div>
                   )}
                 </Field>
@@ -232,7 +237,9 @@ function Contact() {
                         placeholder={intl.messages["contact.email.placeholder"]}
                         className={contact.SmallInput}
                       />
-                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                      {meta.touched && meta.error && (
+                        <span className={contact.ErrorFont}>{meta.error}</span>
+                      )}
                     </div>
                   )}
                 </Field>
@@ -252,7 +259,9 @@ function Contact() {
                         placeholder={intl.messages["contact.phone.placeholder"]}
                         className={contact.SmallInput}
                       />
-                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                      {meta.touched && meta.error && (
+                        <span className={contact.ErrorFont}>{meta.error}</span>
+                      )}
                     </div>
                   )}
                 </Field>
@@ -274,7 +283,9 @@ function Contact() {
                         }
                         className={contact.BigInput}
                       />
-                      {meta.touched && meta.error && <span>{meta.error}</span>}
+                      {meta.touched && meta.error && (
+                        <span className={contact.ErrorFont}>{meta.error}</span>
+                      )}
                     </div>
                   )}
                 </Field>
