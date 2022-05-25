@@ -105,7 +105,12 @@ function Home() {
         </div>
       </div>
       <div className={home.IGsection}>
-        <h2 className={home.IGtitle}>Check our Instagram out</h2>
+        <h2 className={home.IGtitle}>
+          <FormattedMessage
+            id="home.services.title"
+            defaultMessage="Tjek vores Instagram-opslag"
+          />
+        </h2>
         <div className={home.IGpics}>
           <a href="https://www.instagram.com/p/CdBsY0kovgt/" target="_blank">
             <div className={home.IGpicHover}>
