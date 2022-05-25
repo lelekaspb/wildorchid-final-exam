@@ -11,7 +11,7 @@
   "navigation.book": "Bestil tid",
 
   "greeting.one": "Velkommen til",
-  "greeting.two": "Vi venter på dig i vores udsøgte skønhedssklinik",
+  "greeting.two": "Vi venter på dig i vores udsøgte {breakingLine} skønhedssklinik",
 
   "home.relax.title": "Afslappende atmosfære",
   "home.satisfaction.title": "Kundetilfredshed",

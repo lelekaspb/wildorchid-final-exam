@@ -127,3 +127,14 @@
 .IGpicHover:hover:before {
   height: 100%;
 }
+
+@media screen and (min-width: 768px) {
+  .AllWelcomeWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .WelcomePicBorder {
+    width: 30vw;
+  }
+}

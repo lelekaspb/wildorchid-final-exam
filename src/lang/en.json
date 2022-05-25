@@ -11,7 +11,7 @@
   "navigation.book": "Book",
 
   "greeting.one": "Welcome to",
-  "greeting.two": "We are waiting for you in our exquisite beauty salon",
+  "greeting.two": "We are waiting for you in our exquisite {breakingLine} beauty salon",
 
   "home.relax.title": "Relaxing atmosphere",
   "home.satisfaction.title": "Customer satisfaction",
