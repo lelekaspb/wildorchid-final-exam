@@ -10,7 +10,8 @@
   "navigation.giftcard": "Gavekort",
   "navigation.book": "Bestil tid",
 
-  "greeting": "Wild Orchid Webside",
+  "greeting.one": "Velkommen til",
+  "greeting.two": "Vi venter på dig i vores udsøgte skønhedssklinik",
 
   "footer.hours": "Åbningstider",
   "footer.hours.one": "Tirsdag - Torsdag: 11 - 19",

@@ -10,7 +10,8 @@
   "navigation.giftcard": "Gift card",
   "navigation.book": "Book",
 
-  "greeting": "Wild Orchid Website",
+  "greeting.one": "Welcome to",
+  "greeting.two": "We are waiting for you in our beauty salon",
 
   "footer.hours": "Opening Hours",
   "footer.hours.one": "Tuesday - Thursday: 11 - 19",
