@@ -107,15 +107,23 @@ function Home() {
       <div className={home.IGsection}>
         <h2 className={home.IGtitle}>Check our Instagram out</h2>
         <div className={home.IGpics}>
-          <div className={home.IGpicHover}>
-            <img src="./photos/instagram-1.jpg" className={home.IGpic}></img>
-          </div>
-          <div className={home.IGpicHover}>
-            <img src="./photos/instagram-2.jpg" className={home.IGpic}></img>
-          </div>
-          <div className={home.IGpicHover}>
-            <img src="./photos/instagram-3.jpg" className={home.IGpic}></img>
-          </div>
+          <a href="https://www.instagram.com/p/CdBsY0kovgt/" target="_blank">
+            <div className={home.IGpicHover}>
+              <img src="./photos/instagram-1.jpg" className={home.IGpic}></img>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/CaGJbDLosw_/" target="_blank">
+            <div className={home.IGpicHover}>
+              <img src="./photos/instagram-2.jpg" className={home.IGpic}></img>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/CVYVdL1o6s-/" target="_blank">
+            <div className={home.IGpicHover}>
+              <img src="./photos/instagram-3.jpg" className={home.IGpic}></img>
+            </div>
+          </a>
         </div>
       </div>
     </>
