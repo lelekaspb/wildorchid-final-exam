@@ -1,6 +1,13 @@
+/* .background {
+  background-color: var(--pinkish-bg-color);
+  z-index: -2;
+  width: 100vw;
+  /* position: relative; 
+}*/
+
 .Welcomeh2 {
   font-weight: var(--font-light);
-  font-size: var(--title-font-size);
+  font-size: 1.5rem;
   text-align: center;
   margin: 0 auto;
 }
@@ -15,12 +22,23 @@
 }
 
 .WelcomePic {
-  width: 50vw;
+  width: 100%;
   height: auto;
+  position: relative;
 }
 
 .WelcomePicWrap {
+  display: flex;
+  justify-content: flex-end;
+  z-index: -1;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.WelcomePicBorder {
   position: relative;
+  width: 50vw;
+  z-index: -1;
 }
 
 .WelcomePicBorder::before {
@@ -31,4 +49,81 @@
   height: 100%;
   border: 3px solid var(--pinkish-border-color);
   content: "";
+}
+
+.FeatureWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.FeatureSectionWrap {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.FeatureIcon {
+  height: 4rem;
+  width: auto;
+}
+
+.FeatureTitleText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.FeatureTitle {
+  font-weight: var(--font-reguar);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.FeatureText {
+  margin: 0;
+  width: 50vw;
+}
+
+.IGsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.IGtitle {
+  font-weight: var(--font-light);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.IGpic {
+  width: 30vw;
+  height: 30vw;
+}
+
+.IGpics {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.IGpicHover {
+  position: relative;
+  height: 30vw;
+}
+
+.IGpicHover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to bottom, transparent 0%, #f0cdbc 100%);
+}
+
+.IGpicHover:hover:before {
+  height: 100%;
 }
