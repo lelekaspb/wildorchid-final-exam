@@ -25,7 +25,7 @@ function App() {
             {/* <Route path="*" element={<NoMatch />} /> */}
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} exact />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/giftcard" element={<Giftcard />} />
           {/* <Route path="*" element={<NoMatch />} /> */}
         </Routes>

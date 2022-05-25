@@ -1,4 +1,3 @@
-import text from "../styles/Text.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";
 
@@ -10,7 +9,7 @@ function Contact() {
         <h2>
           <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
         </h2>
-        <p className={text.header}>
+        <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
