@@ -111,6 +111,10 @@
   margin-bottom: 1rem;
 }
 
+label {
+  margin-bottom: 0.3rem;
+}
+
 .SmallInput {
   background-color: var(--pinkish-bg-color);
   border: none;
@@ -137,6 +141,11 @@ textarea {
   color: #d6a38a;
 }
 
+span {
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+}
+
 .ContactButton {
   background-color: var(--primary-font-color);
   color: white;
@@ -146,6 +155,13 @@ textarea {
 
 .ErrorFont {
   color: #b73a52;
+}
+
+@media only screen and (min-width: 500px) {
+  .illustration {
+    width: 30vw;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 850px) {
@@ -240,9 +256,13 @@ textarea {
     display: none;
   }
 
+  label {
+    margin-bottom: 0.5rem;
+  }
+
   .SmallInput,
   .BigInput {
-    width: 60vw;
+    width: 50vw;
   }
 
   span {
