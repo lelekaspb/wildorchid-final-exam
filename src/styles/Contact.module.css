@@ -144,7 +144,20 @@ textarea {
   background-color: var(--primary-font-color);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: var(--body-font-size);
+
+  /* background-color: var(--primary-font-color);
+  color: var(--button-text-color);
+  border-radius: 1px;
+  text-align: center;
+
+  border-radius: 1px;
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+  cursor: pointer; */
 }
 
 .ErrorFont {
@@ -187,6 +200,12 @@ textarea {
 
   .ContactIcon {
     height: 1.5rem;
+  }
+
+  .ContactButton {
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 
   .illustration {
