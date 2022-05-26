@@ -1,4 +1,3 @@
-// import text from "../styles/Text.module.css";
 import contact from "../styles/Contact.module.css";
 import { useIntl, FormattedMessage } from "react-intl";
 import { Form, Field } from "react-final-form";
