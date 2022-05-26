@@ -11,7 +11,12 @@ function Contact() {
   const ContactForm = z.object({
     name: z.string(),
     email: z.string().email(),
-    phone: z.number().optional(),
+    phone: z
+      .string()
+      .refine((value) => !Number.isNaN(parseInt(value)), {
+        code: "invalid_type",
+      })
+      .optional(),
     inquiry: z.string(),
   });
 
@@ -25,7 +30,7 @@ function Contact() {
       const errors = {};
       error.errors.forEach((e) => {
         console.log(e);
-        errors[e.path[0]] = e.message;
+        errors[e.path[0]] = e.code + "_" + e.path[0];
       });
       return errors;
     }
