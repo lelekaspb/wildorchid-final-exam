@@ -11,7 +11,12 @@ function Contact() {
   const ContactForm = z.object({
     name: z.string(),
     email: z.string().email(),
-    phone: z.number().optional(),
+    phone: z
+      .string()
+      .refine((value) => !Number.isNaN(parseInt(value)), {
+        code: "invalid_type",
+      })
+      .optional(),
     inquiry: z.string(),
   });
 
@@ -25,7 +30,7 @@ function Contact() {
       const errors = {};
       error.errors.forEach((e) => {
         console.log(e);
-        errors[e.path[0]] = e.message;
+        errors[e.path[0]] = e.code + "_" + e.path[0];
       });
       return errors;
     }
@@ -211,7 +216,10 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          {" "}
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
@@ -228,13 +236,16 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          {" "}
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
                 </Field>
 
-                <Field name="tel">
+                <Field name="phone">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
                       <label for="tel">
@@ -250,7 +261,11 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <span className={contact.ErrorFont}>
+                            <FormattedMessage id={meta.error} />
+                          </span>
+                        </span>
                       )}
                     </div>
                   )}
@@ -274,7 +289,9 @@ function Contact() {
                         className={contact.BigInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
