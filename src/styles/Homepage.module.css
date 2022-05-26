@@ -321,6 +321,14 @@
   .background {
     margin-bottom: 12rem;
   }
+
+  .Welcomeh1 {
+    font-size: 5rem;
+  }
+
+  .Welcomeh2 {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1600px) {
