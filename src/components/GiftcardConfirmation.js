@@ -1,8 +1,10 @@
 import { FormattedMessage } from "react-intl";
+import Navbar from "./Navbar";
 
 function GiftcardConfirmation() {
   return (
     <div>
+      <Navbar activePage="giftcard" />
       <p>
         <FormattedMessage
           id="giftcard.thanks"

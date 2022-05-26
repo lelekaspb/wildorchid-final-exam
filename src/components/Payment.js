@@ -1,9 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Payment() {
   return (
     <div>
-      <Link to="/giftcard/info">back to form</Link>
+      <Navbar activePage="giftcard" />
+      <Link to="/giftcard">back to form</Link>
       <p>Payment</p>
       <Link to="creditcard">
         <button>creditcard</button>
@@ -11,7 +13,6 @@ function Payment() {
       <Link to="mobilepay">
         <button>mobilepay</button>
       </Link>
-
       <Outlet />
     </div>
   );

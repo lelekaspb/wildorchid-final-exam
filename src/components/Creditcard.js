@@ -1,16 +1,13 @@
 import { FormattedMessage } from "react-intl";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Creditcard() {
-  let navigate = useNavigate();
-  // call once successful response came from restdb
-  const redirectToConfirmation = () => {
-    navigate("/confirm");
-  };
+  <Navbar activePage="giftcard" />;
   return (
     <div>
       <p>Creditcard</p>
-      <Link to="/giftcard/confirm"> confirm</Link>
+      <Link to="/confirmation"> confirm</Link>
     </div>
   );
 }

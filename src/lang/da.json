@@ -105,5 +105,21 @@
   "services.waxing.after_six_weeks": "Efter 6 uger*",
   "services.waxing.valid_for": "*gælder også for barbering eller førstegangskunde",
 
-  "book": "Book nu"
+  "book": "Book nu",
+
+  "giftcard.info.first_name_label": "Fornavn *",
+  "giftcard.info.first_name_placeholder": "Skriv dit fornavn her...",
+  "giftcard.info.last_name_label": "Efternavn *",
+  "giftcard.info.last_name_placeholder": "Skriv dit efternavn her...",
+  "giftcard.info.email_label": "Email *",
+  "giftcard.info.email_placeholder": "Skriv din email her...",
+  "giftcard.info.amount_label": "Beløb (DKK) *",
+  "giftcard.info.amount_placeholder": "Skriv det beløb du ønsker at købe her...",
+  "giftcard.info.note_label": "Bemærk",
+  "giftcard.info.note_placeholder": "Skriv bemærk her...",
+  "giftcard.info.date_label": "Dato modtaget *",
+  "giftcard.info.now_label": "Nu",
+  "giftcard.info.later_label": "Senere",
+  "giftcard.error": "ukorrekt",
+  "giftcard.success": "korrekt"
 }

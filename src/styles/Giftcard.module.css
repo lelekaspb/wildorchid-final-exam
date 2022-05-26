@@ -1,3 +1,79 @@
 .heading {
   composes: heading from "./utils.css";
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* nav scheme
+-------------*/
+.nav_scheme {
+  display: flex;
+  margin: 1rem 0 3rem 0;
+}
+
+.step {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  border: 1px solid var(--primary-font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.step_done {
+  composes: step;
+  background-color: var(--primary-font-color);
+  color: var(--button-text-color);
+}
+
+.step_pending {
+  composes: step;
+  background-color: transparent;
+  color: var(--primary-font-color);
+}
+
+.step_middle {
+  height: 0.15rem;
+  width: 4rem;
+  background-color: var(--primary-font-color);
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 30px;
+}
+
+/* giftcard form
+---------------*/
+.info_form {
+  width: 90%;
+  max-width: 800px;
+}
+
+fieldset {
+  border: none;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.label {
+  margin-bottom: 0.4rem;
+}
+
+.input {
+  border: none;
+  background-color: var(--pinkish-bg-color);
+  padding: 0.7rem 0.5rem;
+}
+
+.input::placeholder {
+  color: var(--pinkish-border-color);
+}

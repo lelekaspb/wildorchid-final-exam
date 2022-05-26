@@ -105,5 +105,21 @@
   "services.waxing.after_six_weeks": "After 6 weeks*",
   "services.waxing.valid_for": "*also applies to shaving or first time customer",
 
-  "book": "Book now"
+  "book": "Book now",
+
+  "giftcard.info.first_name_label": "First name *",
+  "giftcard.info.first_name_placeholder": "Type your first name here...",
+  "giftcard.info.last_name_label": "Last name *",
+  "giftcard.info.last_name_placeholder": "Type your last name here...",
+  "giftcard.info.email_label": "Email *",
+  "giftcard.info.email_placeholder": "Type your email here ...",
+  "giftcard.info.amount_label": "Amount (DKK) *",
+  "giftcard.info.amount_placeholder": "Type the amount you wish to purchase here...",
+  "giftcard.info.note_label": "Note",
+  "giftcard.info.note_placeholder": "Type a note here...",
+  "giftcard.info.date_label": "Dato received *",
+  "giftcard.info.now_label": "Now",
+  "giftcard.info.later_label": "Later",
+  "giftcard.error": "ukorrekt",
+  "giftcard.success": "korrekt"
 }
