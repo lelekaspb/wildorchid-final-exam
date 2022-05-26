@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .navbarWrapper {
   background-color: var(--pinkish-bg-color);
 }
@@ -173,6 +177,16 @@
   }
 }
 
+@media screen and (min-width: 500px) {
+  .OrchidDrawing {
+    display: block;
+    width: 8rem;
+    right: 0;
+    top: 800px;
+    position: absolute;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .AllWelcomeWrap {
     display: flex;
@@ -220,6 +234,10 @@
 
   .FeatureText {
     width: 35vw;
+  }
+
+  .OrchidDrawing {
+    width: 8rem;
   }
 
   .IGtitle {
@@ -293,6 +311,10 @@
     width: 22vw;
   }
 
+  .OrchidDrawing {
+    width: 10rem;
+  }
+
   .IGpics {
     gap: 3rem;
   }
@@ -328,6 +350,11 @@
 
   .Welcomeh2 {
     font-size: 3rem;
+  }
+
+  .OrchidDrawing {
+    top: 950px;
+    width: 12rem;
   }
 }
 

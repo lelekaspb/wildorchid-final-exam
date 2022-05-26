@@ -106,10 +106,15 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <img
+        src="./illustrations/burger-menu-orchid.svg"
+        className={` ${home.OrchidDrawing} ${home.hidden}  `}
+      ></img>
       <div className={home.IGsection}>
         <h2 className={home.IGtitle}>
           <FormattedMessage
-            id="home.services.title"
+            id="home.instagram"
             defaultMessage="Tjek vores Instagram-opslag"
           />
         </h2>
