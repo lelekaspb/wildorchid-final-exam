@@ -71,9 +71,39 @@ fieldset {
 .input {
   border: none;
   background-color: var(--pinkish-bg-color);
-  padding: 0.7rem 0.5rem;
+  padding: 0.8rem;
 }
 
 .input::placeholder {
-  color: var(--pinkish-border-color);
+  color: var(--placeholder-color);
+}
+
+.input:focus {
+  outline: 1px solid var(--primary-font-color);
+}
+
+.help_block {
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  transition: all 0.3s;
+}
+
+.hidden {
+  composes: help_block;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.error {
+  composes: help_block;
+  color: var(--error-color);
+  opacity: 1;
+  visibility: visible;
+}
+
+.success {
+  composes: help_block;
+  color: var(--success-color);
+  opacity: 1;
+  visibility: visible;
 }

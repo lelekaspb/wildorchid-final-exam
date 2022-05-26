@@ -136,12 +136,12 @@
 
   "book": "Book nu",
 
-  "giftcard.info.first_name_label": "Fornavn *",
-  "giftcard.info.first_name_placeholder": "Skriv dit fornavn her...",
-  "giftcard.info.last_name_label": "Efternavn *",
-  "giftcard.info.last_name_placeholder": "Skriv dit efternavn her...",
+  "giftcard.info.first_name_label": "Fornavn",
+  "giftcard.info.first_name_placeholder": "Skriv fornavn her...",
+  "giftcard.info.last_name_label": "Efternavn",
+  "giftcard.info.last_name_placeholder": "Skriv efternavn her...",
   "giftcard.info.email_label": "Email *",
-  "giftcard.info.email_placeholder": "Skriv din email her...",
+  "giftcard.info.email_placeholder": "Skriv email her...",
   "giftcard.info.amount_label": "Beløb (DKK) *",
   "giftcard.info.amount_placeholder": "Skriv det beløb du ønsker at købe her...",
   "giftcard.info.note_label": "Bemærk",
@@ -149,6 +149,9 @@
   "giftcard.info.date_label": "Dato modtaget *",
   "giftcard.info.now_label": "Nu",
   "giftcard.info.later_label": "Senere",
-  "giftcard.error": "ukorrekt",
-  "giftcard.success": "korrekt"
+  "giftcard.name.error": "{value} kan kun bestå af bogstaver",
+  "giftcard.email.error": "Indtast venligst en gyldig e-mailadresse",
+  "giftcard.amount.error": "Indtast venligst et beløb mellem 50 og 2000, kun cifre",
+  "giftcard.error": "Ugyldig",
+  "giftcard.success": "Dejligt"
 }
