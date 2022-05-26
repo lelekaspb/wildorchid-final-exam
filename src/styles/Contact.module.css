@@ -140,11 +140,6 @@ textarea {
   color: #d6a38a;
 }
 
-span {
-  font-size: 0.7rem;
-  margin-top: 0.3rem;
-}
-
 .ContactButton {
   background-color: var(--primary-font-color);
   color: white;
@@ -154,6 +149,8 @@ span {
 
 .ErrorFont {
   color: #b73a52;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
 }
 
 @media only screen and (min-width: 500px) {
