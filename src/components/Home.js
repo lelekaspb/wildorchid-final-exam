@@ -117,18 +117,73 @@ function Home() {
           <a href="https://www.instagram.com/p/CdBsY0kovgt/" target="_blank">
             <div className={home.IGpicHover}>
               <img src="./photos/instagram-1.jpg" className={home.IGpic}></img>
+              <div className={home.IGpicHoverBox}>
+                <div className={home.InsideHoverBoxWrap}>
+                  <img
+                    src="./icons/Instagram.svg"
+                    className={home.IGicon}
+                    alt=""
+                  ></img>
+                  <div className={home.ClockTextWrap}>
+                    <img
+                      src="./icons/clock.svg"
+                      className={home.ClockIcon}
+                      alt=""
+                    ></img>
+                    <p>May 1</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </a>
 
           <a href="https://www.instagram.com/p/CaGJbDLosw_/" target="_blank">
             <div className={home.IGpicHover}>
-              <img src="./photos/instagram-2.jpg" className={home.IGpic}></img>
+              <img
+                src="./photos/instagram-2.jpg"
+                className={home.IGpic}
+                alt=""
+              ></img>
+              <div className={home.IGpicHoverBox}>
+                <div className={home.InsideHoverBoxWrap}>
+                  <img
+                    src="./icons/Instagram.svg"
+                    className={home.IGicon}
+                    alt=""
+                  ></img>
+                  <div className={home.ClockTextWrap}>
+                    <img
+                      src="./icons/clock.svg"
+                      className={home.ClockIcon}
+                      alt=""
+                    ></img>
+                    <p>Feb 17</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </a>
 
           <a href="https://www.instagram.com/p/CVYVdL1o6s-/" target="_blank">
             <div className={home.IGpicHover}>
               <img src="./photos/instagram-3.jpg" className={home.IGpic}></img>
+              <div className={home.IGpicHoverBox}>
+                <div className={home.InsideHoverBoxWrap}>
+                  <img
+                    src="./icons/Instagram.svg"
+                    className={home.IGicon}
+                    alt=""
+                  ></img>
+                  <div className={home.ClockTextWrap}>
+                    <img
+                      src="./icons/clock.svg"
+                      className={home.ClockIcon}
+                      alt=""
+                    ></img>
+                    <p>Oct 23</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </a>
         </div>
