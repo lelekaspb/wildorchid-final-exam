@@ -216,7 +216,9 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
@@ -233,7 +235,9 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
@@ -255,7 +259,9 @@ function Contact() {
                         className={contact.SmallInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
@@ -279,7 +285,9 @@ function Contact() {
                         className={contact.BigInput}
                       />
                       {meta.touched && meta.error && (
-                        <span className={contact.ErrorFont}>{meta.error}</span>
+                        <span className={contact.ErrorFont}>
+                          <FormattedMessage id={meta.error} />
+                        </span>
                       )}
                     </div>
                   )}
