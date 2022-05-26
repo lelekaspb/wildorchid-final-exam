@@ -22,6 +22,27 @@
   "footer.follow": "Follow us",
   "footer.cvr": "CVR-number: 37892726",
 
+  "about.hours": "Opening Hours",
+  "about.hours.one": "Tuesday - Thursday: 11 - 19",
+  "about.hours.two": "Friday: 9 - 17",
+  "about.hours.three": "Saturday: 9 - 16",
+  "about.hours.four": "Sunday - Monday: Closed",
+
+  "about.find": "Find Us",
+  "about.find.parking.title": "PARKING",
+  "about.find.metro.body": "M1 and M2 are 800 meters from the clinic. Get off at “Forum”. The M3 line is 240 meters from the clinic. Get off at “Aksel Møllers Have“.",
+  "about.find.bus.body": "Bus 2A stops 150 meters from the clinic. Use the stop “Falkoner Allé (Godthåbsvej)”. Bus 18 stops 240 meters from the clinic. Use the stop “Rolighedsvej (Falkoner Allé)”.",
+  "about.find.parking.body": "There are parking options on the side streets to Rolighedsvej. Here there is 2 hours of free parking. Use Easypark mobile app to see availability.",
+
+  "contact.title": "Write to us",
+  "contact.name": "Name *",
+  "contact.phone": "Phone number",
+  "contact.inquiry": "Inquiry *",
+
+  "contact.name.placeholder": "Write your name here...",
+  "contact.email.placeholder": "Write your email here...",
+  "contact.phone.placeholder": "Write your phone number here...",
+  "contact.inquiry.placeholder": "Write your inquiry here...",
   "about.julia.title": "ABOUT JULIA",
   "about.salon.title": "ABOUT THE SALON",
   "about.clean.title": "WE CARE ABOUT YOU",

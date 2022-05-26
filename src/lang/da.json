@@ -22,6 +22,28 @@
   "footer.follow": "Følg oss",
   "footer.cvr": "CVR-nummer: 37892726",
 
+  "about.hours": "Åbningstider",
+  "about.hours.one": "Tirsdag - Torsdag: 11 - 19",
+  "about.hours.two": "Fredag: 9 - 17",
+  "about.hours.three": "Lørdag: 9 - 16",
+  "about.hours.four": "Søndag - Mandag: Lukket",
+
+  "about.find": "Find Vej",
+  "about.find.parking.title": "PARKERING",
+  "about.find.metro.body": "M1 og M2 ligger 800 meter fra klinikken. Benyt stoppestedet “Forum”. M3 linjen ligger 240 meter fra klinikken. Benyt stoppestedet “Aksel Møllers Have”.",
+  "about.find.bus.body": "Bus 2A har stoppested 150 meter fra klinikken. Benyt stoppestedet “Falkoner Allé (Godthåbsvej)”. Bus 18 har stoppested 240 meter fra klinikken. Benyt stoppestedet “Rolighedsvej (Falkoner Allé)”.",
+  "about.find.parking.body": "Der er parkeringsmuligheder på sidegaderne til Rolighedsvej. Her er der 2 timers gratis parkering. Benyt Easypark mobil-app for at se tilgængelighed.",
+
+  "contact.title": "Skriv til os",
+  "contact.name": "Navn *",
+  "contact.phone": "Telefon",
+  "contact.inquiry": "Besked *",
+
+  "contact.name.placeholder": "Skriv dit navn her...",
+  "contact.email.placeholder": "Skriv dit email her...",
+  "contact.phone.placeholder": "Skriv dit telefon her...",
+  "contact.inquiry.placeholder": "Skriv dit besked her...",
+
   "about.julia.title": "OM JULIA",
   "about.salon.title": "OM SALONEN",
   "about.clean.title": "VI PAS PÅ DIG",
