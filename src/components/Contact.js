@@ -243,7 +243,7 @@ function Contact() {
                   )}
                 </Field>
 
-                <Field name="tel">
+                <Field name="phone">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
                       <label for="tel">
