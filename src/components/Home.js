@@ -5,8 +5,10 @@ import Navbar from "./Navbar";
 function Home() {
   return (
     <>
-      <div className={home.background}>
+      <div className={home.navbarWrapper}>
         <Navbar activePage="home" />
+      </div>
+      <div className={home.background}>
         <div className={home.AllWelcomeWrap}>
           <div className={home.WelcomeWrap}>
             <h2 className={home.Welcomeh2}>

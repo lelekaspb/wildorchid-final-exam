@@ -1,9 +1,14 @@
-/* .background {
+.navbarWrapper {
   background-color: var(--pinkish-bg-color);
+}
+
+.background {
+  background-color: var(--pinkish-bg-color);
+  position: relative;
   z-index: -2;
-  width: 100vw;
-  /* position: relative; 
-}*/
+  height: 24rem;
+  margin-bottom: 3rem;
+}
 
 .Welcomeh2 {
   font-weight: var(--font-light);
@@ -30,15 +35,14 @@
 .WelcomePicWrap {
   display: flex;
   justify-content: flex-end;
-  z-index: -1;
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
 
 .WelcomePicBorder {
   position: relative;
-  width: 50vw;
-  z-index: -1;
+  width: 12rem;
+  /* z-index: -1; */
 }
 
 .WelcomePicBorder::before {
@@ -128,6 +132,16 @@
   height: 100%;
 }
 
+@media screen and (min-width: 398px) {
+  .WelcomePicBorder {
+    width: 14rem;
+  }
+
+  .background {
+    height: 56vh;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .AllWelcomeWrap {
     display: flex;
@@ -135,8 +149,9 @@
   }
 
   .WelcomeWrap {
-    padding-left: 5rem;
+    padding-left: 2rem;
     padding-top: 3rem;
+    padding-right: 1rem;
   }
 
   .Welcomeh1 {
@@ -147,8 +162,13 @@
     font-size: 2rem;
   }
 
+  .background {
+    height: 54vh;
+    margin-bottom: 8rem;
+  }
+
   .WelcomePicWrap {
-    padding-top: 2rem;
+    padding-top: 7rem;
   }
 
   .WelcomePicBorder {
@@ -197,6 +217,15 @@
 
   .Welcomeh2 {
     font-size: 3rem;
+  }
+
+  .WelcomeWrap {
+    padding-left: 4rem;
+  }
+
+  .background {
+    height: 65vh;
+    margin-bottom: 7rem;
   }
 
   .WelcomePicBorder::before {
