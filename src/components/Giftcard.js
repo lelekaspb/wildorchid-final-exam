@@ -2,7 +2,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Navbar from "./Navbar";
 import giftcard from "../styles/Giftcard.module.css";
 import { useNavigate } from "react-router-dom";
-import { useReducer } from "react";
+import { useReducer, useRef } from "react";
+import { DayPicker } from "react-day-picker";
+import "react-day-picker/dist/style.css";
+import "../styles/day-picker.css";
+import { format } from "date-fns";
+import en from "date-fns/locale/en-gb";
+import da from "date-fns/locale/da";
+import { Context } from "./ContextWrapper";
+import { useContext } from "react";
 
 function Giftcard() {
   let navigate = useNavigate();
@@ -24,7 +32,7 @@ function Giftcard() {
     lastNameHelp: "hidden",
     emailHelp: "hidden",
     amountHelp: "hidden",
-    date: "",
+    date: new Date(),
   };
 
   // use reducer hook for updating info state
@@ -94,11 +102,63 @@ function Giftcard() {
     }
   };
 
-  const handleSubmit = (e) => {
+  // datePicker footer
+  const dpFooter = info.date ? (
+    <p>
+      <FormattedMessage
+        id="giftcard.datepicker.footer.selected"
+        defaultMessage="Du valgte"
+      />{" "}
+      {format(info.date, "d/MM/yyyy")}.
+    </p>
+  ) : (
+    <p>
+      <FormattedMessage
+        id="giftcard.datepicker.footer.select"
+        defaultMessage="Vælg venligst en dag."
+      />
+    </p>
+  );
+  // locale for datePicker
+  const context = useContext(Context);
+  const dpLocale = {
+    da: da,
+    en: en,
+  };
+
+  // refs for accessing input elements
+  const firstNameRef = useRef("");
+  const lastNameRef = useRef("");
+  const emailRef = useRef("");
+  const amountRef = useRef("");
+
+  const checkForErrors = () => {
+    if (info.firstNameHelp == "error" || info.firstNameHelp == "hidden") {
+      return firstNameRef;
+    } else if (info.lastNameHelp == "error" || info.lastNameHelp == "hidden") {
+      return lastNameRef;
+    } else if (info.emailHelp == "error" || info.emailHelp == "hidden") {
+      return emailRef;
+    } else if (info.amountHelp == "error" || info.amountHelp == "hidden") {
+      return amountRef;
+    }
+  };
+
+  const focusOnError = (errorField) => {
+    errorField.current.focus();
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     // validate
-    // ...
-    // if validated correctly, redirect to payment
-    redirectToPayment();
+    const errorField = checkForErrors();
+    if (!errorField) {
+      // if validated correctly, redirect to payment
+      redirectToPayment();
+    } else {
+      focusOnError(errorField);
+    }
   };
 
   return (
@@ -136,6 +196,7 @@ function Giftcard() {
                 type="text"
                 id="giftcard_fname"
                 name="fname"
+                ref={firstNameRef}
                 placeholder={intl.formatMessage({
                   id: "giftcard.info.first_name_placeholder",
                   defaultMessage: "Skriv dit fornavn her...",
@@ -202,6 +263,7 @@ function Giftcard() {
                 className={giftcard.input}
                 type="text"
                 id="giftcard_lname"
+                ref={lastNameRef}
                 placeholder={intl.formatMessage({
                   id: "giftcard.info.last_name_placeholder",
                   defaultMessage: "Skriv dit efternavn her...",
@@ -268,6 +330,7 @@ function Giftcard() {
                 className={giftcard.input}
                 id="giftcard_email"
                 type="text"
+                ref={emailRef}
                 placeholder={intl.formatMessage({
                   id: "giftcard.info.email_placeholder",
                   defaultMessage: "Skriv dit efternavn her...",
@@ -326,6 +389,7 @@ function Giftcard() {
                 className={giftcard.input}
                 id="giftcard_amount"
                 type="text"
+                ref={amountRef}
                 placeholder={intl.formatMessage({
                   id: "giftcard.info.amount_placeholder",
                   defaultMessage: "Skriv dit efternavn her...",
@@ -424,7 +488,23 @@ function Giftcard() {
             </div>
 
             {/* datepicker */}
-            <div></div>
+            <div>
+              <DayPicker
+                mode="single"
+                required
+                disabled={[{ before: new Date() }]}
+                locale={dpLocale[context.locale]}
+                selected={info.date}
+                onSelect={(day) => {
+                  dispatch({ type: "date", data: day });
+                }}
+                footer={dpFooter}
+                // styles={{
+                //   selected: { color: "red" },
+                //   today: { color: "blue" },
+                // }}
+              />
+            </div>
           </fieldset>
 
           <button type="submit" onClick={handleSubmit}>

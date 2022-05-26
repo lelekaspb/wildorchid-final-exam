@@ -153,5 +153,7 @@
   "giftcard.email.error": "Please enter a valid email address",
   "giftcard.amount.error": "Please enter an amount between 50 and 2000, only digits",
   "giftcard.error": "Invalid",
-  "giftcard.success": "Lovely"
+  "giftcard.success": "Lovely",
+  "giftcard.datepicker.footer.selected": "You selected",
+  "giftcard.datepicker.footer.select": "Please pick a day."
 }

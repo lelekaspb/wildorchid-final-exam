@@ -1,0 +1,9 @@
+:root {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #d6a38a;
+  --rdp-background-color: #fff3ee;
+  --rdp-accent-color-dark: #d6a38a;
+  --rdp-background-color-dark: #d6a38a;
+  --rdp-outline: 2px solid var(--rdp-accent-color);
+  --rdp-outline-selected: 2px solid rgba(68, 3, 3, 0.6);
+}

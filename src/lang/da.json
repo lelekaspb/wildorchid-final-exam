@@ -153,5 +153,7 @@
   "giftcard.email.error": "Indtast venligst en gyldig e-mailadresse",
   "giftcard.amount.error": "Indtast venligst et beløb mellem 50 og 2000, kun cifre",
   "giftcard.error": "Ugyldig",
-  "giftcard.success": "Dejligt"
+  "giftcard.success": "Dejligt",
+  "giftcard.datepicker.footer.selected": "Du valgte",
+  "giftcard.datepicker.footer.select": "Vælg venligst en dag."
 }
