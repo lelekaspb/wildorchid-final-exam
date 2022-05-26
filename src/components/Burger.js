@@ -1,4 +1,4 @@
-import burger from "../styles/Burger.module.css";
+import burger from "./../styles/Burger.module.css";
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
 

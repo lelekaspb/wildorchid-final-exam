@@ -1,4 +1,3 @@
-import text from "../styles/Text.module.css";
 import about from "../styles/About.module.css";
 import { FormattedMessage } from "react-intl";
 import Navbar from "./Navbar";

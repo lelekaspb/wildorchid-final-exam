@@ -1,5 +1,5 @@
 import { FormattedMessage } from "react-intl";
-import footer from "../styles/Footer.module.css";
+import footer from "./../styles/Footer.module.css";
 
 export default function Footer() {
   return (

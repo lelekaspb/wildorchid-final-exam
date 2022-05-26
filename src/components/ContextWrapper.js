@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
-import Danish from "../lang/da.json";
-import English from "../lang/en.json";
+import Danish from "./../lang/da.json";
+import English from "./../lang/en.json";
 
 export const Context = React.createContext();
 
