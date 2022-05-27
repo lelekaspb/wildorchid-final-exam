@@ -464,7 +464,7 @@ function Giftcard() {
           {/* date of receiving fieldset */}
           <fieldset>
             {/* date radio inputs */}
-            <div className={giftcard.date}>
+            {/* <div className={giftcard.date}>
               <legend className={giftcard.date_label}>
                 <FormattedMessage
                   id="giftcard.info.date_label"
@@ -485,10 +485,16 @@ function Giftcard() {
                   defaultMessage="Senere"
                 />
               </label>
-            </div>
+            </div> */}
 
             {/* datepicker */}
             <div>
+              <label className={giftcard.label}>
+                <FormattedMessage
+                  id="giftcard.info.date_label"
+                  defaultMessage="Dato modtaget *"
+                />
+              </label>
               <DayPicker
                 mode="single"
                 required

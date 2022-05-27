@@ -1,7 +1,5 @@
 // 6082d28c28bf9b609975a5db api key
-export const postGiftcard = async (payload) => {
-  const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-giftcard";
-
+export const postGiftcard = async (payload, url) => {
   const options = {
     method: "POST",
     headers: {
@@ -32,5 +30,6 @@ export const postGiftcard = async (payload) => {
 //   note: info.note,
 //   date_receive: info.date,
 // };
-// const response = await postGiftcard(payload);
+// const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-giftcard";
+// const response = await postGiftcard(payload, url);
 // console.log(response);
