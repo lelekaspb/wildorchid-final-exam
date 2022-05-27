@@ -157,7 +157,7 @@ fieldset {
   display: none;
 }
 
-/* day picker (the rest are in day-picker.css)
+/* day picker (the rest is in day-picker.css)
 -------------------------------------------*/
 .day_picker {
   margin-top: 1.5rem;
@@ -254,6 +254,8 @@ fieldset {
     justify-self: center;
   }
 
+  /* desktop photo display
+  -----------------------*/
   .giftcard_photo {
     display: block;
     grid-column: 2 / span 1;
