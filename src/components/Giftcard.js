@@ -2,7 +2,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import Navbar from "./Navbar";
 import giftcard from "../styles/Giftcard.module.css";
 import { useNavigate } from "react-router-dom";
-import { useReducer, useRef } from "react";
+import { useRef } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "../styles/day-picker.css";
@@ -21,51 +21,8 @@ function Giftcard() {
   // in order to use translations in input placeholder
   const intl = useIntl();
 
-  // initial info object (state)
-  const initInfo = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    amount: "",
-    note: "",
-    firstNameHelp: "hidden",
-    lastNameHelp: "hidden",
-    emailHelp: "hidden",
-    amountHelp: "hidden",
-    date: new Date(),
-  };
-
-  // use reducer hook for updating info state
-  const [info, dispatch] = useReducer(reducer, initInfo);
-
-  // reducer function to update info state
-  function reducer(info, action) {
-    switch (action.type) {
-      case "fname":
-        return { ...info, firstName: action.data };
-      case "lname":
-        return { ...info, lastName: action.data };
-      case "email":
-        return { ...info, email: action.data };
-      case "amount":
-        return { ...info, amount: action.data };
-      case "note":
-        return { ...info, note: action.data };
-      case "fnameHelp":
-        return { ...info, firstNameHelp: action.data };
-      case "lnameHelp":
-        return { ...info, lastNameHelp: action.data };
-      case "emailHelp":
-        return { ...info, emailHelp: action.data };
-      case "amountHelp":
-        return { ...info, amountHelp: action.data };
-      case "date":
-        return { ...info, date: action.data };
-
-      default:
-        throw new Error();
-    }
-  }
+  // fetch states and functions from context provider
+  const { locale, info, dispatch } = useContext(Context);
 
   // validating functions for required inputs
   const validateName = (string) => {
@@ -120,7 +77,6 @@ function Giftcard() {
     </p>
   );
   // locale for datePicker
-  const context = useContext(Context);
   const dpLocale = {
     da: da,
     en: en,
@@ -484,7 +440,7 @@ function Giftcard() {
                 mode="single"
                 required
                 disabled={[{ before: new Date() }]}
-                locale={dpLocale[context.locale]}
+                locale={dpLocale[locale]}
                 selected={info.date}
                 onSelect={(day) => {
                   dispatch({ type: "date", data: day });

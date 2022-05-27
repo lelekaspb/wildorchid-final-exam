@@ -1,7 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import { Context } from "./ContextWrapper";
+import { useContext } from "react";
 
 function Payment() {
+  // fetch states and functions from context provider
+  const { info } = useContext(Context);
   return (
     <div>
       <Navbar activePage="giftcard" />
