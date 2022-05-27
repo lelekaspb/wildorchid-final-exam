@@ -158,8 +158,10 @@
   "giftcard.name.error": "{value} can only consist of letters",
   "giftcard.email.error": "Please enter a valid email address",
   "giftcard.amount.error": "Please enter an amount between 50 and 2000, only digits",
+  "giftcard.amount.directive": "You can choose amount between 50 and 2000",
   "giftcard.error": "Invalid",
-  "giftcard.success": "Lovely",
+  "giftcard.success": "Good",
   "giftcard.datepicker.footer.selected": "You selected",
-  "giftcard.datepicker.footer.select": "Please pick a day."
+  "giftcard.datepicker.footer.select": "Please pick a day.",
+  "giftcard.next_btn": "Next"
 }

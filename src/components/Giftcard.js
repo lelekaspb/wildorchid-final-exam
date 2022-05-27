@@ -182,139 +182,141 @@ function Giftcard() {
         {/* gift card infornation form */}
         <form className={giftcard.info_form} autoComplete="on">
           <fieldset>
-            {/* first name field */}
-            <div className={giftcard.field}>
-              <label className={giftcard.label} htmlFor="giftcard_fname">
-                <FormattedMessage
-                  id="giftcard.info.first_name_label"
-                  defaultMessage="Fornavn"
-                />{" "}
-                {"*"}
-              </label>
-              <input
-                className={giftcard.input}
-                type="text"
-                id="giftcard_fname"
-                name="fname"
-                ref={firstNameRef}
-                placeholder={intl.formatMessage({
-                  id: "giftcard.info.first_name_placeholder",
-                  defaultMessage: "Skriv dit fornavn her...",
-                })}
-                value={info.firstName}
-                onChange={(e) => {
-                  dispatch({ type: "fname", data: e.target.value });
-                }}
-                onBlur={(e) => {
-                  dispatch({
-                    type: "fnameHelp",
-                    data: validateName(e.target.value),
-                  });
-                }}
-                onInput={(e) => {
-                  dispatch({
-                    type: "fnameHelp",
-                    data: validateName(e.target.value),
-                  });
-                }}
-              />
-              <div
-                className={`${
-                  info.firstNameHelp === "hidden"
-                    ? giftcard.hidden
-                    : info.firstNameHelp === "error"
-                    ? giftcard.error
-                    : giftcard.success
-                }`}
-              >
-                {" "}
-                {info.firstNameHelp === "success" ? (
+            <div className={giftcard.name}>
+              {/* first name field */}
+              <div className={giftcard.field}>
+                <label className={giftcard.label} htmlFor="giftcard_fname">
                   <FormattedMessage
-                    id="giftcard.success"
-                    defaultMessage="Dejligt"
-                  />
-                ) : (
-                  <FormattedMessage
-                    id="giftcard.name.error"
-                    defaultMessage="{value} kan kun bestå af bogstaver"
-                    values={{
-                      value: (
-                        <FormattedMessage
-                          id="giftcard.info.first_name_label"
-                          defaultMessage="Fornavn"
-                        />
-                      ),
-                    }}
-                  />
-                )}{" "}
-              </div>
-            </div>
-
-            {/* last name field */}
-            <div className={giftcard.field}>
-              <label className={giftcard.label} htmlFor="giftcard_lname">
-                <FormattedMessage
-                  id="giftcard.info.last_name_label"
-                  defaultMessage="Efternavn"
+                    id="giftcard.info.first_name_label"
+                    defaultMessage="Fornavn"
+                  />{" "}
+                  {"*"}
+                </label>
+                <input
+                  className={giftcard.input}
+                  type="text"
+                  id="giftcard_fname"
+                  name="fname"
+                  ref={firstNameRef}
+                  placeholder={intl.formatMessage({
+                    id: "giftcard.info.first_name_placeholder",
+                    defaultMessage: "Skriv dit fornavn her...",
+                  })}
+                  value={info.firstName}
+                  onChange={(e) => {
+                    dispatch({ type: "fname", data: e.target.value });
+                  }}
+                  onBlur={(e) => {
+                    dispatch({
+                      type: "fnameHelp",
+                      data: validateName(e.target.value),
+                    });
+                  }}
+                  onInput={(e) => {
+                    dispatch({
+                      type: "fnameHelp",
+                      data: validateName(e.target.value),
+                    });
+                  }}
                 />
-                {" *"}
-              </label>
-              <input
-                className={giftcard.input}
-                type="text"
-                id="giftcard_lname"
-                ref={lastNameRef}
-                placeholder={intl.formatMessage({
-                  id: "giftcard.info.last_name_placeholder",
-                  defaultMessage: "Skriv dit efternavn her...",
-                })}
-                value={info.lastName}
-                onChange={(e) => {
-                  dispatch({ type: "lname", data: e.target.value });
-                }}
-                onBlur={(e) => {
-                  dispatch({
-                    type: "lnameHelp",
-                    data: validateName(e.target.value),
-                  });
-                }}
-                onInput={(e) => {
-                  dispatch({
-                    type: "lnameHelp",
-                    data: validateName(e.target.value),
-                  });
-                }}
-              />
+                <div
+                  className={`${
+                    info.firstNameHelp === "hidden"
+                      ? giftcard.hidden
+                      : info.firstNameHelp === "error"
+                      ? giftcard.error
+                      : giftcard.success
+                  }`}
+                >
+                  {" "}
+                  {info.firstNameHelp === "success" ? (
+                    <FormattedMessage
+                      id="giftcard.success"
+                      defaultMessage="Godt"
+                    />
+                  ) : (
+                    <FormattedMessage
+                      id="giftcard.name.error"
+                      defaultMessage="{value} kan kun bestå af bogstaver"
+                      values={{
+                        value: (
+                          <FormattedMessage
+                            id="giftcard.info.first_name_label"
+                            defaultMessage="Fornavn"
+                          />
+                        ),
+                      }}
+                    />
+                  )}{" "}
+                </div>
+              </div>
 
-              <div
-                className={`${
-                  info.lastNameHelp === "hidden"
-                    ? giftcard.hidden
-                    : info.lastNameHelp === "error"
-                    ? giftcard.error
-                    : giftcard.success
-                }`}
-              >
-                {" "}
-                {info.lastNameHelp === "success" ? (
+              {/* last name field */}
+              <div className={giftcard.field}>
+                <label className={giftcard.label} htmlFor="giftcard_lname">
                   <FormattedMessage
-                    id="giftcard.success"
-                    defaultMessage="Dejligt"
+                    id="giftcard.info.last_name_label"
+                    defaultMessage="Efternavn"
                   />
-                ) : (
-                  <FormattedMessage
-                    id="giftcard.name.error"
-                    defaultMessage="{value} kan kun bestå af bogstaver"
-                    values={{
-                      value: (
-                        <FormattedMessage
-                          id="giftcard.info.last_name_label"
-                          defaultMessage="Efternavn"
-                        />
-                      ),
-                    }}
-                  />
-                )}{" "}
+                  {" *"}
+                </label>
+                <input
+                  className={giftcard.input}
+                  type="text"
+                  id="giftcard_lname"
+                  ref={lastNameRef}
+                  placeholder={intl.formatMessage({
+                    id: "giftcard.info.last_name_placeholder",
+                    defaultMessage: "Skriv dit efternavn her...",
+                  })}
+                  value={info.lastName}
+                  onChange={(e) => {
+                    dispatch({ type: "lname", data: e.target.value });
+                  }}
+                  onBlur={(e) => {
+                    dispatch({
+                      type: "lnameHelp",
+                      data: validateName(e.target.value),
+                    });
+                  }}
+                  onInput={(e) => {
+                    dispatch({
+                      type: "lnameHelp",
+                      data: validateName(e.target.value),
+                    });
+                  }}
+                />
+
+                <div
+                  className={`${
+                    info.lastNameHelp === "hidden"
+                      ? giftcard.hidden
+                      : info.lastNameHelp === "error"
+                      ? giftcard.error
+                      : giftcard.success
+                  }`}
+                >
+                  {" "}
+                  {info.lastNameHelp === "success" ? (
+                    <FormattedMessage
+                      id="giftcard.success"
+                      defaultMessage="Godt"
+                    />
+                  ) : (
+                    <FormattedMessage
+                      id="giftcard.name.error"
+                      defaultMessage="{value} kan kun bestå af bogstaver"
+                      values={{
+                        value: (
+                          <FormattedMessage
+                            id="giftcard.info.last_name_label"
+                            defaultMessage="Efternavn"
+                          />
+                        ),
+                      }}
+                    />
+                  )}{" "}
+                </div>
               </div>
             </div>
 
@@ -366,7 +368,7 @@ function Giftcard() {
                 {info.emailHelp === "success" ? (
                   <FormattedMessage
                     id="giftcard.success"
-                    defaultMessage="Dejligt"
+                    defaultMessage="Godt"
                   />
                 ) : (
                   <FormattedMessage
@@ -385,6 +387,12 @@ function Giftcard() {
                   defaultMessage="Beløb (DKK) *"
                 />
               </label>
+              <span className={giftcard.directive}>
+                <FormattedMessage
+                  id="giftcard.amount.directive"
+                  defaultMessage="Du kan vælge beløb mellem 50 og 2000"
+                />
+              </span>
               <input
                 className={giftcard.input}
                 id="giftcard_amount"
@@ -425,7 +433,7 @@ function Giftcard() {
                 {info.amountHelp === "success" ? (
                   <FormattedMessage
                     id="giftcard.success"
-                    defaultMessage="Dejligt"
+                    defaultMessage="Godt"
                   />
                 ) : (
                   <FormattedMessage
@@ -462,40 +470,17 @@ function Giftcard() {
           </fieldset>
 
           {/* date of receiving fieldset */}
-          <fieldset>
-            {/* date radio inputs */}
-            {/* <div className={giftcard.date}>
-              <legend className={giftcard.date_label}>
-                <FormattedMessage
-                  id="giftcard.info.date_label"
-                  defaultMessage="Dato modtaget *"
-                />
-              </legend>
-              <label htmlFor="giftcard_now">
-                <input type="radio" id="giftcard_now" name="date" />
-                <FormattedMessage
-                  id="giftcard.info.now_label"
-                  defaultMessage="Nu"
-                />
-              </label>
-              <label htmlFor="giftcard_later">
-                <input type="radio" id="giftcard_later" name="date" />
-                <FormattedMessage
-                  id="giftcard.info.later_label"
-                  defaultMessage="Senere"
-                />
-              </label>
-            </div> */}
-
+          <fieldset className={giftcard.day_picker}>
             {/* datepicker */}
             <div>
-              <label className={giftcard.label}>
+              <label className={giftcard.label} htmlFor="day_picker">
                 <FormattedMessage
                   id="giftcard.info.date_label"
                   defaultMessage="Dato modtaget *"
                 />
               </label>
               <DayPicker
+                id="day_picker"
                 mode="single"
                 required
                 disabled={[{ before: new Date() }]}
@@ -505,18 +490,31 @@ function Giftcard() {
                   dispatch({ type: "date", data: day });
                 }}
                 footer={dpFooter}
-                // styles={{
-                //   selected: { color: "red" },
-                //   today: { color: "blue" },
-                // }}
               />
             </div>
           </fieldset>
 
-          <button type="submit" onClick={handleSubmit}>
-            next
+          <button
+            className={giftcard.next_btn}
+            type="submit"
+            onClick={handleSubmit}
+          >
+            <FormattedMessage id="giftcard.next_btn" defaultMessage="Næste" />
           </button>
         </form>
+
+        <section className={giftcard.giftcard_photo}>
+          <div className={giftcard.photo_wrapper}>
+            <img
+              className={giftcard.photo}
+              src="./../photos/giftcard_photo.jpg"
+            />
+          </div>
+        </section>
+        <img
+          className={giftcard.orchid}
+          src="./../illustrations/giftcard-info-orchid.svg"
+        />
         {/* gift card infornation form  --- end*/}
       </div>
     </>

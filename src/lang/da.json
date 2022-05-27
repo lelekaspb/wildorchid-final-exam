@@ -158,8 +158,10 @@
   "giftcard.name.error": "{value} kan kun bestå af bogstaver",
   "giftcard.email.error": "Indtast venligst en gyldig e-mailadresse",
   "giftcard.amount.error": "Indtast venligst et beløb mellem 50 og 2000, kun cifre",
+  "giftcard.amount.directive": "Du kan vælge beløb mellem 50 og 2000",
   "giftcard.error": "Ugyldig",
-  "giftcard.success": "Dejligt",
+  "giftcard.success": "Godt",
   "giftcard.datepicker.footer.selected": "Du valgte",
-  "giftcard.datepicker.footer.select": "Vælg venligst en dag."
+  "giftcard.datepicker.footer.select": "Vælg venligst en dag.",
+  "giftcard.next_btn": "Næste"
 }

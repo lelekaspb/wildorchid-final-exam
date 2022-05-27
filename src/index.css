@@ -27,7 +27,6 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   font-family: var(--primary-font);
-  /* font-size: var(--body-font-size); */
   font-size: 13px;
 }
 
