@@ -15,6 +15,12 @@
 
   "greeting": "Wild Orchid Webside",
 
+  "invalid_type_name": "Påkrævet",
+  "invalid_type_email": "Påkrævet",
+  "invalid_type_phone": "Du skal udfylde et nummer",
+  "invalid_type_inquiry": "Påkrævet",
+  "invalid_string_email": "Forkert email",
+
   "footer.hours": "Åbningstider",
   "footer.hours.one": "Tirsdag - Torsdag: 11 - 19",
   "footer.hours.two": "Fredag: 9 - 17",

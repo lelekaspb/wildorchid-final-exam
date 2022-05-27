@@ -15,6 +15,12 @@
 
   "greeting": "Wild Orchid Website",
 
+  "invalid_type_name": "Required",
+  "invalid_type_email": "Required",
+  "invalid_type_phone": "You must fill in a number",
+  "invalid_type_inquiry": "Required",
+  "invalid_string_email": "Invalid email",
+
   "footer.hours": "Opening Hours",
   "footer.hours.one": "Tuesday - Thursday: 11 - 19",
   "footer.hours.two": "Friday: 9 - 17",
