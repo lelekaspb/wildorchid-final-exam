@@ -12,6 +12,7 @@
 
   "greeting": "Wild Orchid Webside",
 
+  "contact.success": "Godt",
   "invalid_type_name": "Påkrævet",
   "invalid_type_email": "Påkrævet",
   "invalid_type_phone": "Du skal udfylde et nummer",

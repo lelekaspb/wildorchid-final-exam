@@ -156,6 +156,10 @@ span {
   color: #b73a52;
 }
 
+.SuccessFont {
+  color: #139b70;
+}
+
 @media only screen and (min-width: 500px) {
   .illustration {
     width: 30vw;

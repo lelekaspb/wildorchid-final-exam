@@ -12,6 +12,7 @@
 
   "greeting": "Wild Orchid Website",
 
+  "contact.success": "Good",
   "invalid_type_name": "Required",
   "invalid_type_email": "Required",
   "invalid_type_phone": "You must fill in a number",

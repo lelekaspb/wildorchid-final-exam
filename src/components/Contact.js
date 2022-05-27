@@ -221,6 +221,13 @@ function Contact() {
                           <FormattedMessage id={meta.error} />
                         </span>
                       )}
+
+                      {meta.touched && !meta.error && (
+                        <span className={contact.SuccessFont}>
+                          {" "}
+                          <FormattedMessage id="contact.success" />
+                        </span>
+                      )}
                     </div>
                   )}
                 </Field>
@@ -239,6 +246,12 @@ function Contact() {
                         <span className={contact.ErrorFont}>
                           {" "}
                           <FormattedMessage id={meta.error} />
+                        </span>
+                      )}
+                      {meta.touched && !meta.error && (
+                        <span className={contact.SuccessFont}>
+                          {" "}
+                          <FormattedMessage id="contact.success" />
                         </span>
                       )}
                     </div>
@@ -267,6 +280,12 @@ function Contact() {
                           </span>
                         </span>
                       )}
+                      {meta.touched && !meta.error && (
+                        <span className={contact.SuccessFont}>
+                          {" "}
+                          <FormattedMessage id="contact.success" />
+                        </span>
+                      )}
                     </div>
                   )}
                 </Field>
@@ -291,6 +310,12 @@ function Contact() {
                       {meta.touched && meta.error && (
                         <span className={contact.ErrorFont}>
                           <FormattedMessage id={meta.error} />
+                        </span>
+                      )}
+                      {meta.touched && !meta.error && (
+                        <span className={contact.SuccessFont}>
+                          {" "}
+                          <FormattedMessage id="contact.success" />
                         </span>
                       )}
                     </div>
