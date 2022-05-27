@@ -78,6 +78,25 @@ function AboutUs() {
           </p>
         </div>
 
+        <div
+          className={` ${about.TrustpilotWidget} `}
+          data-locale="da-DK"
+          data-template-id="5419b6a8b0d04a076446a9ad"
+          data-businessunit-id="628abcf5c39abf4de2a16318"
+          data-style-height="24px"
+          data-style-width="100%"
+          data-theme="light"
+          data-min-review-count="10"
+        >
+          <a
+            href="https://dk.trustpilot.com/review/wildorchid.dk"
+            target="_blank"
+            rel="noopener"
+          >
+            Trustpilot
+          </a>
+        </div>
+
         <img
           className={` ${about.FrontPic} ${about.MobileHidden}  `}
           src="./photos/Salon-outside.jpg"
