@@ -13,6 +13,7 @@ import { Context } from "./ContextWrapper";
 import { useContext } from "react";
 
 function Giftcard() {
+  // for redirecting user to the payment page after form validation
   let navigate = useNavigate();
   const redirectToPayment = () => {
     navigate("/payment");
@@ -113,6 +114,7 @@ function Giftcard() {
       // if validated correctly, redirect to payment
       redirectToPayment();
     } else {
+      // if not, focus on the first error field in the flow
       focusOnError(errorField);
     }
   };

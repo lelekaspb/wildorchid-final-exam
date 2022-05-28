@@ -163,5 +163,8 @@
   "giftcard.success": "Godt",
   "giftcard.datepicker.footer.selected": "Du valgte",
   "giftcard.datepicker.footer.select": "Vælg venligst en dag.",
-  "giftcard.next_btn": "Næste"
+  "giftcard.next_btn": "Næste",
+
+  "payment.back_to_form": "tilbage til formularen",
+  "payment.method": "Betalingsmetode"
 }

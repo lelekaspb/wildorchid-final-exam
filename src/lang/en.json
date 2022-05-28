@@ -163,5 +163,8 @@
   "giftcard.success": "Good",
   "giftcard.datepicker.footer.selected": "You selected",
   "giftcard.datepicker.footer.select": "Please pick a day.",
-  "giftcard.next_btn": "Next"
+  "giftcard.next_btn": "Next",
+
+  "payment.back_to_form": "back to form",
+  "payment.method": "Payment method"
 }
