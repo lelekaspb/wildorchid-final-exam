@@ -54,6 +54,7 @@ function ContextWrapper(props) {
     emailHelp: "hidden",
     amountHelp: "hidden",
     date: new Date(),
+    validated: false,
   };
 
   // use reducer hook for updating info state
@@ -82,6 +83,8 @@ function ContextWrapper(props) {
         return { ...info, amountHelp: action.data };
       case "date":
         return { ...info, date: action.data };
+      case "validated":
+        return { ...info, validated: action.data };
 
       default:
         throw new Error();

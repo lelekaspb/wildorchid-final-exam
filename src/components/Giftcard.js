@@ -112,6 +112,7 @@ function Giftcard() {
     const errorField = checkForErrors();
     if (!errorField) {
       // if validated correctly, redirect to payment
+      dispatch({ type: "validated", data: true });
       redirectToPayment();
     } else {
       // if not, focus on the first error field in the flow

@@ -1,10 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import { Context } from "./ContextWrapper";
-import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import payment from "./../styles/Payment.module.css";
 import giftcard from "../styles/Giftcard.module.css";
+import { useState } from "react";
 
 function Payment() {
   const sessionMethod = sessionStorage.getItem("method");
@@ -13,9 +12,6 @@ function Payment() {
     const methodChosen = e.target.closest("a").getAttribute("data-method");
     setMethod(methodChosen);
   };
-  useEffect(() => {
-    sessionStorage.setItem("method", method);
-  }, [method]);
 
   return (
     <>
