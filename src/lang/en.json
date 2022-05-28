@@ -16,7 +16,7 @@
   "invalid_type_name": "Required",
   "invalid_type_email": "Required",
   "invalid_type_phone": "You must fill in a number",
-  "invalid_type_inquiry": "Required",
+  "invalid_type_message": "Required",
   "invalid_string_email": "Invalid email",
 
   "footer.hours": "Opening Hours",
@@ -44,12 +44,12 @@
   "contact.title": "Write to us",
   "contact.name": "Name *",
   "contact.phone": "Phone number",
-  "contact.inquiry": "Inquiry *",
+  "contact.message": "message *",
 
   "contact.name.placeholder": "Write your name here...",
   "contact.email.placeholder": "Write your email here...",
   "contact.phone.placeholder": "Write your phone number here...",
-  "contact.inquiry.placeholder": "Write your inquiry here...",
+  "contact.message.placeholder": "Write your message here...",
   "about.julia.title": "ABOUT JULIA",
   "about.salon.title": "ABOUT THE SALON",
   "about.clean.title": "WE CARE ABOUT YOU",

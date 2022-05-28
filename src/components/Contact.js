@@ -1,3 +1,4 @@
+import * as React from "react";
 import contact from "../styles/Contact.module.css";
 import { useIntl, FormattedMessage } from "react-intl";
 import { Form, Field } from "react-final-form";
@@ -5,6 +6,30 @@ import { z } from "zod";
 import Navbar from "./Navbar";
 
 function Contact() {
+  const [hasSubmitted, setHasSubmitted] = React.useState(false);
+  const postContact = async (payload) => {
+    const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-contact";
+
+    const options = {
+      method: "POST",
+      headers: {
+        "x-apikey": "6082d28c28bf9b609975a5db",
+        "Content-Type": "application/json; charset=utf-8",
+      },
+      body: JSON.stringify(payload),
+    };
+
+    try {
+      const request = await fetch(url, options);
+      const data = await request.json();
+      setHasSubmitted(true);
+      return data;
+    } catch (err) {
+      console.log("Caught error " + err);
+      return undefined;
+    }
+  };
+
   const intl = useIntl();
 
   //using zod to describe the type of string for each object to validate it
@@ -17,7 +42,7 @@ function Contact() {
         code: "invalid_type",
       })
       .optional(),
-    inquiry: z.string(),
+    message: z.string(),
   });
 
   //the actual validation where it looks at each error and then looks at the first path
@@ -196,7 +221,7 @@ function Contact() {
           </div>
 
           <Form
-            onSubmit={() => {}}
+            onSubmit={postContact}
             validate={validate}
             render={({ handleSubmit }) => (
               <form onSubmit={handleSubmit}>
@@ -282,7 +307,6 @@ function Contact() {
                       )}
                       {meta.touched && !meta.error && (
                         <span className={contact.SuccessFont}>
-                          {" "}
                           <FormattedMessage id="contact.success" />
                         </span>
                       )}
@@ -290,12 +314,12 @@ function Contact() {
                   )}
                 </Field>
 
-                <Field name="inquiry">
+                <Field name="message">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="inquiry">
+                      <label for="message">
                         <FormattedMessage
-                          id="contact.inquiry"
+                          id="contact.message"
                           defaultMessage="Besked *"
                         />
                       </label>
@@ -303,7 +327,7 @@ function Contact() {
                         type="text"
                         {...input}
                         placeholder={
-                          intl.messages["contact.inquiry.placeholder"]
+                          intl.messages["contact.message.placeholder"]
                         }
                         className={contact.BigInput}
                       />
@@ -314,7 +338,6 @@ function Contact() {
                       )}
                       {meta.touched && !meta.error && (
                         <span className={contact.SuccessFont}>
-                          {" "}
                           <FormattedMessage id="contact.success" />
                         </span>
                       )}
@@ -330,6 +353,12 @@ function Contact() {
               </form>
             )}
           />
+          {hasSubmitted && (
+            <p className={contact.ThankYou}>
+              Thank you, we have received the message and we will get back to
+              you shortly!
+            </p>
+          )}
         </div>
       </div>
     </>

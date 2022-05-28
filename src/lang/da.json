@@ -16,7 +16,7 @@
   "invalid_type_name": "Påkrævet",
   "invalid_type_email": "Påkrævet",
   "invalid_type_phone": "Du skal udfylde et nummer",
-  "invalid_type_inquiry": "Påkrævet",
+  "invalid_type_message": "Påkrævet",
   "invalid_string_email": "Forkert email",
 
   "footer.hours": "Åbningstider",
@@ -44,12 +44,12 @@
   "contact.title": "Skriv til os",
   "contact.name": "Navn *",
   "contact.phone": "Telefon",
-  "contact.inquiry": "Besked *",
+  "contact.message": "Besked *",
 
   "contact.name.placeholder": "Skriv dit navn her...",
   "contact.email.placeholder": "Skriv dit email her...",
   "contact.phone.placeholder": "Skriv dit telefon her...",
-  "contact.inquiry.placeholder": "Skriv dit besked her...",
+  "contact.message.placeholder": "Skriv dit besked her...",
 
   "about.julia.title": "OM JULIA",
   "about.salon.title": "OM SALONEN",
