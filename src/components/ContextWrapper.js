@@ -44,17 +44,31 @@ function ContextWrapper(props) {
   // gift card information state and functionn for manipulating it
   // initial info object (state)
   const initInfo = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    amount: "",
-    note: "",
-    firstNameHelp: "hidden",
-    lastNameHelp: "hidden",
-    emailHelp: "hidden",
-    amountHelp: "hidden",
-    date: new Date(),
-    validated: false,
+    giftcard: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      amount: "",
+      note: "",
+      firstNameHelp: "hidden",
+      lastNameHelp: "hidden",
+      emailHelp: "hidden",
+      amountHelp: "hidden",
+      date: new Date(),
+      validated: false,
+      reset: false,
+    },
+    creditcard: {
+      number: "",
+      numberHelp: false,
+      name: "",
+      nameHelp: false,
+      expiry: "",
+      expiryHelp: false,
+      expiryInvalid: false,
+      cvc: "",
+      cvcHelp: false,
+    },
   };
 
   // use reducer hook for updating info state
@@ -64,32 +78,72 @@ function ContextWrapper(props) {
   function reducer(info, action) {
     switch (action.type) {
       case "fname":
-        return { ...info, firstName: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, firstName: action.data },
+        };
       case "lname":
-        return { ...info, lastName: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, lastName: action.data },
+        };
       case "email":
-        return { ...info, email: action.data };
+        return { ...info, giftcard: { ...info.giftcard, email: action.data } };
       case "amount":
-        return { ...info, amount: action.data };
+        return { ...info, giftcard: { ...info.giftcard, amount: action.data } };
       case "note":
-        return { ...info, note: action.data };
+        return { ...info, giftcard: { ...info.giftcard, note: action.data } };
       case "fnameHelp":
-        return { ...info, firstNameHelp: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, firstNameHelp: action.data },
+        };
       case "lnameHelp":
-        return { ...info, lastNameHelp: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, lastNameHelp: action.data },
+        };
       case "emailHelp":
-        return { ...info, emailHelp: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, emailHelp: action.data },
+        };
       case "amountHelp":
-        return { ...info, amountHelp: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, amountHelp: action.data },
+        };
       case "date":
-        return { ...info, date: action.data };
+        return { ...info, giftcard: { ...info.giftcard, date: action.data } };
       case "validated":
-        return { ...info, validated: action.data };
+        return {
+          ...info,
+          giftcard: { ...info.giftcard, validated: action.data },
+        };
+      case "reset":
+        return { ...info, giftcard: { ...info.giftcard, reset: action.data } };
 
       default:
         throw new Error();
     }
   }
+
+  useEffect(() => {
+    if (info.reset) {
+      dispatch({ type: "fname", data: "" });
+      dispatch({ type: "lname", data: "" });
+      dispatch({ type: "email", data: "" });
+      dispatch({ type: "amount", data: "" });
+      dispatch({ type: "note", data: "" });
+      dispatch({ type: "fnameHelp", data: "hidden" });
+      dispatch({ type: "lnameHelp", data: "hidden" });
+      dispatch({ type: "emailHelp", data: "hidden" });
+      dispatch({ type: "amountHelp", data: "hidden" });
+      dispatch({ type: "date", data: new Date() });
+      dispatch({ type: "validated", data: false });
+      dispatch({ type: "reset", data: false });
+    }
+  }, [info.reset]);
 
   return (
     <Context.Provider

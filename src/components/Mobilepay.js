@@ -12,28 +12,18 @@ function Mobilepay() {
   };
 
   const setInfoToInitial = () => {
-    dispatch({ type: "fname", data: "" });
-    dispatch({ type: "lname", data: "" });
-    dispatch({ type: "email", data: "" });
-    dispatch({ type: "amount", data: "" });
-    dispatch({ type: "note", data: "" });
-    dispatch({ type: "fnameHelp", data: "hidden" });
-    dispatch({ type: "nameHelp", data: "hidden" });
-    dispatch({ type: "emailHelp", data: "hidden" });
-    dispatch({ type: "amountHelp", data: "hidden" });
-    dispatch({ type: "date", data: new Date() });
-    dispatch({ type: "validated", data: false });
+    dispatch({ type: "reset", data: true });
   };
 
-  const handleClick = async (e) => {
-    if (info.validated) {
+  const handleClick = async () => {
+    if (info.giftcard.validated) {
       const payload = {
-        first_name: info.firstName,
-        last_name: info.lastName,
-        email: info.email,
-        amount: parseInt(info.amount),
-        note: info.note,
-        date_receive: info.date,
+        first_name: info.giftcard.firstName,
+        last_name: info.giftcard.lastName,
+        email: info.giftcard.email,
+        amount: parseInt(info.giftcard.amount),
+        note: info.giftcard.note,
+        date_receive: info.giftcard.date,
       };
       const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-giftcard";
       const response = await postGiftcard(payload, url);

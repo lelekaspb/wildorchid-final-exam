@@ -61,13 +61,13 @@ function Giftcard() {
   };
 
   // datePicker footer
-  const dpFooter = info.date ? (
+  const dpFooter = info.giftcard.date ? (
     <p>
       <FormattedMessage
         id="giftcard.datepicker.footer.selected"
         defaultMessage="Du valgte"
       />{" "}
-      {format(info.date, "d/MM/yyyy")}.
+      {format(info.giftcard.date, "d/MM/yyyy")}.
     </p>
   ) : (
     <p>
@@ -90,13 +90,16 @@ function Giftcard() {
   const amountRef = useRef("");
 
   const checkForErrors = () => {
-    if (info.firstNameHelp == "error" || info.firstNameHelp == "hidden") {
+    if (info.firstNameHelp === "error" || info.firstNameHelp === "hidden") {
       return firstNameRef;
-    } else if (info.lastNameHelp == "error" || info.lastNameHelp == "hidden") {
+    } else if (
+      info.lastNameHelp === "error" ||
+      info.lastNameHelp === "hidden"
+    ) {
       return lastNameRef;
-    } else if (info.emailHelp == "error" || info.emailHelp == "hidden") {
+    } else if (info.emailHelp === "error" || info.emailHelp === "hidden") {
       return emailRef;
-    } else if (info.amountHelp == "error" || info.amountHelp == "hidden") {
+    } else if (info.amountHelp === "error" || info.amountHelp === "hidden") {
       return amountRef;
     }
   };
@@ -161,7 +164,7 @@ function Giftcard() {
                     id: "giftcard.info.first_name_placeholder",
                     defaultMessage: "Skriv dit fornavn her...",
                   })}
-                  value={info.firstName}
+                  value={info.giftcard.firstName}
                   onChange={(e) => {
                     dispatch({ type: "fname", data: e.target.value });
                   }}
@@ -171,16 +174,10 @@ function Giftcard() {
                       data: validateName(e.target.value),
                     });
                   }}
-                  onInput={(e) => {
-                    dispatch({
-                      type: "fnameHelp",
-                      data: validateName(e.target.value),
-                    });
-                  }}
                 />
                 <div
                   className={`${
-                    info.firstNameHelp === "hidden"
+                    info.giftcard.firstNameHelp === "hidden"
                       ? giftcard.hidden
                       : info.firstNameHelp === "error"
                       ? giftcard.error
@@ -188,7 +185,7 @@ function Giftcard() {
                   }`}
                 >
                   {" "}
-                  {info.firstNameHelp === "success" ? (
+                  {info.giftcard.firstNameHelp === "success" ? (
                     <FormattedMessage
                       id="giftcard.success"
                       defaultMessage="Godt"
@@ -228,7 +225,7 @@ function Giftcard() {
                     id: "giftcard.info.last_name_placeholder",
                     defaultMessage: "Skriv dit efternavn her...",
                   })}
-                  value={info.lastName}
+                  value={info.giftcard.lastName}
                   onChange={(e) => {
                     dispatch({ type: "lname", data: e.target.value });
                   }}
@@ -238,17 +235,11 @@ function Giftcard() {
                       data: validateName(e.target.value),
                     });
                   }}
-                  onInput={(e) => {
-                    dispatch({
-                      type: "lnameHelp",
-                      data: validateName(e.target.value),
-                    });
-                  }}
                 />
 
                 <div
                   className={`${
-                    info.lastNameHelp === "hidden"
+                    info.giftcard.lastNameHelp === "hidden"
                       ? giftcard.hidden
                       : info.lastNameHelp === "error"
                       ? giftcard.error
@@ -256,7 +247,7 @@ function Giftcard() {
                   }`}
                 >
                   {" "}
-                  {info.lastNameHelp === "success" ? (
+                  {info.giftcard.lastNameHelp === "success" ? (
                     <FormattedMessage
                       id="giftcard.success"
                       defaultMessage="Godt"
@@ -296,7 +287,7 @@ function Giftcard() {
                   id: "giftcard.info.email_placeholder",
                   defaultMessage: "Skriv dit efternavn her...",
                 })}
-                value={info.email}
+                value={info.giftcard.email}
                 onChange={(e) => {
                   dispatch({ type: "email", data: e.target.value });
                 }}
@@ -306,17 +297,11 @@ function Giftcard() {
                     data: validateEmail(e.target.value),
                   });
                 }}
-                onInput={(e) => {
-                  dispatch({
-                    type: "emailHelp",
-                    data: validateEmail(e.target.value),
-                  });
-                }}
               />
 
               <div
                 className={`${
-                  info.emailHelp === "hidden"
+                  info.giftcard.emailHelp === "hidden"
                     ? giftcard.hidden
                     : info.emailHelp === "error"
                     ? giftcard.error
@@ -324,7 +309,7 @@ function Giftcard() {
                 }`}
               >
                 {" "}
-                {info.emailHelp === "success" ? (
+                {info.giftcard.emailHelp === "success" ? (
                   <FormattedMessage
                     id="giftcard.success"
                     defaultMessage="Godt"
@@ -361,7 +346,7 @@ function Giftcard() {
                   id: "giftcard.info.amount_placeholder",
                   defaultMessage: "Skriv dit efternavn her...",
                 })}
-                value={info.amount}
+                value={info.giftcard.amount}
                 onChange={(e) => {
                   dispatch({ type: "amount", data: e.target.value });
                 }}
@@ -371,17 +356,11 @@ function Giftcard() {
                     data: validateAmount(e.target.value),
                   });
                 }}
-                onInput={(e) => {
-                  dispatch({
-                    type: "amountHelp",
-                    data: validateAmount(e.target.value),
-                  });
-                }}
               />
 
               <div
                 className={`${
-                  info.amountHelp === "hidden"
+                  info.giftcard.amountHelp === "hidden"
                     ? giftcard.hidden
                     : info.amountHelp === "error"
                     ? giftcard.error
@@ -389,7 +368,7 @@ function Giftcard() {
                 }`}
               >
                 {" "}
-                {info.amountHelp === "success" ? (
+                {info.giftcard.amountHelp === "success" ? (
                   <FormattedMessage
                     id="giftcard.success"
                     defaultMessage="Godt"
@@ -420,7 +399,7 @@ function Giftcard() {
                   id: "giftcard.info.note_placeholder",
                   defaultMessage: "Skriv bemærk her...",
                 })}
-                value={info.note}
+                value={info.giftcard.note}
                 onChange={(e) => {
                   dispatch({ type: "note", data: e.target.value });
                 }}
@@ -444,7 +423,7 @@ function Giftcard() {
                 required
                 disabled={[{ before: new Date() }]}
                 locale={dpLocale[locale]}
-                selected={info.date}
+                selected={info.giftcard.date}
                 onSelect={(day) => {
                   dispatch({ type: "date", data: day });
                 }}
@@ -467,12 +446,14 @@ function Giftcard() {
             <img
               className={giftcard.photo}
               src="./../photos/giftcard_photo.jpg"
+              alt="gift card "
             />
           </div>
         </section>
         <img
           className={giftcard.orchid}
           src="./../illustrations/giftcard-info-orchid.svg"
+          alt="orchid illustration"
         />
         {/* gift card infornation form  --- end*/}
       </div>
