@@ -77,7 +77,9 @@ function AboutUs() {
             />
           </p>
         </div>
+      </div>
 
+      <div className={` ${about.TrustpilotImageSection} `}>
         <div className={` ${about.TrustpilotSection} `}>
           <div
             class="trustpilot-widget"
