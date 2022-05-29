@@ -137,7 +137,7 @@ textarea {
 } */
 
 ::placeholder {
-  color: #d6a38a;
+  color: var(--placeholder-color);
 }
 
 .ContactButton {
@@ -161,7 +161,7 @@ textarea {
 }
 
 .ErrorFont {
-  color: #b73a52;
+  color: var(--error-color);
   font-size: 0.7rem;
   margin-top: 0.3rem;
 }
@@ -280,7 +280,7 @@ textarea {
     width: 50vw;
   }
 
-  span {
+  .ErrorFont {
     font-size: 0.8rem;
     margin-top: 0.5rem;
   }

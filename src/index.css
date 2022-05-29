@@ -5,6 +5,9 @@
   --pinkish-bg-color: #fff3ee;
   --pinkish-border-color: #f0cdbc;
   --button-text-color: #ffffff;
+  --placeholder-color: #d6a38a;
+  --error-color: #b73a52;
+  --success-color: #139b70;
 
   --primary-font: "Roboto", sans-serif;
   --logo-font: "Merienda", cursive;
@@ -24,7 +27,6 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   font-family: var(--primary-font);
-  /* font-size: var(--body-font-size); */
   font-size: 13px;
 }
 

@@ -10,6 +10,9 @@
   "navigation.giftcard": "Gavekort",
   "navigation.book": "Bestil tid",
 
+  "giftcard.thanks": "Tak for dit køb og for at støtte vores virksomhed!",
+  "giftcard.promise": "Gavekortet sendes på mail nu.",
+
   "greeting": "Wild Orchid Webside",
 
   "invalid_type_name": "Påkrævet",
@@ -137,5 +140,31 @@
   "services.waxing.after_six_weeks": "Efter 6 uger*",
   "services.waxing.valid_for": "*gælder også for barbering eller førstegangskunde",
 
-  "book": "Book nu"
+  "book": "Book nu",
+
+  "giftcard.info.first_name_label": "Fornavn",
+  "giftcard.info.first_name_placeholder": "Skriv fornavn her...",
+  "giftcard.info.last_name_label": "Efternavn",
+  "giftcard.info.last_name_placeholder": "Skriv efternavn her...",
+  "giftcard.info.email_label": "Email *",
+  "giftcard.info.email_placeholder": "Skriv email her...",
+  "giftcard.info.amount_label": "Beløb (DKK) *",
+  "giftcard.info.amount_placeholder": "Skriv det beløb du ønsker at købe her...",
+  "giftcard.info.note_label": "Bemærk",
+  "giftcard.info.note_placeholder": "Skriv bemærk her...",
+  "giftcard.info.date_label": "Dato modtaget *",
+  "giftcard.info.now_label": "Nu",
+  "giftcard.info.later_label": "Senere",
+  "giftcard.name.error": "{value} kan kun bestå af bogstaver",
+  "giftcard.email.error": "Indtast venligst en gyldig e-mailadresse",
+  "giftcard.amount.error": "Indtast venligst et beløb mellem 50 og 2000, kun cifre",
+  "giftcard.amount.directive": "Du kan vælge beløb mellem 50 og 2000",
+  "giftcard.error": "Ugyldig",
+  "giftcard.success": "Godt",
+  "giftcard.datepicker.footer.selected": "Du valgte",
+  "giftcard.datepicker.footer.select": "Vælg venligst en dag.",
+  "giftcard.next_btn": "Næste",
+
+  "payment.back_to_form": "tilbage til formularen",
+  "payment.method": "Betalingsmetode"
 }
