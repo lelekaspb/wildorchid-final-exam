@@ -60,14 +60,14 @@ function ContextWrapper(props) {
     },
     creditcard: {
       number: "",
-      numberHelp: false,
+      numberHelp: "hidden",
       name: "",
-      nameHelp: false,
+      nameHelp: "hidden",
       expiry: "",
-      expiryHelp: false,
+      expiryHelp: "hidden",
       expiryInvalid: false,
       cvc: "",
-      cvcHelp: false,
+      cvcHelp: "hidden",
     },
   };
 
@@ -122,6 +122,51 @@ function ContextWrapper(props) {
         };
       case "reset":
         return { ...info, giftcard: { ...info.giftcard, reset: action.data } };
+      case "ccnumber":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, number: action.data },
+        };
+      case "ccnumberHelp":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, numberHelp: action.data },
+        };
+      case "ccname":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, name: action.data },
+        };
+      case "ccnameHelp":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, nameHelp: action.data },
+        };
+      case "ccexpiry":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, expiry: action.data },
+        };
+      case "expiryHelp":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, expiryHelp: action.data },
+        };
+      case "expiryInvalid":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, expiryInvalid: action.data },
+        };
+      case "cccvc":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, cvc: action.data },
+        };
+      case "cccvcHelp":
+        return {
+          ...info,
+          creditcard: { ...info.creditcard, cvcHelp: action.data },
+        };
 
       default:
         throw new Error();

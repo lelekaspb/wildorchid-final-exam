@@ -41,9 +41,9 @@ function Mobilepay() {
   };
 
   return (
-    <div className={mobilepay.picture}>
+    <section className={mobilepay.picture}>
       <img src="./../photos/qr-code.png" alt="qr code" onClick={handleClick} />
-    </div>
+    </section>
   );
 }
 

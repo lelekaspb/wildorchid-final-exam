@@ -166,5 +166,19 @@
   "giftcard.next_btn": "Næste",
 
   "payment.back_to_form": "tilbage til formularen",
-  "payment.method": "Betalingsmetode"
+  "payment.method": "Betalingsmetode",
+
+  "creditcard.number": "Kortnummer *",
+  "creditcard.number.placeholder": "Skriv kortnummer her...",
+  "creditcard.number.error": "Kreditkortnummer skal være på 16 cifre",
+  "creditcard.name": "Navn på kort",
+  "creditcard.name.placeholder": "Skriv dit navn her...",
+  "creditcard.name.error": "Vær sød at skrive dit navn",
+  "creditcard.expiry": "Udløbsdato *",
+  "creditcard.expiry.invalid": "Ugyldigt format",
+  "creditcard.expiry.error": "Udløbsdatoen skal være 4 på cifre",
+  "creditcard.cvc": "Sikkerhedskode *",
+  "creditcard.cvc.error": "Sikkerhedskoden skal være på 3 cifre",
+  "creditcard.total": "I alt",
+  "creditcard.pay": "Betal"
 }

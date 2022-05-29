@@ -1,4 +1,4 @@
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage, useIntl, FormattedDate } from "react-intl";
 import Navbar from "./Navbar";
 import giftcard from "../styles/Giftcard.module.css";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,6 @@ import { useRef } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "../styles/day-picker.css";
-import { format } from "date-fns";
 import en from "date-fns/locale/en-gb";
 import da from "date-fns/locale/da";
 import { Context } from "./ContextWrapper";
@@ -67,7 +66,13 @@ function Giftcard() {
         id="giftcard.datepicker.footer.selected"
         defaultMessage="Du valgte"
       />{" "}
-      {format(info.giftcard.date, "d/MM/yyyy")}.
+      <FormattedDate
+        value={info.giftcard.date}
+        year="numeric"
+        month="long"
+        day="numeric"
+        weekday="long"
+      />
     </p>
   ) : (
     <p>
@@ -90,16 +95,13 @@ function Giftcard() {
   const amountRef = useRef("");
 
   const checkForErrors = () => {
-    if (info.firstNameHelp === "error" || info.firstNameHelp === "hidden") {
+    if (info.giftcard.firstNameHelp === "error") {
       return firstNameRef;
-    } else if (
-      info.lastNameHelp === "error" ||
-      info.lastNameHelp === "hidden"
-    ) {
+    } else if (info.giftcard.lastNameHelp === "error") {
       return lastNameRef;
-    } else if (info.emailHelp === "error" || info.emailHelp === "hidden") {
+    } else if (info.giftcard.emailHelp === "error") {
       return emailRef;
-    } else if (info.amountHelp === "error" || info.amountHelp === "hidden") {
+    } else if (info.giftcard.amountHelp === "error") {
       return amountRef;
     }
   };
