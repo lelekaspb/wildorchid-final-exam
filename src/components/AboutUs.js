@@ -78,21 +78,42 @@ function AboutUs() {
           </p>
         </div>
 
-        <div
-          class="trustpilot-widget"
-          data-locale="da-DK"
-          data-template-id="56278e9abfbbba0bdcd568bc"
-          data-businessunit-id="628abcf5c39abf4de2a16318"
-          data-style-height="52px"
-          data-style-width="100%"
-        >
-          <a
-            href="https://dk.trustpilot.com/review/wildorchid.dk"
-            target="_blank"
-            rel="noopener"
+        <div className={` ${about.TrustpilotSection} `}>
+          <div
+            class="trustpilot-widget"
+            data-locale="da-DK"
+            data-template-id="5419b6a8b0d04a076446a9ad"
+            data-businessunit-id="628abcf5c39abf4de2a16318"
+            data-style-height="24px"
+            data-style-width="100%"
+            data-theme="light"
+            data-min-review-count="10"
           >
-            Trustpilot
-          </a>
+            <a
+              href="https://dk.trustpilot.com/review/wildorchid.dk"
+              target="_blank"
+              rel="noopener"
+            >
+              {/* Trustpilot */}
+            </a>
+          </div>
+
+          <div
+            class="trustpilot-widget"
+            data-locale="da-DK"
+            data-template-id="56278e9abfbbba0bdcd568bc"
+            data-businessunit-id="628abcf5c39abf4de2a16318"
+            data-style-height="52px"
+            data-style-width="100%"
+          >
+            <a
+              href="https://dk.trustpilot.com/review/wildorchid.dk"
+              target="_blank"
+              rel="noopener"
+            >
+              {/* Trustpilot */}
+            </a>
+          </div>
         </div>
 
         <img
