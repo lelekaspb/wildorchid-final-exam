@@ -95,24 +95,39 @@ function Giftcard() {
   const amountRef = useRef("");
 
   const checkForErrors = () => {
-    if (info.giftcard.firstNameHelp === "error") {
+    dispatch({
+      type: "fnameHelp",
+      data: validateName(info.giftcard.firstName),
+    });
+    dispatch({ type: "lnameHelp", data: validateName(info.giftcard.lastName) });
+    dispatch({ type: "emailHelp", data: validateEmail(info.giftcard.email) });
+    dispatch({
+      type: "amountHelp",
+      data: validateAmount(info.giftcard.amount),
+    });
+
+    if (validateName(info.giftcard.firstName) === "error") {
       return firstNameRef;
-    } else if (info.giftcard.lastNameHelp === "error") {
+    } else if (validateName(info.giftcard.lastName) === "error") {
       return lastNameRef;
-    } else if (info.giftcard.emailHelp === "error") {
+    } else if (validateEmail(info.giftcard.email) === "error") {
       return emailRef;
-    } else if (info.giftcard.amountHelp === "error") {
+    } else if (validateAmount(info.giftcard.amount) === "error") {
       return amountRef;
     }
   };
 
-  const focusOnError = (errorField) => {
-    errorField.current.focus();
+  const scrollToError = (errorField) => {
+    const offset = errorField.current.offsetTop;
+    window.scroll({
+      top: offset,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     // validate
     const errorField = checkForErrors();
     if (!errorField) {
@@ -121,7 +136,7 @@ function Giftcard() {
       redirectToPayment();
     } else {
       // if not, focus on the first error field in the flow
-      focusOnError(errorField);
+      scrollToError(errorField);
     }
   };
 
@@ -144,7 +159,7 @@ function Giftcard() {
         </div>
 
         {/* gift card infornation form */}
-        <form className={giftcard.info_form} autoComplete="on">
+        <form className={giftcard.info_form} autoComplete="off">
           <fieldset>
             <div className={giftcard.name}>
               {/* first name field */}
@@ -161,6 +176,7 @@ function Giftcard() {
                   type="text"
                   id="giftcard_fname"
                   name="fname"
+                  autoFocus
                   ref={firstNameRef}
                   placeholder={intl.formatMessage({
                     id: "giftcard.info.first_name_placeholder",
@@ -181,7 +197,7 @@ function Giftcard() {
                   className={`${
                     info.giftcard.firstNameHelp === "hidden"
                       ? giftcard.hidden
-                      : info.firstNameHelp === "error"
+                      : info.giftcard.firstNameHelp === "error"
                       ? giftcard.error
                       : giftcard.success
                   }`}
@@ -243,7 +259,7 @@ function Giftcard() {
                   className={`${
                     info.giftcard.lastNameHelp === "hidden"
                       ? giftcard.hidden
-                      : info.lastNameHelp === "error"
+                      : info.giftcard.lastNameHelp === "error"
                       ? giftcard.error
                       : giftcard.success
                   }`}
@@ -305,7 +321,7 @@ function Giftcard() {
                 className={`${
                   info.giftcard.emailHelp === "hidden"
                     ? giftcard.hidden
-                    : info.emailHelp === "error"
+                    : info.giftcard.emailHelp === "error"
                     ? giftcard.error
                     : giftcard.success
                 }`}
@@ -364,7 +380,7 @@ function Giftcard() {
                 className={`${
                   info.giftcard.amountHelp === "hidden"
                     ? giftcard.hidden
-                    : info.amountHelp === "error"
+                    : info.giftcard.amountHelp === "error"
                     ? giftcard.error
                     : giftcard.success
                 }`}

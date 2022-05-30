@@ -1,6 +1,6 @@
 import MaskedInput from "react-text-mask";
 import { forwardRef } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import giftcard from "../styles/Giftcard.module.css";
 
 const Cardnumber = forwardRef(

@@ -171,7 +171,7 @@
   "creditcard.number": "Card number *",
   "creditcard.number.placeholder": "Type card number here...",
   "creditcard.number.error": "Credit card number must be 16 digits",
-  "creditcard.name": "Name on card",
+  "creditcard.name": "Name on card *",
   "creditcard.name.placeholder": "Type your name here...",
   "creditcard.name.error": "Please enter your name",
   "creditcard.expiry": "Expiry date *",

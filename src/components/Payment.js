@@ -54,7 +54,7 @@ function Payment() {
         <Link
           to="creditcard"
           className={`${
-            method == "creditcard" ? payment.chosen : payment.ignored
+            method === "creditcard" ? payment.chosen : payment.ignored
           }`}
           data-method="creditcard"
           onClick={changeMethod}
@@ -64,7 +64,7 @@ function Payment() {
         <Link
           to="mobilepay"
           className={`${
-            method == "mobilepay" ? payment.chosen : payment.ignored
+            method === "mobilepay" ? payment.chosen : payment.ignored
           }`}
           data-method="mobilepay"
           onClick={changeMethod}

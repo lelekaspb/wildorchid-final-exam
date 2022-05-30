@@ -171,7 +171,7 @@
   "creditcard.number": "Kortnummer *",
   "creditcard.number.placeholder": "Skriv kortnummer her...",
   "creditcard.number.error": "Kreditkortnummer skal være på 16 cifre",
-  "creditcard.name": "Navn på kort",
+  "creditcard.name": "Navn på kort *",
   "creditcard.name.placeholder": "Skriv dit navn her...",
   "creditcard.name.error": "Vær sød at skrive dit navn",
   "creditcard.expiry": "Udløbsdato *",

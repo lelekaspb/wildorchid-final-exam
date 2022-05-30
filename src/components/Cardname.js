@@ -12,7 +12,7 @@ const Cardname = forwardRef(
         <label htmlFor="card-name" className={giftcard.label}>
           <FormattedMessage
             id="creditcard.name"
-            defaultMessage="Navn på kort"
+            defaultMessage="Navn på kort *"
           />
         </label>
 

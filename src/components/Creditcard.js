@@ -1,7 +1,7 @@
 import { FormattedMessage, FormattedDate } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import { Context } from "./ContextWrapper";
-import { useContext, useRef, useEffect } from "react";
+import { useContext, useRef, useEffect, useCallback } from "react";
 import { postGiftcard } from "./../utilities/post.js";
 import creditcard from "../styles/Creditcard.module.css";
 import giftcard from "../styles/Giftcard.module.css";
@@ -11,41 +11,63 @@ import Cardcvc from "./Cardcvc";
 import Cardexpiry from "./Cardexpiry";
 
 function Creditcard() {
+  // fetch the info state and dispatch function from context provider
   const { info, dispatch } = useContext(Context);
 
+  // for redirecting user to confirmation page after form validation
   let navigate = useNavigate();
   const redirectToConfirmation = () => {
     navigate("/confirmation");
   };
 
+  // for re-setting the info state  to initial value after posting giftcard order
   const setInfoToInitial = () => {
     dispatch({ type: "reset", data: true });
   };
 
-  // focus on incorrectly filled in input
-  const focusOnError = (errorField) => {
-    errorField.current.focus();
-  };
-
   // check if there is any input that has been filled in incorrectly
   const checkForErrors = () => {
-    if (info.creditcard.number.length < 19) {
-      return cardNumberRef;
-    } else if (info.creditcard.name.length < 3) {
-      return cardNameRef;
-    } else if (info.creditcard.expiry.length < 5) {
-      return cardExpiryRef;
-    } else if (info.creditcard.cvc.length < 3) {
-      return cardCvcRef;
+    // highlight all incorrectly filled in input fields
+    dispatch({
+      type: "ccnumberHelp",
+      data: `${info.creditcard.number.length < 19 ? "error" : "success"}`,
+    });
+    dispatch({
+      type: "ccnameHelp",
+      data: `${info.creditcard.name.length < 3 ? "error" : "success"}`,
+    });
+    dispatch({
+      type: "expiryHelp",
+      data: `${info.creditcard.expiry.length < 5 ? "error" : "success"}`,
+    });
+    validateExpiry();
+    dispatch({
+      type: "cccvcHelp",
+      data: `${info.creditcard.cvc.length < 3 ? "error" : "success"}`,
+    });
+
+    // check there are incorrectly filled in input fields
+    if (
+      info.creditcard.number.length < 19 ||
+      info.creditcard.name.length < 3 ||
+      info.creditcard.expiry.length < 5 ||
+      !validateExpiry() ||
+      info.creditcard.cvc.length < 3
+    ) {
+      return true;
+    } else {
+      return false;
     }
   };
 
+  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     const errorField = checkForErrors();
     if (!errorField) {
       // if all input fields are filled in correctly, post order and redirect the user to the confirmation page(component)
       if (info.giftcard.validated) {
+        // if giftcard form was filled in correctly, post order in db
         const payload = {
           first_name: info.giftcard.firstName,
           last_name: info.giftcard.lastName,
@@ -57,6 +79,8 @@ function Creditcard() {
         const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-giftcard";
         const response = await postGiftcard(payload, url);
         if (response !== undefined) {
+          // if post request was successful, set state to initial,
+          // and redirect user to confirmation page
           setInfoToInitial();
           redirectToConfirmation();
         } else {
@@ -67,13 +91,12 @@ function Creditcard() {
           "Looks like something is wrong with the information in gift card form."
         );
       }
-    } else {
-      // if there is an error in input values, change focus to the incorrectly filled in input field
-      focusOnError(errorField);
     }
   };
 
-  const validateExpiry = (expiry) => {
+  // check if expiry date is valid
+  const validateExpiry = useCallback(() => {
+    const expiry = info.creditcard.expiry;
     const d = new Date();
     const year = d.getFullYear() - 2000;
     const month = d.getMonth() + 1;
@@ -85,15 +108,13 @@ function Creditcard() {
       expiry.split("/")[1] > year + 10 ||
       expiry.split("/")[1] < year
     ) {
-      // dispatch({ type: "expiryHelp", data: "error" });
       dispatch({ type: "expiryInvalid", data: true });
       return false;
     } else {
-      // dispatch({ type: "expiryHelp", data: "success" });
       dispatch({ type: "expiryInvalid", data: false });
       return true;
     }
-  };
+  }, [info.creditcard.expiry, dispatch]);
 
   // refs for accessing input elements
   const cardNumberRef = useRef("");
@@ -110,12 +131,12 @@ function Creditcard() {
 
   useEffect(() => {
     if (info.creditcard.expiry.length === 5) {
-      const isCorrect = validateExpiry(info.creditcard.expiry);
+      const isCorrect = validateExpiry();
       if (isCorrect) {
         cardCvcRef.current.focus();
       }
     }
-  }, [info.creditcard.expiry]);
+  }, [info.creditcard.expiry, validateExpiry]);
 
   useEffect(() => {
     if (info.creditcard.cvc.length === 3) {
@@ -128,7 +149,7 @@ function Creditcard() {
     if (info.creditcard.name.length > 2) {
       dispatch({ type: "ccnameHelp", data: "success" });
     }
-  }, [info.creditcard.name]);
+  }, [info.creditcard.name, dispatch]);
 
   return (
     <section className={creditcard.content}>
