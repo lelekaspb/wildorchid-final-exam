@@ -10,6 +10,17 @@
   "navigation.giftcard": "Gift card",
   "navigation.book": "Book",
 
+  "greeting.one": "Welcome to",
+  "greeting.two": "We are waiting for you in our exquisite {breakingLine} beauty salon",
+
+  "home.relax.title": "Relaxing atmosphere",
+  "home.satisfaction.title": "Customer satisfaction",
+  "home.services.title": "Quality services",
+  "home.relax.text": "At Wild Orchid you can forget about your every-day worries, relax and enjoy a procedure.",
+  "home.satisfaction.text": "90% of all our customers are regular clients who use the salon’s services at least once a month.",
+  "home.services.text": "We take great pride in our work and we are ready to go the extra miles for our customers.",
+
+  "home.instagram": "Check our Instagram posts out",
   "giftcard.thanks": "Thank you for your purchase and for supporting our company!",
   "giftcard.promise": "Gavekortet sendes på mail nu.",
 
