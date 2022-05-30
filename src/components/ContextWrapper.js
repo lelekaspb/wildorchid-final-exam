@@ -56,7 +56,6 @@ function ContextWrapper(props) {
       amountHelp: "hidden",
       date: new Date(),
       validated: false,
-      reset: false,
     },
     creditcard: {
       number: "",
@@ -69,6 +68,7 @@ function ContextWrapper(props) {
       cvc: "",
       cvcHelp: "hidden",
     },
+    reset: false,
   };
 
   // use reducer hook for updating info state
@@ -121,7 +121,7 @@ function ContextWrapper(props) {
           giftcard: { ...info.giftcard, validated: action.data },
         };
       case "reset":
-        return { ...info, giftcard: { ...info.giftcard, reset: action.data } };
+        return { ...info, reset: action.data };
       case "ccnumber":
         return {
           ...info,
@@ -187,6 +187,15 @@ function ContextWrapper(props) {
       dispatch({ type: "date", data: new Date() });
       dispatch({ type: "validated", data: false });
       dispatch({ type: "reset", data: false });
+      dispatch({ type: "ccnumber", data: "" });
+      dispatch({ type: "ccnumberHelp", data: "hidden" });
+      dispatch({ type: "ccname", data: "" });
+      dispatch({ type: "ccnameHelp", data: "hidden" });
+      dispatch({ type: "ccexpiry", data: "" });
+      dispatch({ type: "expiryHelp", data: "hidden" });
+      dispatch({ type: "expiryInvalid", data: false });
+      dispatch({ type: "cccvc", data: "" });
+      dispatch({ type: "cccvcHelp", data: "hidden" });
     }
   }, [info.reset]);
 
