@@ -82,7 +82,7 @@ function AboutUs() {
       <div className={` ${about.TrustpilotImageSection} `}>
         <div className={` ${about.TrustpilotSection} `}>
           <div
-            class="trustpilot-widget"
+            className="trustpilot-widget"
             data-locale="da-DK"
             data-template-id="5419b6a8b0d04a076446a9ad"
             data-businessunit-id="628abcf5c39abf4de2a16318"
@@ -101,7 +101,7 @@ function AboutUs() {
           </div>
 
           <div
-            class="trustpilot-widget"
+            className="trustpilot-widget"
             data-locale="da-DK"
             data-template-id="56278e9abfbbba0bdcd568bc"
             data-businessunit-id="628abcf5c39abf4de2a16318"
