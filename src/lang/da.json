@@ -21,6 +21,16 @@
   "home.services.text": "Vi sætter en stor ære i vores arbejde, og vi er klar til at gå de ekstra mil for vores kunder.",
 
   "home.instagram": "Tjek vores Instagram-opslag",
+  "giftcard.thanks": "Tak for dit køb og for at støtte vores virksomhed!",
+  "giftcard.promise": "Gavekortet sendes på mail nu.",
+
+  "greeting": "Wild Orchid Webside",
+
+  "invalid_type_name": "Påkrævet",
+  "invalid_type_email": "Påkrævet",
+  "invalid_type_phone": "Du skal udfylde et nummer",
+  "invalid_type_inquiry": "Påkrævet",
+  "invalid_string_email": "Forkert email",
 
   "footer.hours": "Åbningstider",
   "footer.hours.one": "Tirsdag - Torsdag: 11 - 19",
@@ -31,6 +41,35 @@
   "footer.address": "Adresse",
   "footer.follow": "Følg oss",
   "footer.cvr": "CVR-nummer: 37892726",
+
+  "about.hours": "Åbningstider",
+  "about.hours.one": "Tirsdag - Torsdag: 11 - 19",
+  "about.hours.two": "Fredag: 9 - 17",
+  "about.hours.three": "Lørdag: 9 - 16",
+  "about.hours.four": "Søndag - Mandag: Lukket",
+
+  "about.find": "Find Vej",
+  "about.find.parking.title": "PARKERING",
+  "about.find.metro.body": "M1 og M2 ligger 800 meter fra klinikken. Benyt stoppestedet “Forum”. M3 linjen ligger 240 meter fra klinikken. Benyt stoppestedet “Aksel Møllers Have”.",
+  "about.find.bus.body": "Bus 2A har stoppested 150 meter fra klinikken. Benyt stoppestedet “Falkoner Allé (Godthåbsvej)”. Bus 18 har stoppested 240 meter fra klinikken. Benyt stoppestedet “Rolighedsvej (Falkoner Allé)”.",
+  "about.find.parking.body": "Der er parkeringsmuligheder på sidegaderne til Rolighedsvej. Her er der 2 timers gratis parkering. Benyt Easypark mobil-app for at se tilgængelighed.",
+
+  "contact.title": "Skriv til os",
+  "contact.name": "Navn *",
+  "contact.phone": "Telefon",
+  "contact.inquiry": "Besked *",
+
+  "contact.name.placeholder": "Skriv dit navn her...",
+  "contact.email.placeholder": "Skriv dit email her...",
+  "contact.phone.placeholder": "Skriv dit telefon her...",
+  "contact.inquiry.placeholder": "Skriv dit besked her...",
+
+  "about.julia.title": "OM JULIA",
+  "about.salon.title": "OM SALONEN",
+  "about.clean.title": "VI PAS PÅ DIG",
+  "about.julia.body": "“Jeg er meget åben over for mine kunder. Jeg fortæller om mit liv, og de fortæller mig om deres. Mine behandlinger er gode og tilfredsstillende, og jeg er meget grundig. Jeg kan finde på at tage resten af de hår, der skal fjernes, med en pincet, hvis jeg ikke er tilfreds. Derfor kalder flere af mine kunder mig for perfektionist,” fortæller Julia Kurkova, der kommer fra Rusland.",
+  "about.salon.body": "Hos Wild Orchid er du sikker på at få en god og grundig behandling  uanset hvilken du vælger. Julia Kurkova elsker sit arbejde med skønhedsbehandlinger og går op i at levere en god service og fantastiske behandlinger hver gang. Julia Kurkova har arbejdet med skønhed siden 2014 og er efterhånden en ekspert inden for de behandlinger, hun tilbyder.",
+  "about.clean.body": "Hos Wild Orchid vil vi sørge for, at du er sikker. Vi tager vores forholdsregler for at sikre, at ingen smitte spredes fra én kunde til en anden. For at opnå dette bruger vi engangsværktøj og steriliserer engangsudstyr korrekt. Vi tager også særligt hensyn til vores genanvendelige udstyr. Alle instrumenter vi bruger gennemgår en 4-trins rengøringsproces. Redskaberne er behandlet med desinficerende spray; for det andet, derefter vasket for at sikre, at der ikke er nogen hudpartikler tilbage efter en procedure; instrumenterne udsættes for varmluftsterilisering; og til sidst lægges værktøjerne i en UV-sterilisator, hvor de opbevares indtil næste procedure.",
 
   "services.eyes.intro_one": "Vi farver bryn og vipper, og vi tilbyder både Lash Lift og vippeextensions.",
   "services.eyes.intro_two": "Med Lash Lift løfter og former vi dine naturlige øjenvipper, så de fremstår buede og større. Det åbner øjnene op og vipperne virker længere. Effekten efter behandlingen varer i cirka fire uger.",
@@ -112,5 +151,31 @@
   "services.waxing.after_six_weeks": "Efter 6 uger*",
   "services.waxing.valid_for": "*gælder også for barbering eller førstegangskunde",
 
-  "book": "Book nu"
+  "book": "Book nu",
+
+  "giftcard.info.first_name_label": "Fornavn",
+  "giftcard.info.first_name_placeholder": "Skriv fornavn her...",
+  "giftcard.info.last_name_label": "Efternavn",
+  "giftcard.info.last_name_placeholder": "Skriv efternavn her...",
+  "giftcard.info.email_label": "Email *",
+  "giftcard.info.email_placeholder": "Skriv email her...",
+  "giftcard.info.amount_label": "Beløb (DKK) *",
+  "giftcard.info.amount_placeholder": "Skriv det beløb du ønsker at købe her...",
+  "giftcard.info.note_label": "Bemærk",
+  "giftcard.info.note_placeholder": "Skriv bemærk her...",
+  "giftcard.info.date_label": "Dato modtaget *",
+  "giftcard.info.now_label": "Nu",
+  "giftcard.info.later_label": "Senere",
+  "giftcard.name.error": "{value} kan kun bestå af bogstaver",
+  "giftcard.email.error": "Indtast venligst en gyldig e-mailadresse",
+  "giftcard.amount.error": "Indtast venligst et beløb mellem 50 og 2000, kun cifre",
+  "giftcard.amount.directive": "Du kan vælge beløb mellem 50 og 2000",
+  "giftcard.error": "Ugyldig",
+  "giftcard.success": "Godt",
+  "giftcard.datepicker.footer.selected": "Du valgte",
+  "giftcard.datepicker.footer.select": "Vælg venligst en dag.",
+  "giftcard.next_btn": "Næste",
+
+  "payment.back_to_form": "tilbage til formularen",
+  "payment.method": "Betalingsmetode"
 }
