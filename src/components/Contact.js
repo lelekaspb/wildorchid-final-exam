@@ -228,7 +228,7 @@ function Contact() {
                 <Field name="name">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="name">
+                      <label htmlFor="name">
                         <FormattedMessage
                           id="contact.name"
                           defaultMessage="Navn *"
@@ -260,7 +260,7 @@ function Contact() {
                 <Field name="email">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="email">Email *</label>
+                      <label htmlFor="email">Email *</label>
                       <input
                         type="email"
                         {...input}
@@ -286,7 +286,7 @@ function Contact() {
                 <Field name="phone">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="tel">
+                      <label htmlFor="tel">
                         <FormattedMessage
                           id="contact.phone"
                           defaultMessage="Telefon"
@@ -317,7 +317,7 @@ function Contact() {
                 <Field name="message">
                   {({ input, meta }) => (
                     <div className={contact.LabelInputWrap}>
-                      <label for="message">
+                      <label htmlFor="message">
                         <FormattedMessage
                           id="contact.message"
                           defaultMessage="Besked *"
