@@ -137,23 +137,33 @@ textarea {
 } */
 
 ::placeholder {
-  color: #d6a38a;
-}
-
-span {
-  font-size: 0.7rem;
-  margin-top: 0.3rem;
+  color: var(--placeholder-color);
 }
 
 .ContactButton {
   background-color: var(--primary-font-color);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: var(--body-font-size);
+
+  /* background-color: var(--primary-font-color);
+  color: var(--button-text-color);
+  border-radius: 1px;
+  text-align: center;
+
+  border-radius: 1px;
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+  cursor: pointer; */
 }
 
 .ErrorFont {
-  color: #b73a52;
+  color: var(--error-color);
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
 }
 
 .SuccessFont {
@@ -199,6 +209,12 @@ span {
 
   .ContactIcon {
     height: 1.5rem;
+  }
+
+  .ContactButton {
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 
   .illustration {
@@ -273,7 +289,7 @@ span {
     width: 50vw;
   }
 
-  span {
+  .ErrorFont {
     font-size: 0.8rem;
     margin-top: 0.5rem;
   }

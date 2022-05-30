@@ -10,6 +10,20 @@
   "navigation.giftcard": "Gift card",
   "navigation.book": "Book",
 
+  "greeting.one": "Welcome to",
+  "greeting.two": "We are waiting for you in our exquisite {breakingLine} beauty salon",
+
+  "home.relax.title": "Relaxing atmosphere",
+  "home.satisfaction.title": "Customer satisfaction",
+  "home.services.title": "Quality services",
+  "home.relax.text": "At Wild Orchid you can forget about your every-day worries, relax and enjoy a procedure.",
+  "home.satisfaction.text": "90% of all our customers are regular clients who use the salon’s services at least once a month.",
+  "home.services.text": "We take great pride in our work and we are ready to go the extra miles for our customers.",
+
+  "home.instagram": "Check our Instagram posts out",
+  "giftcard.thanks": "Thank you for your purchase and for supporting our company!",
+  "giftcard.promise": "Gavekortet sendes på mail nu.",
+
   "greeting": "Wild Orchid Website",
 
   "contact.success": "Good",
@@ -138,5 +152,31 @@
   "services.waxing.after_six_weeks": "After 6 weeks*",
   "services.waxing.valid_for": "*also applies to shaving or first time customer",
 
-  "book": "Book now"
+  "book": "Book now",
+
+  "giftcard.info.first_name_label": "First name",
+  "giftcard.info.first_name_placeholder": "Type first name here...",
+  "giftcard.info.last_name_label": "Last name",
+  "giftcard.info.last_name_placeholder": "Type last name here...",
+  "giftcard.info.email_label": "Email *",
+  "giftcard.info.email_placeholder": "Type email here ...",
+  "giftcard.info.amount_label": "Amount (DKK) *",
+  "giftcard.info.amount_placeholder": "Type the amount you wish to purchase here...",
+  "giftcard.info.note_label": "Note",
+  "giftcard.info.note_placeholder": "Type a note here...",
+  "giftcard.info.date_label": "Date received *",
+  "giftcard.info.now_label": "Now",
+  "giftcard.info.later_label": "Later",
+  "giftcard.name.error": "{value} can only consist of letters",
+  "giftcard.email.error": "Please enter a valid email address",
+  "giftcard.amount.error": "Please enter an amount between 50 and 2000, only digits",
+  "giftcard.amount.directive": "You can choose amount between 50 and 2000",
+  "giftcard.error": "Invalid",
+  "giftcard.success": "Good",
+  "giftcard.datepicker.footer.selected": "You selected",
+  "giftcard.datepicker.footer.select": "Please pick a day.",
+  "giftcard.next_btn": "Next",
+
+  "payment.back_to_form": "back to form",
+  "payment.method": "Payment method"
 }

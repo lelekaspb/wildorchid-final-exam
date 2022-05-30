@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import IntlWrapper from "./components/ContextWrapper";
+import ContextWrapper from "./components/ContextWrapper";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <IntlWrapper>
+    <ContextWrapper>
       <App />
-    </IntlWrapper>
+    </ContextWrapper>
   </React.StrictMode>
 );
 
