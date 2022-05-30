@@ -162,12 +162,14 @@ textarea {
 
 .ErrorFont {
   color: var(--error-color);
-  font-size: 0.7rem;
-  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .SuccessFont {
   color: #139b70;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .ThankYou {
@@ -289,10 +291,10 @@ textarea {
     width: 50vw;
   }
 
-  .ErrorFont {
+  /* .ErrorFont {
     font-size: 0.8rem;
     margin-top: 0.5rem;
-  }
+  } */
 
   .ThankYou {
     font-size: 1rem;
