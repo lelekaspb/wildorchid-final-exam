@@ -40,7 +40,6 @@ const Cardnumber = forwardRef(
             /\d/,
             /\d/,
           ]}
-          autoFocus
           className={`form-control ${giftcard.input}`}
           placeholder="1234 1234 1234 1234"
           guide={false}
