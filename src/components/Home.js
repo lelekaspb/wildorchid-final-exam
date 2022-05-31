@@ -1,5 +1,5 @@
 import { FormattedMessage } from "react-intl";
-import home from "./../styles/Homepage.module.css";
+import home from "../styles/Homepage.module.css";
 import Navbar from "./Navbar";
 
 function Home() {
