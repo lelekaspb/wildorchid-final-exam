@@ -7,6 +7,8 @@ import Navbar from "./Navbar";
 
 function Contact() {
   const [hasSubmitted, setHasSubmitted] = React.useState(false);
+
+  //posting to restdb and try to see if it has been submitted properly, otherwise give error
   const postContact = async (payload) => {
     const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-contact";
 
@@ -45,7 +47,7 @@ function Contact() {
     message: z.string(),
   });
 
-  //the actual validation where it looks at each error and then looks at the first path
+  //the actual validation where it looks at each error and then looks at the first path of the error
   function validate(values) {
     const { success, error } = ContactForm.safeParse(values);
 
