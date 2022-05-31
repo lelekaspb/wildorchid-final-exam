@@ -80,7 +80,7 @@ function Contact() {
                     <img
                       src="./icons/clock.svg"
                       className={contact.ContactIcon}
-                      alt=""
+                      alt="Clock icon"
                     ></img>
                     <h3 className={contact.ContactTitle}>
                       <FormattedMessage
@@ -120,7 +120,7 @@ function Contact() {
                     <img
                       src="./icons/address.svg"
                       className={contact.ContactIcon}
-                      alt=""
+                      alt="Location icon"
                     ></img>
                     <h3 className={contact.ContactTitle}>Adresse</h3>
                   </div>
@@ -141,7 +141,7 @@ function Contact() {
                 <img
                   src="./illustrations/burger-menu-orchid.svg"
                   className={contact.illustration}
-                  alt=""
+                  alt="Orchid"
                 ></img>
               </div>
             </div>
@@ -156,7 +156,11 @@ function Contact() {
           <div className={contact.FindContainer}>
             <div className={contact.FindIconTextWrap}>
               <div className={contact.FindTitleIconWrap}>
-                <img src="./icons/metro.svg" className={contact.FindIcon}></img>
+                <img
+                  src="./icons/metro.svg"
+                  className={contact.FindIcon}
+                  alt="Metro icon"
+                ></img>
                 <h4 className={contact.FindTitle}>METRO</h4>
               </div>
               <p className={contact.FindText}>
@@ -168,7 +172,11 @@ function Contact() {
             </div>
             <div className={contact.FindIconTextWrap}>
               <div className={contact.FindTitleIconWrap}>
-                <img src="./icons/bus.svg" className={contact.FindIcon}></img>
+                <img
+                  src="./icons/bus.svg"
+                  className={contact.FindIcon}
+                  alt="Bus icon"
+                ></img>
                 <h4 className={contact.FindTitle}>BUS</h4>
               </div>
               <p className={contact.FindText}>
@@ -180,7 +188,11 @@ function Contact() {
             </div>
             <div className={contact.FindIconTextWrap}>
               <div className={contact.FindTitleIconWrap}>
-                <img src="./icons/car.svg" className={contact.FindIcon}></img>
+                <img
+                  src="./icons/car.svg"
+                  className={contact.FindIcon}
+                  alt="Car icon"
+                ></img>
                 <h4 className={contact.FindTitle}>
                   <FormattedMessage
                     id="about.find.parking.title"
@@ -222,6 +234,7 @@ function Contact() {
             </h2>
           </div>
 
+          {/* handling the submit of form, inside form there is meta.touched & meta.error which will check if form has been touched and if there is an error, then it will show error text */}
           <Form
             onSubmit={postContact}
             validate={validate}

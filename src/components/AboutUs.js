@@ -18,7 +18,7 @@ function AboutUs() {
             <img
               src="./photos/Julia.jpg"
               className={` ${about.SectionPic} `}
-              alt=""
+              alt="Julia smiling"
             ></img>
           </div>
           <h3 className={` ${about.SubTitle} `}>
@@ -39,7 +39,7 @@ function AboutUs() {
             <img
               src="./photos/Salon.jpg"
               className={` ${about.SectionPic} `}
-              alt=""
+              alt="Julia doing customer's nails"
             ></img>
           </div>
           <h3 className={` ${about.SubTitle} `}>
@@ -61,7 +61,7 @@ function AboutUs() {
             <img
               src="./photos/Clean.jpg"
               className={` ${about.SectionPic} `}
-              alt=""
+              alt="Machine used for sterilizing equipment"
             ></img>
           </div>
           <h3 className={` ${about.SubTitle} `}>
@@ -94,7 +94,7 @@ function AboutUs() {
             <a
               href="https://dk.trustpilot.com/review/wildorchid.dk"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               {/* Trustpilot */}
             </a>
@@ -111,7 +111,7 @@ function AboutUs() {
             <a
               href="https://dk.trustpilot.com/review/wildorchid.dk"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               {/* Trustpilot */}
             </a>

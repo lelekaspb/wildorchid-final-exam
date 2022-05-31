@@ -55,19 +55,27 @@ export default function Footer() {
             <FormattedMessage id="footer.follow" defaultMessage="Følg oss" />
           </h1>
           <div className={` ${footer.IconGroup} `}>
-            <a href="https://www.facebook.com/WildOrchidDk/" target="_blank">
+            <a
+              href="https://www.facebook.com/WildOrchidDk/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className={` ${footer.icon} `}
                 src="./icons/Facebook.svg"
-                alt=""
+                alt="Facebook icon"
               ></img>
             </a>
 
-            <a href="https://www.instagram.com/wildorchiddk/" target="_blank">
+            <a
+              href="https://www.instagram.com/wildorchiddk/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className={` ${footer.icon} `}
                 src="./icons/Instagram.svg"
-                alt=""
+                alt="Instagram icon"
               ></img>
             </a>
           </div>
