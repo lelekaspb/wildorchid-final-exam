@@ -22,7 +22,7 @@
 
   "home.instagram": "Check our Instagram posts out",
   "giftcard.thanks": "Thank you for your purchase and for supporting our company!",
-  "giftcard.promise": "Gavekortet sendes på mail nu.",
+  "giftcard.promise": "The gift card will be send by email now.",
 
   "greeting": "Wild Orchid Website",
 
@@ -178,5 +178,19 @@
   "giftcard.next_btn": "Next",
 
   "payment.back_to_form": "back to form",
-  "payment.method": "Payment method"
+  "payment.method": "Payment method",
+
+  "creditcard.number": "Card number *",
+  "creditcard.number.placeholder": "Type card number here...",
+  "creditcard.number.error": "Credit card number must be 16 digits",
+  "creditcard.name": "Name on card *",
+  "creditcard.name.placeholder": "Type your name here...",
+  "creditcard.name.error": "Please enter your name",
+  "creditcard.expiry": "Expiry date *",
+  "creditcard.expiry.invalid": "Invalid format",
+  "creditcard.expiry.error": "Expiry date must be 4 digits",
+  "creditcard.cvc": "Security code *",
+  "creditcard.cvc.error": "Security code must be 3 digits",
+  "creditcard.total": "Total",
+  "creditcard.pay": "Pay"
 }
