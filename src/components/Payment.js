@@ -1,10 +1,9 @@
 import { Outlet, Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import { Context } from "./ContextWrapper";
-import { useContext, useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import payment from "./../styles/Payment.module.css";
 import giftcard from "../styles/Giftcard.module.css";
+import { useState } from "react";
 
 function Payment() {
   const sessionMethod = sessionStorage.getItem("method");
@@ -13,9 +12,6 @@ function Payment() {
     const methodChosen = e.target.closest("a").getAttribute("data-method");
     setMethod(methodChosen);
   };
-  useEffect(() => {
-    sessionStorage.setItem("method", method);
-  }, [method]);
 
   return (
     <>
@@ -58,7 +54,7 @@ function Payment() {
         <Link
           to="creditcard"
           className={`${
-            method == "creditcard" ? payment.chosen : payment.ignored
+            method === "creditcard" ? payment.chosen : payment.ignored
           }`}
           data-method="creditcard"
           onClick={changeMethod}
@@ -68,7 +64,7 @@ function Payment() {
         <Link
           to="mobilepay"
           className={`${
-            method == "mobilepay" ? payment.chosen : payment.ignored
+            method === "mobilepay" ? payment.chosen : payment.ignored
           }`}
           data-method="mobilepay"
           onClick={changeMethod}

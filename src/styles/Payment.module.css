@@ -75,7 +75,7 @@
   filter: invert(99%) sepia(1%) saturate(2%) hue-rotate(61deg) brightness(112%)
     contrast(100%);
   height: 100%;
-  width: 80%;
+  width: 95%;
   transition: all 0.3s;
 }
 
@@ -90,7 +90,7 @@
   filter: invert(29%) sepia(8%) saturate(6664%) hue-rotate(343deg)
     brightness(90%) contrast(82%);
   height: 100%;
-  width: 80%;
+  width: 95%;
   transition: all 0.3s;
 }
 
@@ -105,5 +105,16 @@
 @media screen and (min-width: 520px) {
   .method {
     font-size: calc(1.2rem + 0.3vw);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .method,
+  .links {
+    margin-left: 10rem;
+  }
+
+  .icon:first-child {
+    margin-left: 0;
   }
 }
