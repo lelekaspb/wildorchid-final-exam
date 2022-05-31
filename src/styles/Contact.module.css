@@ -162,8 +162,19 @@ textarea {
 
 .ErrorFont {
   color: var(--error-color);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.SuccessFont {
+  color: #139b70;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.ThankYou {
   font-size: 0.7rem;
-  margin-top: 0.3rem;
+  width: 80vw;
 }
 
 @media only screen and (min-width: 500px) {
@@ -280,8 +291,13 @@ textarea {
     width: 50vw;
   }
 
-  .ErrorFont {
+  /* .ErrorFont {
     font-size: 0.8rem;
     margin-top: 0.5rem;
+  } */
+
+  .ThankYou {
+    font-size: 1rem;
+    width: 50vw;
   }
 }

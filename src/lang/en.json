@@ -10,15 +10,27 @@
   "navigation.giftcard": "Gift card",
   "navigation.book": "Book",
 
+  "greeting.one": "Welcome to",
+  "greeting.two": "We are waiting for you in our exquisite {breakingLine} beauty salon",
+
+  "home.relax.title": "Relaxing atmosphere",
+  "home.satisfaction.title": "Customer satisfaction",
+  "home.services.title": "Quality services",
+  "home.relax.text": "At Wild Orchid you can forget about your every-day worries, relax and enjoy a procedure.",
+  "home.satisfaction.text": "90% of all our customers are regular clients who use the salon’s services at least once a month.",
+  "home.services.text": "We take great pride in our work and we are ready to go the extra miles for our customers.",
+
+  "home.instagram": "Check our Instagram posts out",
   "giftcard.thanks": "Thank you for your purchase and for supporting our company!",
   "giftcard.promise": "The gift card will be send by email now.",
 
   "greeting": "Wild Orchid Website",
 
+  "contact.success": "Good",
   "invalid_type_name": "Required",
   "invalid_type_email": "Required",
   "invalid_type_phone": "You must fill in a number",
-  "invalid_type_inquiry": "Required",
+  "invalid_type_message": "Required",
   "invalid_string_email": "Invalid email",
 
   "footer.hours": "Opening Hours",
@@ -46,12 +58,12 @@
   "contact.title": "Write to us",
   "contact.name": "Name *",
   "contact.phone": "Phone number",
-  "contact.inquiry": "Inquiry *",
+  "contact.message": "Message *",
 
   "contact.name.placeholder": "Write your name here...",
   "contact.email.placeholder": "Write your email here...",
   "contact.phone.placeholder": "Write your phone number here...",
-  "contact.inquiry.placeholder": "Write your inquiry here...",
+  "contact.message.placeholder": "Write your message here...",
   "about.julia.title": "ABOUT JULIA",
   "about.salon.title": "ABOUT THE SALON",
   "about.clean.title": "WE CARE ABOUT YOU",

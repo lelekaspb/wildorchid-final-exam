@@ -10,15 +10,27 @@
   "navigation.giftcard": "Gavekort",
   "navigation.book": "Bestil tid",
 
+  "greeting.one": "Velkommen til",
+  "greeting.two": "Vi venter på dig i vores udsøgte {breakingLine} skønhedssklinik",
+
+  "home.relax.title": "Afslappende atmosfære",
+  "home.satisfaction.title": "Kundetilfredshed",
+  "home.services.title": "Kvalitetstjenester",
+  "home.relax.text": "Hos Wild Orchid kan du glemme dine daglige bekymringer, slappe af og nyde en procedure.",
+  "home.satisfaction.text": "90 % af alle vores kunder er faste kunder, som bruger salonens tjenester mindst en gang om måneden.",
+  "home.services.text": "Vi sætter en stor ære i vores arbejde, og vi er klar til at gå de ekstra mil for vores kunder.",
+
+  "home.instagram": "Tjek vores Instagram-opslag",
   "giftcard.thanks": "Tak for dit køb og for at støtte vores virksomhed!",
   "giftcard.promise": "Gavekortet sendes på mail nu.",
 
   "greeting": "Wild Orchid Webside",
 
+  "contact.success": "Godt",
   "invalid_type_name": "Påkrævet",
   "invalid_type_email": "Påkrævet",
   "invalid_type_phone": "Du skal udfylde et nummer",
-  "invalid_type_inquiry": "Påkrævet",
+  "invalid_type_message": "Påkrævet",
   "invalid_string_email": "Forkert email",
 
   "footer.hours": "Åbningstider",
@@ -46,12 +58,12 @@
   "contact.title": "Skriv til os",
   "contact.name": "Navn *",
   "contact.phone": "Telefon",
-  "contact.inquiry": "Besked *",
+  "contact.message": "Besked *",
 
   "contact.name.placeholder": "Skriv dit navn her...",
   "contact.email.placeholder": "Skriv dit email her...",
   "contact.phone.placeholder": "Skriv dit telefon her...",
-  "contact.inquiry.placeholder": "Skriv dit besked her...",
+  "contact.message.placeholder": "Skriv dit besked her...",
 
   "about.julia.title": "OM JULIA",
   "about.salon.title": "OM SALONEN",
