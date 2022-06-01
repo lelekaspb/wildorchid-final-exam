@@ -1,25 +1,36 @@
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import navbar from "./../styles/Navbar.module.css";
 import Burgermenu from "./Burgermenu";
 import Burger from "./Burger";
 import DesktopMenu from "./DesktopMenu";
 
-function Navbar({ activePage }) {
+function Navbar() {
   const context = useContext(Context);
 
-  return (
-    <nav className={navbar.navbar}>
-      <Burger />
-      <Burgermenu activePage={activePage} />
+  let location = useLocation();
 
-      <Link to="/" className={`${navbar.logo_link}`}>
-        <img className={navbar.logo} src="./../logo/logo.svg" alt="logo" />
-      </Link>
+  return (
+    <nav
+      className={`${navbar.navbar} ${
+        location.pathname === "/" ? navbar.bg : ""
+      }`}
+    >
+      <Burger />
+      <Burgermenu />
+
+      <NavLink to="/" className={`${navbar.logo_link}`}>
+        <img
+          className={navbar.logo}
+          src="./../logo/logo.svg"
+          alt="logo"
+          data-page="home"
+        />
+      </NavLink>
 
       <div className={navbar.pull_right}>
-        <DesktopMenu activePage={activePage} />
+        <DesktopMenu />
 
         <div className={navbar.lang_buttons}>
           <button

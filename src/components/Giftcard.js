@@ -9,7 +9,6 @@ import en from "date-fns/locale/en-gb";
 import da from "date-fns/locale/da";
 import { Context } from "./ContextWrapper";
 import { useContext } from "react";
-import Navbar from "./Navbar";
 import Firstname from "./FirstnameField";
 import Lastname from "./LastnameField";
 import Email from "./EmailField";
@@ -144,7 +143,6 @@ function Giftcard() {
 
   return (
     <>
-      <Navbar activePage="giftcard" />
       <div className={giftcard.wrapper}>
         <h2 className={giftcard.heading}>
           <FormattedMessage

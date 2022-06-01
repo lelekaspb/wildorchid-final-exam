@@ -62,7 +62,7 @@ export default function Footer() {
             >
               <img
                 className={` ${footer.icon} `}
-                src="./icons/Facebook.svg"
+                src="../icons/Facebook.svg"
                 alt="Facebook icon"
               ></img>
             </a>
@@ -74,7 +74,7 @@ export default function Footer() {
             >
               <img
                 className={` ${footer.icon} `}
-                src="./icons/Instagram.svg"
+                src="../icons/Instagram.svg"
                 alt="Instagram icon"
               ></img>
             </a>

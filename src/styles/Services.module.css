@@ -8,6 +8,12 @@
   height: 1.2rem;
 }
 
+.default {
+  composes: link from "./utils.css";
+  height: 1.2rem;
+  background-size: 100% 1px;
+}
+
 .link:hover,
 .link:active {
   background-size: 100% 1px;

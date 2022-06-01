@@ -1,64 +1,48 @@
 import menu from "./../styles/Desktopmenu.module.css";
-import { useContext } from "react";
-import { Context } from "./ContextWrapper";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function DesktopMenu({ activePage }) {
-  const context = useContext(Context);
-
+function DesktopMenu() {
   return (
     <div className={menu.menu}>
-      <Link
+      <NavLink
         to="/services"
-        className={` ${menu.link} ${
-          activePage === "services" ? menu.underline : ""
-        }`}
-        onClick={() => {
-          context.setMenuOpen(!context.menuOpen);
-        }}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
       >
         <FormattedMessage
           id="navigation.services"
           defaultMessage="Behandlinger"
         />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/about_us"
-        className={` ${menu.link} ${
-          activePage === "about_us" ? menu.underline : ""
-        }`}
-        onClick={() => {
-          context.setMenuOpen(!context.menuOpen);
-        }}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
       >
         <FormattedMessage id="navigation.about_us" defaultMessage="Om os" />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/contact"
-        className={` ${menu.link} ${
-          activePage === "contact" ? menu.underline : ""
-        }`}
-        onClick={() => {
-          context.setMenuOpen(!context.menuOpen);
-        }}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
       >
         <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/giftcard"
-        className={` ${menu.link} ${
-          activePage === "giftcard" ? menu.underline : ""
-        }`}
-        onClick={() => {
-          context.setMenuOpen(!context.menuOpen);
-        }}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
       >
         <FormattedMessage id="navigation.giftcard" defaultMessage="Gavekort" />
-      </Link>
+      </NavLink>
 
       <a
         className={menu.link}

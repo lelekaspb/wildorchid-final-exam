@@ -1,34 +1,34 @@
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import menu from "./../styles/Burgermenu.module.css";
 import { useContext } from "react";
 import { Context } from "./ContextWrapper";
 
-function Burgermenu({ activePage }) {
+function Burgermenu() {
   const context = useContext(Context);
 
   return (
     <div
       className={`${menu.menu} ${context.menuOpen ? menu.open : menu.closed}`}
     >
-      <Link
+      <NavLink
         to="/"
-        className={` ${menu.link} ${
-          activePage === "home" ? menu.underline : ""
-        }`}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
         onClick={() => {
           context.setMenuOpen(!context.menuOpen);
         }}
       >
         <img className={menu.icon} src="./../icons/home.svg" alt="home icon" />
         <FormattedMessage id="navigation.home" defaultMessage="Forside" />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/services"
-        className={` ${menu.link} ${
-          activePage === "services" ? menu.underline : ""
-        }`}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
         onClick={() => {
           context.setMenuOpen(!context.menuOpen);
         }}
@@ -42,13 +42,13 @@ function Burgermenu({ activePage }) {
           id="navigation.services"
           defaultMessage="Behandlinger"
         />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/about_us"
-        className={` ${menu.link} ${
-          activePage === "about_us" ? menu.underline : ""
-        }`}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
         onClick={() => {
           context.setMenuOpen(!context.menuOpen);
         }}
@@ -59,13 +59,13 @@ function Burgermenu({ activePage }) {
           alt="about us icon"
         />
         <FormattedMessage id="navigation.about_us" defaultMessage="Om os" />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/contact"
-        className={` ${menu.link} ${
-          activePage === "contact" ? menu.underline : ""
-        }`}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
         onClick={() => {
           context.setMenuOpen(!context.menuOpen);
         }}
@@ -76,13 +76,13 @@ function Burgermenu({ activePage }) {
           alt="contact icon"
         />
         <FormattedMessage id="navigation.contact" defaultMessage="Kontakt" />
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to="/giftcard"
-        className={` ${menu.link} ${
-          activePage === "giftcard" ? menu.underline : ""
-        }`}
+        className={({ isActive }) =>
+          ` ${menu.link} ${isActive ? menu.underline : ""}`
+        }
         onClick={() => {
           context.setMenuOpen(!context.menuOpen);
         }}
@@ -93,7 +93,7 @@ function Burgermenu({ activePage }) {
           alt="giftcard icon"
         />
         <FormattedMessage id="navigation.giftcard" defaultMessage="Gavekort" />
-      </Link>
+      </NavLink>
 
       <a
         className={menu.link}

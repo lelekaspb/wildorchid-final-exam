@@ -1,5 +1,4 @@
 import { FormattedMessage } from "react-intl";
-import Navbar from "./Navbar";
 import confirmation from "./../styles/Confirmation.module.css";
 import giftcard from "../styles/Giftcard.module.css";
 import payment from "./../styles/Payment.module.css";
@@ -7,8 +6,6 @@ import payment from "./../styles/Payment.module.css";
 function GiftcardConfirmation() {
   return (
     <div className={confirmation.page}>
-      <Navbar activePage="giftcard" />
-
       <div className={confirmation.content_wrapper}>
         {/* heading */}
         <h2 className={payment.heading}>

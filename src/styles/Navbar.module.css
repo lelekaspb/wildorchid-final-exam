@@ -6,6 +6,10 @@
   z-index: 10;
 }
 
+.bg {
+  background-color: var(--pinkish-bg-color);
+}
+
 .logo_link {
   justify-self: center;
 }

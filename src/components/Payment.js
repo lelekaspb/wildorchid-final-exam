@@ -1,5 +1,4 @@
 import { Outlet, Link } from "react-router-dom";
-import Navbar from "./Navbar";
 import { FormattedMessage } from "react-intl";
 import payment from "./../styles/Payment.module.css";
 import giftcard from "../styles/Giftcard.module.css";
@@ -15,7 +14,6 @@ function Payment() {
 
   return (
     <>
-      <Navbar activePage="giftcard" />
       <div className={payment.wrapper}>
         {/* link back to info form */}
         <div className={payment.backlink}>

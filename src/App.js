@@ -14,11 +14,13 @@ import Mobilepay from "./components/Mobilepay";
 import GiftcardConfirmation from "./components/GiftcardConfirmation";
 import NoMatch from "./components/NoMatch";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter forceRefresh={false}>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />}>

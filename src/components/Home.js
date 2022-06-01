@@ -1,13 +1,10 @@
 import { FormattedMessage } from "react-intl";
 import home from "../styles/Homepage.module.css";
-import Navbar from "./Navbar";
 
 function Home() {
   return (
     <>
-      <div className={home.navbarWrapper}>
-        <Navbar activePage="home" />
-      </div>
+      <div className={home.navbarWrapper}></div>
       <div className={home.background}>
         <div className={home.AllWelcomeWrap}>
           <div className={home.WelcomeWrap}>
