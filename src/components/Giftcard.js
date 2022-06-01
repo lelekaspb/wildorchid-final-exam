@@ -276,11 +276,21 @@ function Giftcard() {
 
         <section className={giftcard.giftcard_photo}>
           <div className={giftcard.photo_wrapper}>
-            <img
-              className={giftcard.photo}
-              src="./../photos/giftcard_photo.jpg"
-              alt="gift card "
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet="./../photos/giftcard_photo.webp"
+              />
+              <source
+                type="image/jpeg"
+                srcSet="./../photos/giftcard_photo.jpg"
+              />
+              <img
+                className={giftcard.photo}
+                src="./../photos/giftcard_photo.jpg"
+                alt="gift card "
+              />
+            </picture>
           </div>
         </section>
         <img

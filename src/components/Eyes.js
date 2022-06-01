@@ -8,13 +8,16 @@ function Eyes() {
   return (
     <section className={styles.section}>
       <article className={styles.products}>
-        <div className={styles.products_img_wrapper}>
+        <picture className={styles.products_img_wrapper}>
+          <source type="image/webp" srcSet="./../photos/eyes_products.webp" />
+          <source type="image/jpeg" srcSet="./../photos/eyes_products.jpg" />
           <img
             className={styles.products_img}
             src="./../photos/eyes_products.jpg"
             alt="brows and lashes products"
           />
-        </div>
+        </picture>
+
         <div className={styles.products_text}>
           <p>
             <FormattedMessage
@@ -48,21 +51,33 @@ function Eyes() {
         </div>
       </article>
       <article className={styles.gallery}>
-        <img
-          className={styles.gallery_img}
-          src="./../photos/eyes_gallery_3.jpg"
-          alt="brows and lashes gallery "
-        />
-        <img
-          className={styles.gallery_img}
-          src="./../photos/eyes_gallery_2.jpg"
-          alt="brows and lashes gallery "
-        />
-        <img
-          className={styles.gallery_img}
-          src="./../photos/eyes_gallery_1.jpg"
-          alt="brows and lashes gallery "
-        />
+        <picture>
+          <source type="image/webp" srcSet="./../photos/eyes_gallery_3.webp" />
+          <source type="image/jpeg" srcSet="./../photos/eyes_gallery_3.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/eyes_gallery_3.jpg"
+            alt="brows and lashes gallery "
+          />
+        </picture>
+        <picture>
+          <source type="image/webp" srcSet="./../photos/eyes_gallery_2.webp" />
+          <source type="image/jpeg" srcSet="./../photos/eyes_gallery_2.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/eyes_gallery_2.jpg"
+            alt="brows and lashes gallery "
+          />
+        </picture>
+        <picture>
+          <source type="image/webp" srcSet="./../photos/eyes_gallery_1.webp" />
+          <source type="image/jpeg" srcSet="./../photos/eyes_gallery_1.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/eyes_gallery_1.jpg"
+            alt="brows and lashes gallery "
+          />
+        </picture>
       </article>
     </section>
   );

@@ -11,13 +11,16 @@ function Wax() {
   return (
     <section className={styles.section}>
       <article className={styles.products}>
-        <div className={styles.products_img_wrapper}>
+        <picture className={styles.products_img_wrapper}>
+          <source type="image/webp" srcSet="./../photos/waxing_products.webp" />
+          <source type="image/jpeg" srcSet="./../photos/waxing_products.jpg" />
           <img
             className={styles.products_img}
             src="./../photos/waxing_products.jpg"
             alt="waxing products"
           />
-        </div>
+        </picture>
+
         <div className={styles.products_text}>
           <p>
             <FormattedMessage
@@ -135,21 +138,42 @@ function Wax() {
       </article>
 
       <article className={styles.gallery}>
-        <img
-          className={styles.gallery_img}
-          src="./../photos/waxing_gallery_1.jpg"
-          alt="waxing gallery "
-        />
-        <img
-          className={styles.gallery_img}
-          src="./../photos/waxing_gallery_2.jpg"
-          alt="waxing gallery "
-        />
-        <img
-          className={styles.gallery_img}
-          src="./../photos/waxing_gallery_3.jpg"
-          alt="waxing gallery "
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="./../photos/waxing_gallery_1.webp"
+          />
+          <source type="image/jpeg" srcSet="./../photos/waxing_gallery_1.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/waxing_gallery_1.jpg"
+            alt="waxing gallery "
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="./../photos/waxing_gallery_2.webp"
+          />
+          <source type="image/jpeg" srcSet="./../photos/waxing_gallery_2.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/waxing_gallery_2.jpg"
+            alt="waxing gallery "
+          />
+        </picture>
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="./../photos/waxing_gallery_3.webp"
+          />
+          <source type="image/jpeg" srcSet="./../photos/waxing_gallery_3.jpg" />
+          <img
+            className={styles.gallery_img}
+            src="./../photos/waxing_gallery_3.jpg"
+            alt="waxing gallery "
+          />
+        </picture>
       </article>
     </section>
   );

@@ -31,11 +31,18 @@ function Home() {
 
           <div className={home.WelcomePicWrap}>
             <div className={home.WelcomePicBorder}>
-              <img
-                className={home.WelcomePic}
-                src="./photos/homepage-girl.jpg"
-                alt="Beautiful girl with flowers"
-              ></img>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="./photos/homepage-girl.webp"
+                />
+                <source type="image/jpeg" srcSet="./photos/homepage-girl.jpg" />
+                <img
+                  className={home.WelcomePic}
+                  src="./photos/homepage-girl.jpg"
+                  alt="Beautiful girl with flowers"
+                ></img>
+              </picture>
             </div>
           </div>
         </div>
@@ -126,11 +133,15 @@ function Home() {
             rel="noreferrer"
           >
             <div className={home.IGpicHover}>
-              <img
-                src="./photos/instagram-1.jpg"
-                className={home.IGpic}
-                alt="Eye with eyelash done"
-              ></img>
+              <picture>
+                <source type="image/webp" srcSet="./photos/instagram-1.webp" />
+                <source type="image/jpeg" srcSet="./photos/instagram-1.jpg" />
+                <img
+                  src="./photos/instagram-1.jpg"
+                  className={home.IGpic}
+                  alt="Eye with eyelash done"
+                ></img>
+              </picture>
               <div className={home.IGpicHoverBox}>
                 <div className={home.InsideHoverBoxWrap}>
                   <img
@@ -153,11 +164,15 @@ function Home() {
 
           <a href="https://www.instagram.com/p/CaGJbDLosw_/" target="_blank">
             <div className={home.IGpicHover}>
-              <img
-                src="./photos/instagram-2.jpg"
-                className={home.IGpic}
-                alt="Eye with eyelash done"
-              ></img>
+              <picture>
+                <source type="image/webp" srcSet="./photos/instagram-2.webp" />
+                <source type="image/jpeg" srcSet="./photos/instagram-2.jpg" />
+                <img
+                  src="./photos/instagram-2.jpg"
+                  className={home.IGpic}
+                  alt="Eye with eyelash done"
+                ></img>
+              </picture>
               <div className={home.IGpicHoverBox}>
                 <div className={home.InsideHoverBoxWrap}>
                   <img
@@ -184,11 +199,15 @@ function Home() {
             rel="noreferrer"
           >
             <div className={home.IGpicHover}>
-              <img
-                src="./photos/instagram-3.jpg"
-                className={home.IGpic}
-                alt="Hand with nails painted"
-              ></img>
+              <picture>
+                <source type="image/webp" srcSet="./photos/instagram-3.webp" />
+                <source type="image/jpeg" srcSet="./photos/instagram-3.jpg" />
+                <img
+                  src="./photos/instagram-3.jpg"
+                  className={home.IGpic}
+                  alt="Hand with nails painted"
+                ></img>
+              </picture>
               <div className={home.IGpicHoverBox}>
                 <div className={home.InsideHoverBoxWrap}>
                   <img

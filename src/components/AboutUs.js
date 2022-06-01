@@ -15,11 +15,15 @@ function AboutUs() {
       <div className={` ${about.section} `}>
         <div className={` ${about.SubSection} ${about.MobileHidden}  `}>
           <div className={` ${about.PicContainer} `}>
-            <img
-              src="./photos/Julia.jpg"
-              className={` ${about.SectionPic} `}
-              alt="Julia smiling"
-            ></img>
+            <picture>
+              <source type="image/webp" srcSet="./photos/Julia.webp" />
+              <source type="image/jpeg" srcSet="./photos/Julia.jpg" />
+              <img
+                src="./photos/Julia.jpg"
+                className={` ${about.SectionPic} `}
+                alt="Julia smiling"
+              ></img>
+            </picture>
           </div>
           <h3 className={` ${about.SubTitle} `}>
             <FormattedMessage
@@ -36,11 +40,16 @@ function AboutUs() {
         </div>
         <div className={` ${about.SubSection} `}>
           <div className={` ${about.PicContainer} `}>
-            <img
-              src="./photos/Salon.jpg"
-              className={` ${about.SectionPic} `}
-              alt="Julia doing customer's nails"
-            ></img>
+            {/* TODO: takealook */}
+            <picture>
+              <source type="image/webp" srcSet="./photos/Salon.webp" />
+              <source type="image/jpeg" srcSet="./photos/Salon.jpg" />
+              <img
+                src="./photos/Salon.jpg"
+                className={` ${about.SectionPic} `}
+                alt="Julia doing customer's nails"
+              ></img>
+            </picture>
           </div>
           <h3 className={` ${about.SubTitle} `}>
             <FormattedMessage
@@ -58,11 +67,15 @@ function AboutUs() {
 
         <div className={` ${about.SubSection} `}>
           <div className={` ${about.PicContainer} `}>
-            <img
-              src="./photos/Clean.jpg"
-              className={` ${about.SectionPic} `}
-              alt="Machine used for sterilizing equipment"
-            ></img>
+            <picture>
+              <source type="image/webp" srcSet="./photos/Clean.webp" />
+              <source type="image/jpeg" srcSet="./photos/Clean.jpg" />
+              <img
+                src="./photos/Clean.jpg"
+                className={` ${about.SectionPic} `}
+                alt="Machine used for sterilizing equipment"
+              ></img>
+            </picture>
           </div>
           <h3 className={` ${about.SubTitle} `}>
             <FormattedMessage
@@ -118,11 +131,15 @@ function AboutUs() {
           </div>
         </div>
 
-        <img
-          className={` ${about.FrontPic} ${about.MobileHidden}  `}
-          src="./photos/Salon-outside.jpg"
-          alt=""
-        ></img>
+        <picture>
+          <source type="image/webp" srcSet="./photos/Salon-outside.webp" />
+          <source type="image/jpeg" srcSet="./photos/Salon-outside.jpg" />
+          <img
+            className={` ${about.FrontPic} ${about.MobileHidden}  `}
+            src="./photos/Salon-outside.jpg"
+            alt=""
+          ></img>
+        </picture>
       </div>
     </>
   );
