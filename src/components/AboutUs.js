@@ -81,7 +81,7 @@ function AboutUs() {
 
       <div className={` ${about.TrustpilotImageSection} `}>
         <div className={` ${about.TrustpilotSection} `}>
-          <div
+          {/* <div
             className="trustpilot-widget"
             data-locale="da-DK"
             data-template-id="5419b6a8b0d04a076446a9ad"
@@ -96,7 +96,7 @@ function AboutUs() {
               target="_blank"
               rel="noreferrer"
             >
-              {/* Trustpilot */}
+       
             </a>
           </div>
 
@@ -113,9 +113,57 @@ function AboutUs() {
               target="_blank"
               rel="noreferrer"
             >
-              {/* Trustpilot */}
+           
             </a>
-          </div>
+          </div> */}
+
+          <a
+            href="https://trustpilot.com/review/wildorchid.dk"
+            target="_blank"
+            rel="noreferrer"
+            className={about.TrustpilotLink}
+          >
+            <div className={about.TrustpilotAllIconText}>
+              <p className={about.TrustpilotText}>
+                <FormattedMessage
+                  id="about.trustpilot.see"
+                  defaultMessage="Se vores anmeldelser på"
+                />
+              </p>
+              <div className={about.TrustpilotIconText}>
+                <img
+                  src="./icons/trustpilot.svg"
+                  className={` ${about.TrustpilotIcon} `}
+                  alt="Trustpilot icon (green star)"
+                ></img>
+                <p className={about.TrustpilotText}>Trustpilot</p>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://trustpilot.com/evaluate/wildorchid.dk"
+            target="_blank"
+            rel="noreferrer"
+            className={about.TrustpilotLink}
+          >
+            <div className={about.TrustpilotAllIconText}>
+              <p className={about.TrustpilotText}>
+                <FormattedMessage
+                  id="about.trustpilot.review"
+                  defaultMessage="Anmeld os på"
+                />
+              </p>
+              <div className={about.TrustpilotIconText}>
+                <img
+                  src="./icons/trustpilot.svg"
+                  className={` ${about.TrustpilotIcon} `}
+                  alt="Trustpilot icon (green star)"
+                ></img>
+                <p className={about.TrustpilotText}>Trustpilot</p>
+              </div>
+            </div>
+          </a>
         </div>
 
         <img
