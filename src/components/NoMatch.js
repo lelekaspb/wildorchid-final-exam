@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import nomatch from "../styles/NoMatch.module.css";
+import { FormattedMessage } from "react-intl";
 
 function NoMatch() {
   return (
