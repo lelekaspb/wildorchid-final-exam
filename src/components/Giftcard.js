@@ -37,9 +37,10 @@ function Giftcard() {
   };
 
   const validateEmail = (string) => {
-    const emailRegex = new RegExp(
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    );
+    // const emailRegex = new RegExp(
+    //   /^\w+([-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    // );
+    const emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     if (string.match(emailRegex)) {
       return "success";
     } else {
