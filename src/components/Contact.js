@@ -225,7 +225,11 @@ function Contact() {
 
         <div className={contact.TitleFormWrap}>
           <div className={contact.TitleIconWrap}>
-            <img src="./icons/write.svg" className={contact.WriteIcon}></img>
+            <img
+              src="./icons/write.svg"
+              className={contact.WriteIcon}
+              alt="Pen icon"
+            ></img>
             <h2 className={contact.WriteTitle}>
               <FormattedMessage
                 id="contact.title"
