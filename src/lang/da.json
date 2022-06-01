@@ -195,5 +195,8 @@
   "creditcard.cvc": "Sikkerhedskode *",
   "creditcard.cvc.error": "Sikkerhedskoden skal være på 3 cifre",
   "creditcard.total": "I alt",
-  "creditcard.pay": "Betal"
+  "creditcard.pay": "Betal",
+
+  "nomatch.notfound": "Beklager, siden blev ikke fundet!",
+  "nomatch.back": "Vende hjem"
 }

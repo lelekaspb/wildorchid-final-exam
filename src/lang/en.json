@@ -195,5 +195,8 @@
   "creditcard.cvc": "Security code *",
   "creditcard.cvc.error": "Security code must be 3 digits",
   "creditcard.total": "Total",
-  "creditcard.pay": "Pay"
+  "creditcard.pay": "Pay",
+
+  "nomatch.notfound": "Sorry, the page was not found!",
+  "nomatch.back": "Return home"
 }

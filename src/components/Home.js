@@ -159,7 +159,11 @@ function Home() {
             </div>
           </a>
 
-          <a href="https://www.instagram.com/p/CaGJbDLosw_/" target="_blank">
+          <a
+            href="https://www.instagram.com/p/CaGJbDLosw_/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className={home.IGpicHover}>
               <picture>
                 <source type="image/webp" srcSet="./photos/instagram-2.webp" />

@@ -5,8 +5,8 @@ import { useRef } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "../styles/day-picker.css";
-import en from "date-fns/locale/en-gb";
-import da from "date-fns/locale/da";
+// import en from "date-fns/locale/en-gb";
+import { enGB, da } from "date-fns/locale";
 import { Context } from "./ContextWrapper";
 import { useContext } from "react";
 import Firstname from "./FirstnameField";
@@ -36,9 +36,10 @@ function Giftcard() {
   };
 
   const validateEmail = (string) => {
-    const emailRegex = new RegExp(
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    );
+    // const emailRegex = new RegExp(
+    //   /^\w+([-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    // );
+    const emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     if (string.match(emailRegex)) {
       return "success";
     } else {
@@ -86,7 +87,7 @@ function Giftcard() {
   // locale for datePicker
   const dpLocale = {
     da: da,
-    en: en,
+    en: enGB,
   };
 
   // refs for accessing input elements
