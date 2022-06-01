@@ -1,4 +1,3 @@
-import { FormattedMessage } from "react-intl";
 import data from "./../procedures/spraytan.json";
 import styles from "./../styles/Procedures.module.css";
 import { getDOMProcedures } from "./../utilities/procedures.js";
