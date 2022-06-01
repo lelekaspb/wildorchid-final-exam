@@ -7,7 +7,16 @@ export const Context = React.createContext();
 
 function ContextWrapper(props) {
   // find preferred language from browser settings
-  const lang = navigator.language.split(/[-_]/)[0]; // language without region code
+  const browserLang = navigator.language.split(/[-_]/)[0]; // language without region code
+
+  // if preferred language is english, set language of the app to english
+  let lang;
+  if (browserLang === "en") {
+    lang = "en";
+  } else {
+    // for all other preferred languages, set language of the app to danish
+    lang = "da";
+  }
 
   // get chosen language from sessionStorage
   // in order to see if the page has been open
