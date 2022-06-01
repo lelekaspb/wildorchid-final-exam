@@ -1,78 +1,50 @@
-import { FormattedMessage } from "react-intl";
 import data from "./../procedures/nails.json";
 import styles from "./../styles/Procedures.module.css";
 import { getDOMProcedures } from "./../utilities/procedures.js";
+import Products from "./Products";
+import Gallery from "./Gallery";
+import Procedures from "./Procedures";
 
 function Nails() {
   const procedures = getDOMProcedures(data);
   return (
     <section className={styles.section}>
-      <article className={styles.products}>
-        <picture className={styles.products_img_wrapper}>
-          <source type="image/webp" srcSet="./../photos/nails_products.webp" />
-          <source type="image/jpeg" srcSet="./../photos/nails_products.jpg" />
-          <img
-            className={styles.products_img}
-            src="./../photos/nails_products.jpg"
-            alt="nails products"
-          />
-        </picture>
+      <Products
+        webpSrc="./../photos/nails_products.webp"
+        jpegSrc="./../photos/nails_products.jpg"
+        altText="nails products"
+        messages={[
+          {
+            id: "services.nails-intro_one",
+            text: "Vi har både styrkende neglebehandlinger og forskellige former for shellakbehandlinger.",
+          },
+          {
+            id: "services.nails.intro_two",
+            text: "Vi bruger produkter af høj kvalitet, som ikke indeholder skadelige kemikalier, og som holder længe. Vores behandlinger giver et smukt og holdbart resultat i flere uger. Vi har utallige farver at vælge imellem, og vi kan også lave neglekunst såsom tegninger, mønstre og glitter.",
+          },
+        ]}
+      />
+      <Procedures procedures={procedures} />
 
-        <div className={styles.products_text}>
-          <p>
-            <FormattedMessage
-              id="services.nails-intro_one"
-              defaultMessage="Vi har både styrkende neglebehandlinger og forskellige former for shellakbehandlinger."
-            />
-          </p>
-          <p>
-            <FormattedMessage
-              id="services.nails.intro_two"
-              defaultMessage="Vi bruger produkter af høj kvalitet, som ikke indeholder skadelige kemikalier, og som holder længe. Vores behandlinger giver et smukt og holdbart resultat i flere uger. Vi har utallige farver at vælge imellem, og vi kan også lave neglekunst såsom tegninger, mønstre og glitter."
-            />
-          </p>
-        </div>
-      </article>
-      <article className={styles.procedures}>
-        {procedures}
-        <div className={styles.book}>
-          <a
-            className={styles.book_btn}
-            href="https://wildorchid.onlinebooq.dk/"
-          >
-            <FormattedMessage id="book" defaultMessage="Book nu" />
-          </a>
-        </div>
-      </article>
-      <article className={styles.gallery}>
-        <picture>
-          <source type="image/webp" srcSet="./../photos/nails_gallery_1.webp" />
-          <source type="image/jpeg" srcSet="./../photos/nails_gallery_1.jpg" />
-          <img
-            className={styles.gallery_img}
-            src="./../photos/nails_gallery_1.jpg"
-            alt="nails gallery "
-          />
-        </picture>
-        <picture>
-          <source type="image/webp" srcSet="./../photos/nails_gallery_2.webp" />
-          <source type="image/jpeg" srcSet="./../photos/nails_gallery_2.jpg" />
-          <img
-            className={styles.gallery_img}
-            src="./../photos/nails_gallery_2.jpg"
-            alt="nails gallery "
-          />
-        </picture>
-        <picture>
-          <source type="image/webp" srcSet="./../photos/nails_gallery_3.webp" />
-          <source type="image/jpeg" srcSet="./../photos/nails_gallery_3.jpg" />
-          <img
-            className={styles.gallery_img}
-            src="./../photos/nails_gallery_3.jpg"
-            alt="nails gallery "
-          />
-        </picture>
-      </article>
+      <Gallery
+        images={[
+          {
+            webpSrc: "./../photos/nails_gallery_1.webp",
+            jpegSrc: "./../photos/nails_gallery_1.jpg",
+            altText: "nails gallery",
+          },
+          {
+            webpSrc: "./../photos/nails_gallery_2.webp",
+            jpegSrc: "./../photos/nails_gallery_2.jpg",
+            altText: "nails gallery",
+          },
+          {
+            webpSrc: "./../photos/nails_gallery_3.webp",
+            jpegSrc: "./../photos/nails_gallery_3.jpg",
+            altText: "nails gallery",
+          },
+        ]}
+      />
     </section>
   );
 }

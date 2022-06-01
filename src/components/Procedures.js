@@ -1,10 +1,7 @@
 import { FormattedMessage } from "react-intl";
-import data from "./../procedures/eyes.json";
 import styles from "./../styles/Procedures.module.css";
-import { getDOMProcedures } from "./../utilities/procedures.js";
 
-function Procedures() {
-  const procedures = getDOMProcedures(data);
+function Procedures({ procedures }) {
   return (
     <article className={styles.procedures}>
       {procedures}

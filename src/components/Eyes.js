@@ -1,13 +1,12 @@
-// import { FormattedMessage } from "react-intl";
-// import data from "./../procedures/eyes.json";
 import styles from "./../styles/Procedures.module.css";
-// import { getDOMProcedures } from "./../utilities/procedures.js";
+import data from "./../procedures/eyes.json";
+import { getDOMProcedures } from "./../utilities/procedures.js";
 import Products from "./Products";
 import Gallery from "./Gallery";
 import Procedures from "./Procedures";
 
 function Eyes() {
-  // const procedures = getDOMProcedures(data);
+  const procedures = getDOMProcedures(data);
   return (
     <section className={styles.section}>
       <Products
@@ -30,7 +29,7 @@ function Eyes() {
         ]}
       />
 
-      <Procedures />
+      <Procedures procedures={procedures} />
 
       <Gallery
         images={[

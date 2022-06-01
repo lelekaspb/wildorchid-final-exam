@@ -55,7 +55,6 @@ function Contact() {
     } else {
       const errors = {};
       error.errors.forEach((e) => {
-        console.log(e);
         errors[e.path[0]] = e.code + "_" + e.path[0];
       });
       return errors;

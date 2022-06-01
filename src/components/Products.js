@@ -2,6 +2,17 @@ import styles from "./../styles/Procedures.module.css";
 import { FormattedMessage } from "react-intl";
 
 function Products({ webpSrc, jpegSrc, altText, messages }) {
+  const paragraphs = messages.map((message, index) => {
+    return (
+      <p key={index}>
+        <FormattedMessage
+          id={message.id}
+          defaultMessage={message.text}
+          values={message.values}
+        />
+      </p>
+    );
+  });
   return (
     <article className={styles.products}>
       <picture className={styles.products_img_wrapper}>
@@ -10,26 +21,7 @@ function Products({ webpSrc, jpegSrc, altText, messages }) {
         <img className={styles.products_img} src={jpegSrc} alt={altText} />
       </picture>
 
-      <div className={styles.products_text}>
-        <p>
-          <FormattedMessage
-            id={messages[0].id}
-            defaultMessage={messages[0].text}
-          />
-        </p>
-        <p>
-          <FormattedMessage
-            id={messages[1].id}
-            defaultMessage={messages[1].text}
-          />
-        </p>
-        <p>
-          <FormattedMessage
-            id={messages[2].id}
-            defaultMessage={messages[2].text}
-          />
-        </p>
-      </div>
+      <div className={styles.products_text}>{paragraphs}</div>
     </article>
   );
 }

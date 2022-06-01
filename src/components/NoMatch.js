@@ -11,7 +11,6 @@ function NoMatch() {
             id="nomatch.notfound"
             defaultMessage="Beklager, siden blev ikke fundet!"
           />
-          Sorry, page not found!
         </p>
         <img src="./icons/notfound.svg" alt="Sad face"></img>
       </div>

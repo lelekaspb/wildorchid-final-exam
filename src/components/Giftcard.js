@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import "../styles/day-picker.css";
-// import en from "date-fns/locale/en-gb";
 import { enGB, da } from "date-fns/locale";
 import { Context } from "./ContextWrapper";
 import { useContext } from "react";
@@ -36,9 +35,6 @@ function Giftcard() {
   };
 
   const validateEmail = (string) => {
-    // const emailRegex = new RegExp(
-    //   /^\w+([-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    // );
     const emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     if (string.match(emailRegex)) {
       return "success";
