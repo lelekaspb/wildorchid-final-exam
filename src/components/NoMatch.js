@@ -5,7 +5,13 @@ function NoMatch() {
   return (
     <div className={nomatch.NoMatchContainer}>
       <div className={nomatch.ErrorWrap}>
-        <p>Sorry, page not found!</p>
+        <p>
+          <FormattedMessage
+            id="nomatch.notfound"
+            defaultMessage="Beklager, siden blev ikke fundet!"
+          />
+          Sorry, page not found!
+        </p>
         <img src="./icons/notfound.svg" alt="Sad face"></img>
       </div>
 
@@ -16,7 +22,7 @@ function NoMatch() {
           alt="Return icon"
         ></img>
         <Link to="/" className={nomatch.BackText}>
-          Return home
+          <FormattedMessage id="nomatch.back" defaultMessage="Vende hjem" />
         </Link>
       </div>
     </div>
