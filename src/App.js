@@ -12,7 +12,7 @@ import Payment from "./components/Payment";
 import Creditcard from "./components/Creditcard";
 import Mobilepay from "./components/Mobilepay";
 import GiftcardConfirmation from "./components/GiftcardConfirmation";
-// import NoMatch from "./components/NoMatch";
+import NoMatch from "./components/NoMatch";
 import Footer from "./components/Footer";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Route path="wax" element={<Wax />} />
             <Route path="nails" element={<Nails />} />
             <Route path="spraytan" element={<Spraytan />} />
-            {/* <Route path="*" element={<NoMatch />} /> */}
+            <Route path="*" element={<NoMatch />} />
           </Route>
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
@@ -38,7 +38,7 @@ function App() {
             <Route path="mobilepay" element={<Mobilepay />} />
           </Route>
           <Route path="/confirmation" element={<GiftcardConfirmation />} />
-          {/* <Route path="*" element={<NoMatch />} /> */}
+          <Route path="*" element={<NoMatch />} />
         </Routes>
       </BrowserRouter>
       <Footer></Footer>
