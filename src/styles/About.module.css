@@ -2,6 +2,7 @@
   font-weight: var(--font-regular);
   color: var(--primary-font-color);
   font-size: var(--title-font-size);
+  text-transform: uppercase;
 }
 
 .SubTitle {
