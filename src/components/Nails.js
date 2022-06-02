@@ -24,6 +24,7 @@ function Nails() {
           },
         ]}
       />
+
       <Procedures procedures={procedures} />
 
       <Gallery

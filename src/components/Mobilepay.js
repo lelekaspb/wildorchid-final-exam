@@ -5,16 +5,21 @@ import { postGiftcard } from "./../utilities/post.js";
 import mobilepay from "./../styles/Mobilepay.module.css";
 
 function Mobilepay() {
+  // fetch the info state and dispatch function from context provider
   const { info, dispatch } = useContext(Context);
+
+  // for redirecting user to confirmation page
   let navigate = useNavigate();
   const redirectToConfirmation = () => {
     navigate("/confirmation");
   };
 
+  // for re-setting the info state  to initial value after posting giftcard order
   const setInfoToInitial = () => {
     dispatch({ type: "reset", data: true });
   };
 
+  // handle qr code click
   const handleClick = async () => {
     if (info.giftcard.validated) {
       const payload = {
@@ -28,6 +33,8 @@ function Mobilepay() {
       const url = "https://kea0209-5a57.restdb.io/rest/wildorchid-giftcard";
       const response = await postGiftcard(payload, url);
       if (response !== undefined) {
+        // if post request was successful, set state to initial,
+        // and redirect user to confirmation page
         setInfoToInitial();
         redirectToConfirmation();
       } else {

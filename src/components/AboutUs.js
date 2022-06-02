@@ -39,7 +39,6 @@ function AboutUs() {
         </div>
         <div className={` ${about.SubSection} `}>
           <div className={` ${about.PicContainer} `}>
-            {/* TODO: takealook */}
             <picture>
               <source type="image/webp" srcSet="./photos/Salon.webp" />
               <source type="image/jpeg" srcSet="./photos/Salon.jpg" />

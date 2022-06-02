@@ -50,7 +50,6 @@ function ContextWrapper(props) {
   // hamburger menu state for tracking whether it's open or not
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // gift card information state and functionn for manipulating it
   // initial info object (state)
   const initInfo = {
     giftcard: {
@@ -182,6 +181,8 @@ function ContextWrapper(props) {
     }
   }
 
+  // once reset property of the info state object set to true (in Mobilepay or Creditcard component),
+  // reset the info object to initial
   useEffect(() => {
     if (info.reset) {
       dispatch({ type: "fname", data: "" });

@@ -93,6 +93,7 @@ function Giftcard() {
   const amountRef = useRef("");
 
   const checkForErrors = () => {
+    // highlight all the incorrectly filled in input fields
     dispatch({
       type: "fnameHelp",
       data: validateName(info.giftcard.firstName),
@@ -104,6 +105,7 @@ function Giftcard() {
       data: validateAmount(info.giftcard.amount),
     });
 
+    // check if there are incorrectly filled in input fields
     if (validateName(info.giftcard.firstName) === "error") {
       return firstNameRef;
     } else if (validateName(info.giftcard.lastName) === "error") {
@@ -115,6 +117,7 @@ function Giftcard() {
     }
   };
 
+  // scroll up to the first found error
   const scrollToError = (errorField) => {
     const offset = errorField.current.offsetTop;
     window.scroll({
@@ -124,6 +127,7 @@ function Giftcard() {
     });
   };
 
+  // handle submit function
   const handleSubmit = async (e) => {
     e.preventDefault();
     // validate
@@ -133,7 +137,7 @@ function Giftcard() {
       dispatch({ type: "validated", data: true });
       redirectToPayment();
     } else {
-      // if not, focus on the first error field in the flow
+      // if not, scroll up to the first error field in the flow
       scrollToError(errorField);
     }
   };
@@ -269,6 +273,7 @@ function Giftcard() {
         </form>
         {/* gift card information form  --- end*/}
 
+        {/* photo of gift card for desktop view */}
         <section className={giftcard.giftcard_photo}>
           <div className={giftcard.photo_wrapper}>
             <picture>
@@ -289,6 +294,8 @@ function Giftcard() {
             </picture>
           </div>
         </section>
+
+        {/* illustration of orchid for tablet view */}
         <img
           className={giftcard.orchid}
           loading="lazy"
