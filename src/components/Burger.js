@@ -11,7 +11,7 @@ function Burger() {
         context.setMenuOpen(!context.menuOpen);
       }}
     >
-      <button className={burger.button}>
+      <button className={burger.button} title="menu mobile">
         <div
           className={`${burger.line} ${
             context.menuOpen ? burger.line1_open : burger.line1_closed
