@@ -36,7 +36,6 @@ function Home() {
                 <source type="image/jpeg" srcSet="./photos/homepage-girl.jpg" />
                 <img
                   className={home.WelcomePic}
-                  loading="lazy"
                   src="./photos/homepage-girl.jpg"
                   alt="Beautiful girl with flowers"
                 ></img>

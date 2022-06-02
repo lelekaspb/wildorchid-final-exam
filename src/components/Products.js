@@ -18,12 +18,7 @@ function Products({ webpSrc, jpegSrc, altText, messages }) {
       <picture className={styles.products_img_wrapper}>
         <source type="image/webp" srcSet={webpSrc} />
         <source type="image/jpeg" srcSet={jpegSrc} />
-        <img
-          className={styles.products_img}
-          src={jpegSrc}
-          loading="lazy"
-          alt={altText}
-        />
+        <img className={styles.products_img} src={jpegSrc} alt={altText} />
       </picture>
 
       <div className={styles.products_text}>{paragraphs}</div>
