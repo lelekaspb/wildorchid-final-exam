@@ -12,12 +12,12 @@ function NoMatch() {
             defaultMessage="Beklager, siden blev ikke fundet!"
           />
         </p>
-        <img src="./icons/notfound.svg" alt="Sad face"></img>
+        <img src="../icons/notfound.svg" alt="Sad face"></img>
       </div>
 
       <div className={nomatch.BackWrap}>
         <img
-          src="./icons/enter-back.svg"
+          src="../icons/enter-back.svg"
           className={nomatch.BackIcon}
           alt="Return icon"
         ></img>
