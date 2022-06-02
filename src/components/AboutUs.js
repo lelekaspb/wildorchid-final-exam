@@ -19,6 +19,7 @@ function AboutUs() {
               <img
                 src="./photos/Julia.jpg"
                 className={` ${about.SectionPic} `}
+                loading="lazy"
                 alt="Julia smiling"
               ></img>
             </picture>
@@ -45,6 +46,7 @@ function AboutUs() {
               <img
                 src="./photos/Salon.jpg"
                 className={` ${about.SectionPic} `}
+                loading="lazy"
                 alt="Julia doing customer's nails"
               ></img>
             </picture>
@@ -71,6 +73,7 @@ function AboutUs() {
               <img
                 src="./photos/Clean.jpg"
                 className={` ${about.SectionPic} `}
+                loading="lazy"
                 alt="Machine used for sterilizing equipment"
               ></img>
             </picture>
@@ -145,6 +148,7 @@ function AboutUs() {
                 <img
                   src="./icons/trustpilot.svg"
                   className={` ${about.TrustpilotIcon} `}
+                  loading="lazy"
                   alt="Trustpilot icon (green star)"
                 ></img>
                 <p className={about.TrustpilotText}>Trustpilot</p>

@@ -257,6 +257,7 @@ function Creditcard() {
       <div className={creditcard.orchid}>
         <img
           className={creditcard.image}
+          loading="lazy"
           src="./../illustrations/giftcard-info-orchid.svg"
           alt="orchid illustration"
         />

@@ -9,6 +9,7 @@ function Gallery({ images }) {
         <img
           className={styles.gallery_img}
           src={imageObj.jpegSrc}
+          loading="lazy"
           alt={imageObj.altText}
         />
       </picture>

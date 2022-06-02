@@ -282,6 +282,7 @@ function Giftcard() {
               />
               <img
                 className={giftcard.photo}
+                loading="lazy"
                 src="./../photos/giftcard_photo.jpg"
                 alt="gift card "
               />
@@ -290,6 +291,7 @@ function Giftcard() {
         </section>
         <img
           className={giftcard.orchid}
+          loading="lazy"
           src="./../illustrations/giftcard-info-orchid.svg"
           alt="orchid illustration"
         />

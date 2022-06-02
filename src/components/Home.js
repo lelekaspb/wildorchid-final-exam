@@ -36,6 +36,7 @@ function Home() {
                 <source type="image/jpeg" srcSet="./photos/homepage-girl.jpg" />
                 <img
                   className={home.WelcomePic}
+                  loading="lazy"
                   src="./photos/homepage-girl.jpg"
                   alt="Beautiful girl with flowers"
                 ></img>
@@ -136,6 +137,7 @@ function Home() {
                 <img
                   src="./photos/instagram-1.jpg"
                   className={home.IGpic}
+                  loading="lazy"
                   alt="Eye with eyelash done"
                 ></img>
               </picture>
@@ -171,6 +173,7 @@ function Home() {
                 <img
                   src="./photos/instagram-2.jpg"
                   className={home.IGpic}
+                  loading="lazy"
                   alt="Eye with eyelash done"
                 ></img>
               </picture>
@@ -206,6 +209,7 @@ function Home() {
                 <img
                   src="./photos/instagram-3.jpg"
                   className={home.IGpic}
+                  loading="lazy"
                   alt="Hand with nails painted"
                 ></img>
               </picture>
